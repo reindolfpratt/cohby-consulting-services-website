@@ -14,6 +14,7 @@ import BookConsultation from "./pages/BookConsultation";
 import FreeSalesforce from "./pages/nonprofit-subpages/FreeSalesforce";
 import NPSPBasics from "./pages/nonprofit-subpages/NPSPBasics";
 import Challenges from "./pages/nonprofit-subpages/Challenges";
+import AIAutomation from "./pages/AIAutomation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
               <Route path="/non-profits/challenges" element={<Challenges />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/book-consultation" element={<BookConsultation />} />
+              <Route path="/ai-automation" element={<AIAutomation />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

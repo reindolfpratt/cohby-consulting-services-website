@@ -84,6 +84,45 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* AI & Automation */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">AI & Automation</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/ai-automation"
+                  className="text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-automation#automations"
+                  className="text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  General Automations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-automation#websites"
+                  className="text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  AI Websites
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-automation#chatbots"
+                  className="text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  AI Chatbots
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>

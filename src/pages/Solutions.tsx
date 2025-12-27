@@ -10,6 +10,10 @@ import {
   Workflow,
   FileSpreadsheet,
   Users,
+  Bot,
+  Globe,
+  MessageSquare,
+  Share2,
 } from "lucide-react";
 
 const Solutions = () => {
@@ -72,7 +76,7 @@ const Solutions = () => {
     {
       icon: <GraduationCap className="h-10 w-10 text-accent" />,
       title: "Training & Support",
-      description: "Empower your team with comprehensive training and ongoing support to maximize your Salesforce investment.",
+      description: "Empower your team with comprehensive training and ongoing support to maximise your Salesforce investment.",
       features: [
         "User and admin training",
         "Custom documentation",
@@ -83,23 +87,67 @@ const Solutions = () => {
     {
       icon: <Users className="h-10 w-10 text-accent" />,
       title: "Non-Profit Solutions",
-      description: "Specialized Salesforce solutions for non-profit organizations, including free licensing guidance and NPSP implementation.",
+      description: "Specialised Salesforce solutions for non-profit organisations, including free licensing guidance and NPSP implementation.",
       features: [
-        "Power of Us program assistance",
-        "NPSP setup and customization",
+        "Power of Us programme assistance",
+        "NPSP setup and customisation",
         "Donor and grant management",
         "Volunteer tracking systems",
       ],
     },
     {
       icon: <FileSpreadsheet className="h-10 w-10 text-accent" />,
-      title: "Health Check & Optimization",
-      description: "Already using Salesforce? We'll review your setup and identify opportunities for improvement and optimization.",
+      title: "Health Check & Optimisation",
+      description: "Already using Salesforce? We'll review your setup and identify opportunities for improvement and optimisation.",
       features: [
         "Comprehensive system audit",
-        "Performance optimization",
+        "Performance optimisation",
         "Security review",
         "Actionable recommendations",
+      ],
+    },
+    {
+      icon: <Bot className="h-10 w-10 text-accent" />,
+      title: "AI & General Automations",
+      description: "Streamline your operations with intelligent workflow automation. Save time, reduce errors, and let your team focus on what matters.",
+      features: [
+        "Workflow process automation",
+        "Document processing & data extraction",
+        "Email and task automation",
+        "Custom integration development",
+      ],
+    },
+    {
+      icon: <Globe className="h-10 w-10 text-accent" />,
+      title: "AI-Powered Websites",
+      description: "Next-generation websites that work smarter, not harder. Adapt to visitors, personalise content, and convert more leads.",
+      features: [
+        "Intelligent content personalisation",
+        "AI-powered search & recommendations",
+        "Automated SEO optimisation",
+        "Smart lead capture & qualification",
+      ],
+    },
+    {
+      icon: <MessageSquare className="h-10 w-10 text-accent" />,
+      title: "AI Chatbots",
+      description: "Engage customers 24/7 with intelligent conversational AI that understands context and handles complex queries.",
+      features: [
+        "Natural language understanding",
+        "Multi-channel deployment",
+        "CRM & helpdesk integration",
+        "Lead qualification & booking",
+      ],
+    },
+    {
+      icon: <Share2 className="h-10 w-10 text-accent" />,
+      title: "Social Media Automations",
+      description: "Maintain a powerful social presence without the manual grind. Automate posting, engagement, and analytics.",
+      features: [
+        "Scheduled content publishing",
+        "Cross-platform management",
+        "Automated engagement responses",
+        "Performance analytics & reporting",
       ],
     },
   ];

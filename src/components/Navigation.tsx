@@ -24,6 +24,13 @@ const Navigation = () => {
     { title: "Top 3 Challenges Non-Profits Face", href: "/non-profits/challenges" },
   ];
 
+  const aiAutomationLinks = [
+    { title: "AI & General Automations", href: "/ai-automation#automations" },
+    { title: "AI-Powered Websites", href: "/ai-automation#websites" },
+    { title: "AI Chatbots", href: "/ai-automation#chatbots" },
+    { title: "Social Media Automations", href: "/ai-automation#social" },
+  ];
+
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
@@ -78,6 +85,35 @@ const Navigation = () => {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium">
+                    AI & Automation
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4">
+                      <li>
+                        <Link to="/ai-automation">
+                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/10 hover:text-accent">
+                            <div className="text-sm font-medium leading-none">AI & Automation Overview</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Intelligent automation solutions for modern businesses
+                            </p>
+                          </NavigationMenuLink>
+                        </Link>
+                      </li>
+                      {aiAutomationLinks.map((link) => (
+                        <li key={link.href}>
+                          <Link to={link.href}>
+                            <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/10 hover:text-accent">
+                              <div className="text-sm font-medium leading-none">{link.title}</div>
+                            </NavigationMenuLink>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium">
                     Non-Profits
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -87,7 +123,7 @@ const Navigation = () => {
                           <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/10 hover:text-accent">
                             <div className="text-sm font-medium leading-none">Non-Profits Overview</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Salesforce solutions for non-profit organizations
+                              Salesforce solutions for non-profit organisations
                             </p>
                           </NavigationMenuLink>
                         </Link>
@@ -159,6 +195,28 @@ const Navigation = () => {
             >
               Our Solutions
             </Link>
+            <div className="px-4 py-2">
+              <div className="font-medium mb-2">AI & Automation</div>
+              <div className="ml-4 space-y-2">
+                <Link
+                  to="/ai-automation"
+                  className="block py-1 text-sm hover:text-accent"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Overview
+                </Link>
+                {aiAutomationLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="block py-1 text-sm hover:text-accent"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
             <div className="px-4 py-2">
               <div className="font-medium mb-2">Non-Profits</div>
               <div className="ml-4 space-y-2">

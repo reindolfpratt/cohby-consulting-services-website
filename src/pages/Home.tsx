@@ -9,6 +9,10 @@ import {
   HeadphonesIcon,
   CheckCircle2,
   Sparkles,
+  Bot,
+  Globe,
+  MessageSquare,
+  Share2,
 } from "lucide-react";
 
 const Home = () => {
@@ -36,6 +40,30 @@ const Home = () => {
       title: "Ongoing Support & Training",
       description:
         "Continuous guidance to ensure your Salesforce environment evolves with your business.",
+    },
+    {
+      icon: <Bot className="h-8 w-8" />,
+      title: "AI & General Automations",
+      description:
+        "Streamline operations with intelligent workflow automation that saves time and reduces errors.",
+    },
+    {
+      icon: <Globe className="h-8 w-8" />,
+      title: "AI-Powered Websites",
+      description:
+        "Next-generation websites that adapt, personalise, and convert more leads while you sleep.",
+    },
+    {
+      icon: <MessageSquare className="h-8 w-8" />,
+      title: "AI Chatbots",
+      description:
+        "Engage customers 24/7 with intelligent conversational AI that understands context.",
+    },
+    {
+      icon: <Share2 className="h-8 w-8" />,
+      title: "Social Media Automations",
+      description:
+        "Automated posting, engagement tracking, and analytics to grow your audience effortlessly.",
     },
   ];
 
