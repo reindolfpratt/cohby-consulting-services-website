@@ -44,7 +44,7 @@ const Contact = () => {
                 <h3 className="text-lg font-semibold mb-3">Phone</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="text-sm">UK: +44 7424 742415</p>
-                  <p className="text-sm">Canada: +1 343 297 1992</p>
+                  <p className="text-sm">Canada: +1 343 883 2087</p>
                   <p className="text-sm mt-2">WhatsApp available</p>
                 </div>
               </CardContent>
@@ -72,8 +72,8 @@ const Contact = () => {
                 </div>
                 <h3 className="text-lg font-semibold mb-3">Business Hours</h3>
                 <div className="text-muted-foreground space-y-1">
-                  <p className="text-sm">Monday - Saturday</p>
-                  <p className="text-sm">10:00 AM - 6:00 PM</p>
+                  <p className="text-sm">Monday - Thursday</p>
+                  <p className="text-sm">10:00 AM - 3:00 PM</p>
                   <p className="text-sm mt-2">(UK & Canada Time)</p>
                 </div>
               </CardContent>
