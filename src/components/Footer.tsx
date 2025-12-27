@@ -92,7 +92,7 @@ const Footer = () => {
                 <Phone size={18} className="mt-0.5 flex-shrink-0" />
                 <div>
                   <div>UK: +44 7424 742415</div>
-                  <div>Canada: +1 343 297 1992</div>
+                  <div>Canada: +1 343 883 2087</div>
                 </div>
               </li>
               <li className="flex items-center gap-2 text-sm text-white/80">
@@ -104,8 +104,8 @@ const Footer = () => {
               <li className="flex items-start gap-2 text-sm text-white/80">
                 <MapPin size={18} className="mt-0.5 flex-shrink-0" />
                 <div>
-                  Monday to Saturday<br />
-                  10 a.m. – 6 p.m.
+                  Monday to Thursday<br />
+                  10 a.m. – 3 p.m.
                 </div>
               </li>
             </ul>
