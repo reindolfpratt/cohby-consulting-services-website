@@ -15,6 +15,8 @@ import FreeSalesforce from "./pages/nonprofit-subpages/FreeSalesforce";
 import NPSPBasics from "./pages/nonprofit-subpages/NPSPBasics";
 import Challenges from "./pages/nonprofit-subpages/Challenges";
 import AIAutomation from "./pages/AIAutomation";
+import CloudSolutions from "./pages/CloudSolutions";
+import DataAnalysis from "./pages/DataAnalysis";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +41,8 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/book-consultation" element={<BookConsultation />} />
               <Route path="/ai-automation" element={<AIAutomation />} />
+              <Route path="/cloud-solutions" element={<CloudSolutions />} />
+              <Route path="/data-analysis" element={<DataAnalysis />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

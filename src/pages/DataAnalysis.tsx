@@ -3,95 +3,89 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowRight,
-  Bot,
-  Globe,
-  MessageSquare,
-  Share2,
-  Zap,
-  Clock,
-  TrendingUp,
-  Shield,
+  LineChart,
+  BarChart3,
+  PieChart,
+  Search,
   CheckCircle2,
-  Sparkles,
-  Cpu
+  Database,
+  Layers,
+  TrendingUp,
+  BrainCircuit
 } from "lucide-react";
 
-const AIAutomation = () => {
+const DataAnalysis = () => {
   const services = [
     {
-      icon: <Cpu className="h-10 w-10 text-primary" />,
-      title: "AI Engineering & Integrations",
+      icon: <Database className="h-10 w-10 text-primary" />,
+      title: "Data Engineering & Pipelines",
       description:
-        "Custom machine learning pipelines and deep integrations with your existing platforms. We build intelligent systems that scale and adapt to your complex data architecture.",
+        "Centralize your scattered data into robust data warehouses and lakes. We build automated ETL/ELT pipelines that ensure your data is clean, accurate, and ready to use.",
       features: [
-        "Machine learning model deployment",
-        "Custom LLM integrations",
-        "API & webhook development",
-        "Data pipeline engineering",
-        "Predictive analytics engines",
+        "Data Warehouse architecture (Snowflake, BigQuery)",
+        "Automated ETL/ELT pipeline development",
+        "Data cleansing and normalisation",
+        "Real-time streaming data solutions",
       ],
     },
     {
-      icon: <Zap className="h-10 w-10 text-primary" />,
-      title: "Intelligent Automations",
+      icon: <LineChart className="h-10 w-10 text-primary" />,
+      title: "Business Intelligence & Dashboards",
       description:
-        "Streamline your operations with intelligent workflow automation. We build custom solutions that save time, reduce errors, and let your team focus on high-impact work.",
+        "Turn raw data into interactive, intuitive dashboards. We help executive teams and operators understand their business performance at a glance.",
       features: [
-        "Workflow process automation",
-        "Document processing & data extraction",
-        "Email and task automation",
-        "Business process optimisation",
-        "RPA (Robotic Process Automation)",
+        "Tableau, PowerBI & Looker implementation",
+        "Custom dashboard design and UX",
+        "KPI and metric definition",
+        "Self-service analytics setup",
       ],
     },
     {
-      icon: <MessageSquare className="h-10 w-10 text-primary" />,
-      title: "Conversational AI Chatbots",
+      icon: <BrainCircuit className="h-10 w-10 text-primary" />,
+      title: "Predictive Analytics & Modeling",
       description:
-        "Engage customers 24/7 with advanced conversational AI. Our agents understand context, handle complex queries, and seamlessly hand off to human reps when necessary.",
+        "Leverage statistical models and machine learning to forecast trends, understand customer behavior, and optimize pricing strategies.",
       features: [
-        "Natural language understanding",
-        "Multi-channel deployment (Web, WhatsApp, etc.)",
-        "CRM & helpdesk integration",
-        "Lead qualification & booking",
-        "Continuous learning & feedback loops",
+        "Customer churn prediction",
+        "Demand forecasting & inventory optimization",
+        "Pricing elasticity models",
+        "Propensity and segmentation analysis",
       ],
     },
     {
-      icon: <Globe className="h-10 w-10 text-primary" />,
-      title: "AI-Powered Platforms",
+      icon: <Layers className="h-10 w-10 text-primary" />,
+      title: "Data Strategy & Governance",
       description:
-        "Next-generation portals and websites that work smarter. Our platforms adapt to users, personalise content, and generate actionable insights automatically.",
+        "Establish a secure, compliant data foundation. We define data governance policies so your teams trust the data they rely on.",
       features: [
-        "Intelligent content personalisation",
-        "AI-powered search & recommendations",
-        "Automated SEO optimization",
-        "Smart lead capture",
-        "Performance self-optimisation",
+        "Data maturity assessments",
+        "Data governance framework implementation",
+        "Master Data Management (MDM)",
+        "Compliance and security reviews",
       ],
     },
   ];
 
   const benefits = [
     {
-      icon: <Clock className="h-8 w-8 text-primary" />,
-      title: "Save Time",
-      description: "Automate repetitive tasks and free up hours every week.",
+      icon: <Search className="h-8 w-8 text-primary" />,
+      title: "Deep Insights",
+      description: "Uncover hidden patterns in your data that drive strategic decisions.",
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-primary" />,
-      title: "Scale Effortlessly",
-      description: "Handle more workload without adding proportional headcount.",
+      title: "Revenue Growth",
+      description: "Identify new market opportunities and optimize pricing models.",
     },
     {
-      icon: <Shield className="h-8 w-8 text-primary" />,
-      title: "Reduce Errors",
-      description: "Eliminate human error with consistent, deterministic automation.",
+      icon: <CheckCircle2 className="h-8 w-8 text-primary" />,
+      title: "Improved Accuracy",
+      description: "Eliminate manual data entry and blind guesswork.",
     },
     {
-      icon: <Sparkles className="h-8 w-8 text-primary" />,
-      title: "Stay Competitive",
-      description: "Leverage cutting-edge engineering to outpace your industry.",
+      icon: <PieChart className="h-8 w-8 text-primary" />,
+      title: "Holistic View",
+      description: "Maintain a single source of truth across all departments.",
     },
   ];
 
@@ -99,17 +93,17 @@ const AIAutomation = () => {
     <div className="min-h-screen bg-background selection:bg-primary/30">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-hero border-b border-white/5">
-        <div className="absolute inset-0 data-rain-bg opacity-30"></div>
+        <div className="absolute inset-0 data-rain-bg opacity-40"></div>
         <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
-        <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-80 h-80 bg-accent/20 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
+        <div className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] bg-accent/20 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '2s' }}></div>
 
-        {/* AI Tech Particles */}
+        {/* Floating Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_, i) => (
             <div 
               key={i}
-              className="absolute w-1 h-1 bg-primary/60 flex items-center justify-center animate-particle-drift rounded-full"
+              className="absolute w-1.5 h-1.5 bg-primary/50 flex items-center justify-center animate-particle-drift rounded-full shadow-blue-glow"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -123,16 +117,16 @@ const AIAutomation = () => {
         <div className="container relative mx-auto px-4 py-32 z-10 pt-40">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass border border-primary/30 mb-8 animate-fade-in shadow-blue-glow">
-              <Bot className="h-5 w-5 text-primary animate-pulse" />
+              <BarChart3 className="h-5 w-5 text-primary animate-pulse" />
               <span className="text-sm font-bold text-white tracking-widest uppercase">
-                AI Automation & Engineering
+                Data & Analytics
               </span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] text-white animate-slide-up tracking-tight">
-              ENGINEER YOUR <br className="hidden md:block"/>
+              HARNESS YOUR <br className="hidden md:block"/>
               <span className="text-transparent bg-clip-text bg-gradient-primary filter drop-shadow-[0_0_15px_rgba(43,158,255,0.4)]">
-                FUTURE
+                DATA POTENTIAL
               </span>
             </h1>
 
@@ -140,7 +134,7 @@ const AIAutomation = () => {
               className="text-xl md:text-2xl mb-12 text-white/80 animate-slide-up font-medium"
               style={{ animationDelay: "0.1s" }}
             >
-              From intelligent data pipelines to custom automated workflows, we engineer AI systems that drive massive business impact.
+              Transform raw complex data into an actionable strategic asset with predictive modeling and powerful BI.
             </p>
 
             <div
@@ -152,7 +146,7 @@ const AIAutomation = () => {
                   size="lg"
                   className="w-full glow-button bg-primary text-white hover:bg-primary font-bold text-lg px-10 py-7 shadow-blue-glow rounded-full"
                 >
-                  Start Building
+                  Unlock Your Data
                   <ArrowRight className="ml-2 h-6 w-6" />
                 </Button>
               </Link>
@@ -167,11 +161,11 @@ const AIAutomation = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-20 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white tracking-tight">
-              Engineering Capabilities
+              Analytics Services
             </h2>
             <div className="h-1 w-24 bg-gradient-primary mx-auto rounded-full mb-6"></div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Advanced technical solutions tailored for ambitious enterprises.
+              End-to-end data engineering and reporting for modern enterprises.
             </p>
           </div>
 
@@ -221,7 +215,7 @@ const AIAutomation = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
-              The Engineering ROI
+              Data Driven Impact
             </h2>
             <div className="h-1 w-24 bg-gradient-primary mx-auto rounded-full mb-6"></div>
           </div>
@@ -256,17 +250,17 @@ const AIAutomation = () => {
         <div className="container relative mx-auto px-4 text-center z-10">
            <div className="max-w-4xl mx-auto glass-card p-12 md:p-20 rounded-[3rem] border-primary/20 shadow-blue-glow">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
-              Ready to Upgrade Your Tech Stack?
+              Stop Guessing, Start Knowing
             </h2>
             <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Let's engineer a solution that positions your business for the next decade.
+              Our data engineers can turn your messy data into a powerful engine for predictable growth.
             </p>
             <Link to="/book-consultation" className="inline-block w-full sm:w-auto">
               <Button
                 size="lg"
                 className="w-full glow-button bg-primary text-white hover:bg-primary font-bold text-xl px-12 py-8 rounded-full shadow-blue-glow"
               >
-                Schedule an Architecture Review
+                Schedule an Assessment
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
             </Link>
@@ -277,4 +271,4 @@ const AIAutomation = () => {
   );
 };
 
-export default AIAutomation;
+export default DataAnalysis;

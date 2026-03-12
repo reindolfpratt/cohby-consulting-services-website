@@ -3,95 +3,88 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowRight,
-  Bot,
-  Globe,
-  MessageSquare,
-  Share2,
-  Zap,
-  Clock,
-  TrendingUp,
+  Cloud,
+  Server,
   Shield,
+  Zap,
   CheckCircle2,
-  Sparkles,
-  Cpu
+  Database,
+  Lock,
+  RefreshCw
 } from "lucide-react";
 
-const AIAutomation = () => {
+const CloudSolutions = () => {
   const services = [
     {
-      icon: <Cpu className="h-10 w-10 text-primary" />,
-      title: "AI Engineering & Integrations",
+      icon: <Server className="h-10 w-10 text-primary" />,
+      title: "Cloud Infrastructure Setup",
       description:
-        "Custom machine learning pipelines and deep integrations with your existing platforms. We build intelligent systems that scale and adapt to your complex data architecture.",
+        "Design and deploy scalable, high-performance cloud architectures tailored to your enterprise requirements.",
       features: [
-        "Machine learning model deployment",
-        "Custom LLM integrations",
-        "API & webhook development",
-        "Data pipeline engineering",
-        "Predictive analytics engines",
+        "AWS, Azure, and Google Cloud Platform (GCP)",
+        "Serverless architecture design",
+        "High availability and disaster recovery",
+        "Cost optimization and auditing",
       ],
     },
     {
-      icon: <Zap className="h-10 w-10 text-primary" />,
-      title: "Intelligent Automations",
+      icon: <RefreshCw className="h-10 w-10 text-primary" />,
+      title: "Seamless Cloud Migration",
       description:
-        "Streamline your operations with intelligent workflow automation. We build custom solutions that save time, reduce errors, and let your team focus on high-impact work.",
+        "Migrate your legacy systems to the cloud with zero downtime and complete data integrity.",
       features: [
-        "Workflow process automation",
-        "Document processing & data extraction",
-        "Email and task automation",
-        "Business process optimisation",
-        "RPA (Robotic Process Automation)",
+        "Infrastructure and application migration",
+        "Database migration services",
+        "Minimal downtime strategies",
+        "Post-migration support and tuning",
       ],
     },
     {
-      icon: <MessageSquare className="h-10 w-10 text-primary" />,
-      title: "Conversational AI Chatbots",
+      icon: <Lock className="h-10 w-10 text-primary" />,
+      title: "Cloud Security & Compliance",
       description:
-        "Engage customers 24/7 with advanced conversational AI. Our agents understand context, handle complex queries, and seamlessly hand off to human reps when necessary.",
+        "Enterprise-grade security implementations ensuring your data remains protected and compliant with industry standards.",
       features: [
-        "Natural language understanding",
-        "Multi-channel deployment (Web, WhatsApp, etc.)",
-        "CRM & helpdesk integration",
-        "Lead qualification & booking",
-        "Continuous learning & feedback loops",
+        "Identity and Access Management (IAM)",
+        "Data encryption in transit and at rest",
+        "Vulnerability assessments",
+        "Regulatory compliance (GDPR, HIPAA, SOC2)",
       ],
     },
     {
-      icon: <Globe className="h-10 w-10 text-primary" />,
-      title: "AI-Powered Platforms",
+      icon: <Database className="h-10 w-10 text-primary" />,
+      title: "Managed Cloud Services",
       description:
-        "Next-generation portals and websites that work smarter. Our platforms adapt to users, personalise content, and generate actionable insights automatically.",
+        "24/7 monitoring, maintenance, and optimization of your cloud environments, so your team can focus on building.",
       features: [
-        "Intelligent content personalisation",
-        "AI-powered search & recommendations",
-        "Automated SEO optimization",
-        "Smart lead capture",
-        "Performance self-optimisation",
+        "Proactive monitoring and alerting",
+        "Performance optimization",
+        "Automated backups and patching",
+        "Dedicated cloud support engineers",
       ],
     },
   ];
 
   const benefits = [
     {
-      icon: <Clock className="h-8 w-8 text-primary" />,
-      title: "Save Time",
-      description: "Automate repetitive tasks and free up hours every week.",
-    },
-    {
-      icon: <TrendingUp className="h-8 w-8 text-primary" />,
-      title: "Scale Effortlessly",
-      description: "Handle more workload without adding proportional headcount.",
+      icon: <Zap className="h-8 w-8 text-primary" />,
+      title: "Infinite Scalability",
+      description: "Automatically scale resources up or down based on your business demands.",
     },
     {
       icon: <Shield className="h-8 w-8 text-primary" />,
-      title: "Reduce Errors",
-      description: "Eliminate human error with consistent, deterministic automation.",
+      title: "Enhanced Security",
+      description: "Leverage state-of-the-art security protocols and compliance frameworks.",
     },
     {
-      icon: <Sparkles className="h-8 w-8 text-primary" />,
-      title: "Stay Competitive",
-      description: "Leverage cutting-edge engineering to outpace your industry.",
+      icon: <Cloud className="h-8 w-8 text-primary" />,
+      title: "Cost Efficiency",
+      description: "Pay only for what you use and optimize overhead with intelligent resource management.",
+    },
+    {
+      icon: <Server className="h-8 w-8 text-primary" />,
+      title: "High Availability",
+      description: "Ensure your applications are always online with robust disaster recovery plans.",
     },
   ];
 
@@ -101,15 +94,15 @@ const AIAutomation = () => {
       <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-hero border-b border-white/5">
         <div className="absolute inset-0 data-rain-bg opacity-30"></div>
         <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
-        <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-80 h-80 bg-accent/20 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
+        <div className="absolute bottom-[20%] left-[10%] w-[400px] h-[400px] bg-accent/20 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '2s' }}></div>
 
-        {/* AI Tech Particles */}
+        {/* Floating Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_, i) => (
             <div 
               key={i}
-              className="absolute w-1 h-1 bg-primary/60 flex items-center justify-center animate-particle-drift rounded-full"
+              className="absolute w-1.5 h-1.5 bg-primary/50 flex items-center justify-center animate-particle-drift rounded-full shadow-blue-glow"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -123,16 +116,16 @@ const AIAutomation = () => {
         <div className="container relative mx-auto px-4 py-32 z-10 pt-40">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass border border-primary/30 mb-8 animate-fade-in shadow-blue-glow">
-              <Bot className="h-5 w-5 text-primary animate-pulse" />
+              <Cloud className="h-5 w-5 text-primary animate-pulse" />
               <span className="text-sm font-bold text-white tracking-widest uppercase">
-                AI Automation & Engineering
+                Enterprise Cloud Architecture
               </span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] text-white animate-slide-up tracking-tight">
-              ENGINEER YOUR <br className="hidden md:block"/>
+              ELEVATE YOUR <br className="hidden md:block"/>
               <span className="text-transparent bg-clip-text bg-gradient-primary filter drop-shadow-[0_0_15px_rgba(43,158,255,0.4)]">
-                FUTURE
+                INFRASTRUCTURE
               </span>
             </h1>
 
@@ -140,7 +133,7 @@ const AIAutomation = () => {
               className="text-xl md:text-2xl mb-12 text-white/80 animate-slide-up font-medium"
               style={{ animationDelay: "0.1s" }}
             >
-              From intelligent data pipelines to custom automated workflows, we engineer AI systems that drive massive business impact.
+              Secure, scalable, and high-performance cloud solutions that drive digital transformation and enterprise agility.
             </p>
 
             <div
@@ -152,7 +145,7 @@ const AIAutomation = () => {
                   size="lg"
                   className="w-full glow-button bg-primary text-white hover:bg-primary font-bold text-lg px-10 py-7 shadow-blue-glow rounded-full"
                 >
-                  Start Building
+                  Architect Your Cloud
                   <ArrowRight className="ml-2 h-6 w-6" />
                 </Button>
               </Link>
@@ -167,11 +160,11 @@ const AIAutomation = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-20 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white tracking-tight">
-              Engineering Capabilities
+              Cloud Solutions
             </h2>
             <div className="h-1 w-24 bg-gradient-primary mx-auto rounded-full mb-6"></div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Advanced technical solutions tailored for ambitious enterprises.
+              Comprehensive migration, security, and management tailored to your specific operational needs.
             </p>
           </div>
 
@@ -221,7 +214,7 @@ const AIAutomation = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
-              The Engineering ROI
+              The Cloud Advantage
             </h2>
             <div className="h-1 w-24 bg-gradient-primary mx-auto rounded-full mb-6"></div>
           </div>
@@ -256,17 +249,17 @@ const AIAutomation = () => {
         <div className="container relative mx-auto px-4 text-center z-10">
            <div className="max-w-4xl mx-auto glass-card p-12 md:p-20 rounded-[3rem] border-primary/20 shadow-blue-glow">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
-              Ready to Upgrade Your Tech Stack?
+              Ready to Optimize Your Cloud?
             </h2>
             <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Let's engineer a solution that positions your business for the next decade.
+              Our cloud engineers can architect a solution that guarantees uptime and boosts performance.
             </p>
             <Link to="/book-consultation" className="inline-block w-full sm:w-auto">
               <Button
                 size="lg"
                 className="w-full glow-button bg-primary text-white hover:bg-primary font-bold text-xl px-12 py-8 rounded-full shadow-blue-glow"
               >
-                Schedule an Architecture Review
+                Schedule an Assessment
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
             </Link>
@@ -277,4 +270,4 @@ const AIAutomation = () => {
   );
 };
 
-export default AIAutomation;
+export default CloudSolutions;
