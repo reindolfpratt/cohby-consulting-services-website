@@ -1,22 +1,11 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  ArrowRight,
-  Cloud,
-  Server,
-  Shield,
-  Zap,
-  CheckCircle2,
-  Database,
-  Lock,
-  RefreshCw
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const CloudSolutions = () => {
   const services = [
     {
-      icon: <Server className="h-10 w-10 text-primary" />,
       title: "Cloud Infrastructure Setup",
       description:
         "Design and deploy scalable, high-performance cloud architectures tailored to your enterprise requirements.",
@@ -28,7 +17,6 @@ const CloudSolutions = () => {
       ],
     },
     {
-      icon: <RefreshCw className="h-10 w-10 text-primary" />,
       title: "Seamless Cloud Migration",
       description:
         "Migrate your legacy systems to the cloud with zero downtime and complete data integrity.",
@@ -40,7 +28,6 @@ const CloudSolutions = () => {
       ],
     },
     {
-      icon: <Lock className="h-10 w-10 text-primary" />,
       title: "Cloud Security & Compliance",
       description:
         "Enterprise-grade security implementations ensuring your data remains protected and compliant with industry standards.",
@@ -52,7 +39,6 @@ const CloudSolutions = () => {
       ],
     },
     {
-      icon: <Database className="h-10 w-10 text-primary" />,
       title: "Managed Cloud Services",
       description:
         "24/7 monitoring, maintenance, and optimization of your cloud environments, so your team can focus on building.",
@@ -67,31 +53,30 @@ const CloudSolutions = () => {
 
   const benefits = [
     {
-      icon: <Zap className="h-8 w-8 text-primary" />,
       title: "Infinite Scalability",
       description: "Automatically scale resources up or down based on your business demands.",
     },
     {
-      icon: <Shield className="h-8 w-8 text-primary" />,
       title: "Enhanced Security",
       description: "Leverage state-of-the-art security protocols and compliance frameworks.",
     },
     {
-      icon: <Cloud className="h-8 w-8 text-primary" />,
       title: "Cost Efficiency",
       description: "Pay only for what you use and optimize overhead with intelligent resource management.",
     },
     {
-      icon: <Server className="h-8 w-8 text-primary" />,
       title: "High Availability",
       description: "Ensure your applications are always online with robust disaster recovery plans.",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-background selection:bg-primary/30">
+    <div className="min-h-screen bg-background selection:bg-primary/30 relative">
+      {/* Dynamic Background Blend */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
+      
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-hero border-b border-white/5">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-hero border-b border-white/5 z-10">
         <div className="absolute inset-0 data-rain-bg opacity-30"></div>
         <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
         <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
@@ -116,7 +101,7 @@ const CloudSolutions = () => {
         <div className="container relative mx-auto px-4 py-32 z-10 pt-40">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass border border-primary/30 mb-8 animate-fade-in shadow-blue-glow">
-              <Cloud className="h-5 w-5 text-primary animate-pulse" />
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
               <span className="text-sm font-bold text-white tracking-widest uppercase">
                 Enterprise Cloud Architecture
               </span>
@@ -179,11 +164,7 @@ const CloudSolutions = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
                   <div className="relative z-10 flex-grow flex flex-col">
-                    <div
-                      className="mb-8 p-5 glass border border-primary/20 rounded-2xl w-fit group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300 shadow-blue-glow"
-                    >
-                      {service.icon}
-                    </div>
+                    <div className="h-1 w-12 bg-primary rounded-full mb-8 group-hover:w-full transition-all duration-500 shadow-blue-glow"></div>
                     <h3 className="text-3xl font-bold mb-4 text-white group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
@@ -191,11 +172,9 @@ const CloudSolutions = () => {
                       {service.description}
                     </p>
                     <ul className="space-y-4">
-                      {service.features.map((feature, idx) => (
+                       {service.features.map((feature, idx) => (
                          <li key={idx} className="flex items-start gap-4">
-                           <div className="mt-1 flex items-center justify-center p-1 rounded-full bg-primary/20 shadow-[0_0_8px_rgba(43,158,255,0.4)]">
-                             <CheckCircle2 className="h-4 w-4 text-primary" />
-                           </div>
+                           <div className="mt-2 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0 shadow-[0_0_8px_rgba(43,158,255,0.8)]"></div>
                            <span className="text-white/80">{feature}</span>
                          </li>
                       ))}
@@ -226,11 +205,10 @@ const CloudSolutions = () => {
                 className="group text-center p-10 rounded-3xl glass-card card-hover-glow transition-all duration-500 animate-slide-up h-full flex flex-col items-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="mb-8 relative">
-                   <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl group-hover:bg-primary/40 group-hover:scale-150 transition-all duration-500"></div>
-                   <div className="relative p-6 glass rounded-full border border-primary/30 group-hover:border-primary shadow-blue-glow transition-all duration-500 group-hover:scale-110">
-                     {benefit.icon}
-                   </div>
+                <div className="mb-6">
+                  <div className="text-4xl font-black text-primary/20 group-hover:text-primary transition-colors duration-500">
+                    0{index + 1}
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">{benefit.title}</h3>
                 <p className="text-muted-foreground text-lg">{benefit.description}</p>

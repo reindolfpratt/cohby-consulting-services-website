@@ -1,11 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Target, Award, Heart } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background selection:bg-primary/30">
+    <div className="min-h-screen bg-background selection:bg-primary/30 relative">
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
+      
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-hero border-b border-white/5">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-hero border-b border-white/5 z-10">
          <div className="absolute inset-0 data-rain-bg opacity-30"></div>
          <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
          <div className="absolute top-[20%] right-[15%] w-96 h-96 bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
@@ -54,11 +55,10 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             <Card className="group glass-card card-hover-glow transition-all duration-500 text-center border-white/5">
               <CardContent className="p-10 flex flex-col items-center">
-                 <div className="mb-8 relative">
-                   <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl group-hover:bg-primary/40 group-hover:scale-150 transition-all duration-500"></div>
-                   <div className="relative p-6 glass rounded-full border border-primary/30 group-hover:border-primary shadow-blue-glow transition-all duration-500 group-hover:scale-110">
-                     <Target className="h-8 w-8 text-primary" />
-                   </div>
+                 <div className="mb-6">
+                  <div className="text-4xl font-black text-primary/20 group-hover:text-primary transition-colors duration-500">
+                    01
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Impact-Obsessed</h3>
                 <p className="text-muted-foreground text-lg">
@@ -69,11 +69,10 @@ const About = () => {
 
             <Card className="group glass-card card-hover-glow transition-all duration-500 text-center border-white/5">
                <CardContent className="p-10 flex flex-col items-center">
-                 <div className="mb-8 relative">
-                   <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl group-hover:bg-primary/40 group-hover:scale-150 transition-all duration-500"></div>
-                   <div className="relative p-6 glass rounded-full border border-primary/30 group-hover:border-primary shadow-blue-glow transition-all duration-500 group-hover:scale-110">
-                     <Users className="h-8 w-8 text-primary" />
-                   </div>
+                 <div className="mb-6">
+                  <div className="text-4xl font-black text-primary/20 group-hover:text-primary transition-colors duration-500">
+                    02
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Collaborative</h3>
                 <p className="text-muted-foreground text-lg">
@@ -84,11 +83,10 @@ const About = () => {
 
             <Card className="group glass-card card-hover-glow transition-all duration-500 text-center border-white/5">
               <CardContent className="p-10 flex flex-col items-center">
-                 <div className="mb-8 relative">
-                   <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl group-hover:bg-primary/40 group-hover:scale-150 transition-all duration-500"></div>
-                   <div className="relative p-6 glass rounded-full border border-primary/30 group-hover:border-primary shadow-blue-glow transition-all duration-500 group-hover:scale-110">
-                     <Award className="h-8 w-8 text-primary" />
-                   </div>
+                 <div className="mb-6">
+                  <div className="text-4xl font-black text-primary/20 group-hover:text-primary transition-colors duration-500">
+                    03
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Elite Expertise</h3>
                 <p className="text-muted-foreground text-lg">
@@ -99,11 +97,10 @@ const About = () => {
 
             <Card className="group glass-card card-hover-glow transition-all duration-500 text-center border-white/5">
               <CardContent className="p-10 flex flex-col items-center">
-                 <div className="mb-8 relative">
-                   <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl group-hover:bg-primary/40 group-hover:scale-150 transition-all duration-500"></div>
-                   <div className="relative p-6 glass rounded-full border border-primary/30 group-hover:border-primary shadow-blue-glow transition-all duration-500 group-hover:scale-110">
-                     <Heart className="h-8 w-8 text-primary" />
-                   </div>
+                 <div className="mb-6">
+                  <div className="text-4xl font-black text-primary/20 group-hover:text-primary transition-colors duration-500">
+                    04
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Zero BS</h3>
                 <p className="text-muted-foreground text-lg">

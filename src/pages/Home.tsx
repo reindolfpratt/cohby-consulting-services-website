@@ -2,56 +2,37 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  ArrowRight,
-  Database,
-  Users,
-  BarChart3,
-  HeadphonesIcon,
-  CheckCircle2,
-  Sparkles,
-  Bot,
-  Globe,
-  MessageSquare,
-  Share2,
-  Cloud,
-  Cpu,
-  LineChart
+  ArrowRight
 } from "lucide-react";
 
 const Home = () => {
   const services = [
     {
-      icon: <Sparkles className="h-8 w-8" />,
       title: "Salesforce Consulting",
       description:
         "Tailored Salesforce solutions, implementation, and customisation that fit your unique business needs.",
     },
     {
-      icon: <Cloud className="h-8 w-8" />,
       title: "Cloud Solutions",
       description:
         "Comprehensive cloud architecture, migration, and infrastructure management for modern enterprises.",
     },
     {
-      icon: <Cpu className="h-8 w-8" />,
       title: "AI Automation & Engineering",
       description:
         "Intelligent AI pipelines, machine learning models, and automated workflows that save time and reduce errors.",
     },
     {
-      icon: <LineChart className="h-8 w-8" />,
       title: "Data Analysis",
       description:
         "Deep insights through advanced BI, predictive analytics, and transformative data engineering.",
     },
     {
-      icon: <Database className="h-8 w-8" />,
       title: "Data Migration & Integration",
       description:
         "Seamless transfer and connection of your critical data across platforms and cloud environments.",
     },
     {
-      icon: <HeadphonesIcon className="h-8 w-8" />,
       title: "Ongoing Support & Training",
       description:
         "Continuous guidance to ensure your tech stack and team evolve with your business.",
@@ -101,8 +82,11 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-hidden selection:bg-primary/30">
+      {/* Dynamic Background Blend */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero z-10">
         
         {/* Data Rain Background */}
         <div className="absolute inset-0 data-rain-bg opacity-30"></div>
@@ -133,14 +117,11 @@ const Home = () => {
         <div className="container relative mx-auto px-4 py-32 z-10 pt-40">
           <div className="max-w-5xl mx-auto text-center">
             
-            <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in sm:gap-8">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 glass-card rounded-2xl flex items-center justify-center border-primary/30 shadow-blue-glow mb-4 sm:mb-0">
-                <Cloud className="w-8 h-8 sm:w-10 sm:h-10 text-primary animate-pulse" />
-              </div>
-              <div className="h-px w-12 sm:w-24 bg-gradient-to-r from-primary to-transparent hidden sm:block"></div>
-              <div className="w-16 h-16 sm:w-20 sm:h-20 glass-card rounded-2xl flex items-center justify-center border-accent/30 shadow-blue-glow">
-                <Database className="w-8 h-8 sm:w-10 sm:h-10 text-accent animate-pulse" style={{ animationDelay: '1s' }} />
-              </div>
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass border border-primary/30 mb-8 animate-fade-in shadow-blue-glow">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+              <span className="text-sm font-bold text-white tracking-widest uppercase">
+                Elite Engineering & Consulting
+              </span>
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-[1.1] tracking-tight text-white animate-slide-up">
@@ -212,9 +193,7 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
                   <div className="relative z-10 flex-grow">
-                    <div className="mb-8 p-5 glass rounded-2xl w-fit text-primary border-primary/20 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300 shadow-lg">
-                      {service.icon}
-                    </div>
+                    <div className="h-1 w-12 bg-primary rounded-full mb-8 group-hover:w-24 transition-all duration-500 shadow-blue-glow"></div>
                     <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
@@ -249,12 +228,9 @@ const Home = () => {
                 className="group text-center animate-slide-up p-10 rounded-3xl glass-card card-hover-glow transition-all duration-500"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="mb-8 flex justify-center">
-                  <div className="relative">
-                    <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl group-hover:bg-primary/40 group-hover:scale-150 transition-all duration-500"></div>
-                    <div className="relative p-6 glass rounded-full border border-primary/30 group-hover:border-primary shadow-blue-glow transition-all duration-500 group-hover:scale-110">
-                      <CheckCircle2 className="h-10 w-10 text-primary" />
-                    </div>
+                <div className="mb-6 flex justify-center">
+                  <div className="text-4xl font-black text-primary/20 group-hover:text-primary transition-colors duration-500">
+                    0{index + 1}
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">{item.title}</h3>

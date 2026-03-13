@@ -2,26 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  Settings,
-  Database,
-  BarChart3,
-  GraduationCap,
-  Cloud,
-  Workflow,
-  FileSpreadsheet,
-  Users,
-  Bot,
-  Globe,
-  MessageSquare,
-  Share2,
-  Cpu,
-  LineChart
+  CheckCircle2
 } from "lucide-react";
 
 const Solutions = () => {
   const solutions = [
     {
-      icon: <Settings className="h-10 w-10 text-primary" />,
       title: "Salesforce Implementation",
       description: "Full end-to-end Salesforce implementation tailored to your business processes. We configure, customise, and optimise your Salesforce environment for maximum efficiency.",
       features: [
@@ -32,7 +18,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <Cloud className="h-10 w-10 text-primary" />,
       title: "Cloud Solutions",
       description: "Scale your business with secure, high-performance cloud infrastructure tailored for modern enterprises.",
       features: [
@@ -43,7 +28,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <Cpu className="h-10 w-10 text-primary" />,
       title: "AI Automation & Engineering",
       description: "Streamline your operations with intelligent workflow automation. Save time, reduce errors, and let your team focus on what matters.",
       features: [
@@ -54,7 +38,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <LineChart className="h-10 w-10 text-primary" />,
       title: "Data Analysis",
       description: "Transform your data into actionable insights with powerful data engineering and predictive analytics.",
       features: [
@@ -65,7 +48,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <Database className="h-10 w-10 text-primary" />,
       title: "Data Migration & Integration",
       description: "Seamlessly migrate your data and integrate with your existing systems for a unified view of your business.",
       features: [
@@ -76,7 +58,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <Workflow className="h-10 w-10 text-primary" />,
       title: "Salesforce Customisation",
       description: "Make Salesforce truly yours with custom solutions built for your unique workflows and business requirements.",
       features: [
@@ -87,7 +68,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <GraduationCap className="h-10 w-10 text-primary" />,
       title: "Training & Support",
       description: "Empower your team with comprehensive training and ongoing support to maximise your tech investment.",
       features: [
@@ -98,7 +78,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <Users className="h-10 w-10 text-primary" />,
       title: "Non-Profit Solutions",
       description: "Specialised tech solutions for non-profit organisations, including free licensing guidance and implementation.",
       features: [
@@ -109,7 +88,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <FileSpreadsheet className="h-10 w-10 text-primary" />,
       title: "Health Check & Optimisation",
       description: "Already using complex tech stacks? We'll review your setup and identify opportunities for improvement and optimisation.",
       features: [
@@ -120,7 +98,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <Globe className="h-10 w-10 text-primary" />,
       title: "AI-Powered Websites",
       description: "Next-generation websites that work smarter, not harder. Adapt to visitors, personalise content, and convert more leads.",
       features: [
@@ -131,7 +108,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <MessageSquare className="h-10 w-10 text-primary" />,
       title: "AI Chatbots",
       description: "Engage customers 24/7 with intelligent conversational AI that understands context and handles complex queries.",
       features: [
@@ -142,7 +118,6 @@ const Solutions = () => {
       ],
     },
     {
-      icon: <Share2 className="h-10 w-10 text-primary" />,
       title: "Social Media Automations",
       description: "Maintain a powerful social presence without the manual grind. Automate posting, engagement, and analytics.",
       features: [
@@ -155,9 +130,12 @@ const Solutions = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background selection:bg-primary/30">
+    <div className="min-h-screen bg-background selection:bg-primary/30 relative">
+      {/* Dynamic Background Blend */}
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
+      
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-hero border-b border-white/5">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-hero border-b border-white/5 z-10">
         <div className="absolute inset-0 data-rain-bg opacity-30"></div>
         <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
         <div className="absolute top-[20%] right-[15%] w-96 h-96 bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
@@ -185,9 +163,7 @@ const Solutions = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 <CardHeader className="relative z-10">
-                  <div className="mb-4 p-4 glass rounded-2xl w-fit border border-primary/20 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300 shadow-blue-glow">
-                    {solution.icon}
-                  </div>
+                  <div className="h-1 w-12 bg-primary rounded-full mb-6 group-hover:w-full transition-all duration-500 shadow-blue-glow"></div>
                   <CardTitle className="text-2xl text-white group-hover:text-primary transition-colors">{solution.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="relative z-10 flex-grow flex flex-col">
@@ -195,7 +171,7 @@ const Solutions = () => {
                   <ul className="space-y-3">
                     {solution.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <div className="h-1.5 w-1.5 bg-primary rounded-full mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(43,158,255,0.8)]" />
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
                         <span className="text-sm text-white/70">{feature}</span>
                       </li>
                     ))}
