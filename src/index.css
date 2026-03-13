@@ -8,57 +8,58 @@
 
 @layer base {
   :root {
-    --background: 214 40% 18%;
-    --foreground: 210 20% 95%;
+    /* Light Theme (Logo Match) */
+    --background: 0 0% 100%; /* Pure White */
+    --foreground: 224 38% 16%; /* Dark Navy */
 
-    --card: 214 40% 22%;
-    --card-foreground: 210 20% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 38% 16%;
 
-    --popover: 214 40% 22%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 38% 16%;
 
-    --primary: 201 80% 45%;
+    --primary: 200 78% 48%; /* Cloud Cyan */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 209 66% 33%;
+    --secondary: 209 65% 33%; /* Medium Blue */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 214 30% 26%;
-    --muted-foreground: 215 10% 75%;
+    --muted: 213 27% 95%; /* Very Light Grey */
+    --muted-foreground: 215 10% 65%; /* Silver Grey */
 
-    --accent: 201 80% 45%;
+    --accent: 200 78% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 15% 30%;
-    --input: 215 15% 30%;
-    --ring: 201 80% 45%;
+    --border: 215 10% 85%; /* Light Grey Border */
+    --input: 215 10% 85%;
+    --ring: 200 78% 48%;
 
     --radius: 0.75rem;
 
     /* Custom gradients */
     --gradient-primary: linear-gradient(
       135deg,
-      hsl(201, 80%, 45%),
-      hsl(209, 66%, 33%)
+      hsl(200, 78%, 48%),
+      hsl(209, 65%, 33%)
     );
     --gradient-hero: linear-gradient(
       135deg,
-      hsl(214, 40%, 18%),
-      hsl(214, 40%, 15%),
-      hsl(214, 40%, 12%)
+      hsl(0, 0%, 100%),
+      hsl(213, 27%, 95%),
+      hsl(213, 27%, 90%)
     );
     --gradient-accent: linear-gradient(
       90deg,
-      hsl(201, 80%, 45%),
-      hsl(209, 66%, 33%)
+      hsl(200, 78%, 48%),
+      hsl(209, 65%, 33%)
     );
     --gradient-card: linear-gradient(
       145deg,
-      hsl(214, 40%, 26%),
-      hsl(214, 40%, 20%)
+      hsl(0, 0%, 100%),
+      hsl(213, 27%, 98%)
     );
 
     /* Shadows */
@@ -275,37 +276,6 @@
 
   .animate-cloud-glow {
     animation: cloud-glow 3s ease-in-out infinite;
-  }
-
-  /* ──── Glass Effects (Dark) ──── */
-  .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  }
-
-  .glass-card:hover {
-    border-color: hsl(207, 90%, 54%, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
-      0 0 20px hsl(207 90% 54% / 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  }
-
-  .glass-dark {
-    background: rgba(0, 10, 30, 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   /* ──── Glow Button ──── */
