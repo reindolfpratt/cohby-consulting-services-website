@@ -8,14 +8,14 @@
 
 @layer base {
   :root {
-    --background: 220 20% 8%;
-    --foreground: 210 20% 92%;
+    --background: 220 20% 12%;
+    --foreground: 210 20% 95%;
 
-    --card: 220 25% 12%;
-    --card-foreground: 210 20% 92%;
+    --card: 220 25% 16%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 220 25% 12%;
-    --popover-foreground: 210 20% 92%;
+    --popover: 220 25% 16%;
+    --popover-foreground: 210 20% 95%;
 
     --primary: 207 90% 54%;
     --primary-foreground: 0 0% 100%;
@@ -23,8 +23,8 @@
     --secondary: 210 80% 30%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 20% 16%;
-    --muted-foreground: 210 15% 55%;
+    --muted: 220 20% 20%;
+    --muted-foreground: 210 15% 65%;
 
     --accent: 199 90% 48%;
     --accent-foreground: 0 0% 100%;
@@ -32,8 +32,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 18%;
+    --border: 220 20% 24%;
+    --input: 220 20% 24%;
     --ring: 207 90% 54%;
 
     --radius: 0.75rem;
@@ -46,9 +46,9 @@
     );
     --gradient-hero: linear-gradient(
       135deg,
-      hsl(220, 40%, 8%),
-      hsl(220, 30%, 12%),
-      hsl(210, 60%, 16%)
+      hsl(220, 40%, 12%),
+      hsl(220, 30%, 18%),
+      hsl(210, 60%, 22%)
     );
     --gradient-accent: linear-gradient(
       90deg,
@@ -57,8 +57,8 @@
     );
     --gradient-card: linear-gradient(
       145deg,
-      hsl(220, 25%, 14%),
-      hsl(220, 25%, 11%)
+      hsl(220, 25%, 18%),
+      hsl(220, 25%, 15%)
     );
 
     /* Shadows */
@@ -98,10 +98,10 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: hsl(220, 20%, 8%);
+    background: hsl(220, 20%, 12%);
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(220, 20%, 22%);
+    background: hsl(220, 20%, 26%);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
