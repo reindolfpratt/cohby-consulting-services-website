@@ -8,13 +8,13 @@
 
 @layer base {
   :root {
-    --background: 220 20% 4%;
+    --background: 220 20% 8%;
     --foreground: 210 20% 92%;
 
-    --card: 220 25% 8%;
+    --card: 220 25% 12%;
     --card-foreground: 210 20% 92%;
 
-    --popover: 220 25% 8%;
+    --popover: 220 25% 12%;
     --popover-foreground: 210 20% 92%;
 
     --primary: 207 90% 54%;
@@ -23,7 +23,7 @@
     --secondary: 210 80% 30%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 20% 12%;
+    --muted: 220 20% 16%;
     --muted-foreground: 210 15% 55%;
 
     --accent: 199 90% 48%;
@@ -32,8 +32,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 14%;
-    --input: 220 20% 14%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
     --ring: 207 90% 54%;
 
     --radius: 0.75rem;
@@ -46,9 +46,9 @@
     );
     --gradient-hero: linear-gradient(
       135deg,
-      hsl(220, 40%, 4%),
-      hsl(220, 30%, 8%),
-      hsl(210, 60%, 12%)
+      hsl(220, 40%, 8%),
+      hsl(220, 30%, 12%),
+      hsl(210, 60%, 16%)
     );
     --gradient-accent: linear-gradient(
       90deg,
@@ -57,8 +57,8 @@
     );
     --gradient-card: linear-gradient(
       145deg,
-      hsl(220, 25%, 10%),
-      hsl(220, 25%, 7%)
+      hsl(220, 25%, 14%),
+      hsl(220, 25%, 11%)
     );
 
     /* Shadows */
@@ -98,10 +98,10 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: hsl(220, 20%, 4%);
+    background: hsl(220, 20%, 8%);
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(220, 20%, 18%);
+    background: hsl(220, 20%, 22%);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
