@@ -120,7 +120,7 @@ const Home = () => {
             <div className="h-8"></div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-[1.1] tracking-tight text-white animate-slide-up">
-              CLOUD-POWERED <br className="hidden md:block"/>
+              SALESFORCE, DATA & AI <br className="hidden md:block"/>
               <span className="text-transparent bg-clip-text bg-gradient-primary filter drop-shadow-[0_0_20px_rgba(27,156,217,0.4)]">
                 SOLUTIONS
               </span>
