@@ -8,57 +8,57 @@
 
 @layer base {
   :root {
-    --background: 220 20% 12%;
+    --background: 214 40% 18%;
     --foreground: 210 20% 95%;
 
-    --card: 220 25% 16%;
+    --card: 214 40% 22%;
     --card-foreground: 210 20% 95%;
 
-    --popover: 220 25% 16%;
+    --popover: 214 40% 22%;
     --popover-foreground: 210 20% 95%;
 
-    --primary: 207 90% 54%;
+    --primary: 201 80% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 80% 30%;
+    --secondary: 209 66% 33%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 20% 20%;
-    --muted-foreground: 210 15% 65%;
+    --muted: 214 30% 26%;
+    --muted-foreground: 215 10% 75%;
 
-    --accent: 199 90% 48%;
+    --accent: 201 80% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 24%;
-    --input: 220 20% 24%;
-    --ring: 207 90% 54%;
+    --border: 215 15% 30%;
+    --input: 215 15% 30%;
+    --ring: 201 80% 45%;
 
     --radius: 0.75rem;
 
     /* Custom gradients */
     --gradient-primary: linear-gradient(
       135deg,
-      hsl(207, 90%, 54%),
-      hsl(199, 90%, 48%)
+      hsl(201, 80%, 45%),
+      hsl(209, 66%, 33%)
     );
     --gradient-hero: linear-gradient(
       135deg,
-      hsl(220, 40%, 12%),
-      hsl(220, 30%, 18%),
-      hsl(210, 60%, 22%)
+      hsl(214, 40%, 18%),
+      hsl(214, 40%, 15%),
+      hsl(214, 40%, 12%)
     );
     --gradient-accent: linear-gradient(
       90deg,
-      hsl(207, 90%, 54%),
-      hsl(199, 90%, 48%)
+      hsl(201, 80%, 45%),
+      hsl(209, 66%, 33%)
     );
     --gradient-card: linear-gradient(
       145deg,
-      hsl(220, 25%, 18%),
-      hsl(220, 25%, 15%)
+      hsl(214, 40%, 26%),
+      hsl(214, 40%, 20%)
     );
 
     /* Shadows */
@@ -98,10 +98,10 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: hsl(220, 20%, 12%);
+    background: hsl(214, 40%, 18%);
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(220, 20%, 26%);
+    background: hsl(214, 15%, 35%);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {

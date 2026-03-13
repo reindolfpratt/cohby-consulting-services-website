@@ -117,12 +117,7 @@ const Home = () => {
         <div className="container relative mx-auto px-4 py-32 z-10 pt-40">
           <div className="max-w-5xl mx-auto text-center">
             
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass border border-primary/30 mb-8 animate-fade-in shadow-blue-glow">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-              <span className="text-sm font-bold text-white tracking-widest uppercase">
-                Elite Engineering & Consulting
-              </span>
-            </div>
+            <div className="h-8"></div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-[1.1] tracking-tight text-white animate-slide-up">
               CLOUD-POWERED <br className="hidden md:block"/>
