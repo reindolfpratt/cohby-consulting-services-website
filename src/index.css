@@ -24,6 +24,12 @@
     --secondary: 209 65% 33%; /* Medium Blue */
     --secondary-foreground: 0 0% 100%;
 
+    --navy: 224 38% 16%; /* Dark Navy */
+    --navy-foreground: 0 0% 100%;
+
+    --ash: 215 15% 96%; /* Light Ash / Silver Grey */
+    --ash-foreground: 224 38% 16%;
+
     --muted: 213 27% 95%; /* Very Light Grey */
     --muted-foreground: 215 10% 65%; /* Silver Grey */
 
@@ -323,6 +329,7 @@
     padding: 1px;
     background: linear-gradient(135deg, hsl(207 90% 54% / 0.5), hsl(199 90% 48% / 0.5), transparent);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;

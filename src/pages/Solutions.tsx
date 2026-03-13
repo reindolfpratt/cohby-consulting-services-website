@@ -135,11 +135,11 @@ const Solutions = () => {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
       
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-hero border-b border-white/5 z-10">
-        <div className="absolute inset-0 data-rain-bg opacity-30"></div>
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-navy z-10">
+        <div className="absolute inset-0 data-rain-bg opacity-10"></div>
         <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
-        <div className="absolute top-[20%] right-[15%] w-96 h-96 bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
-        <div className="absolute bottom-[10%] left-[10%] w-80 h-80 bg-accent/20 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-[20%] right-[15%] w-96 h-96 bg-primary/10 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
+        <div className="absolute bottom-[10%] left-[10%] w-80 h-80 bg-accent/10 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '1.5s' }}></div>
 
         <div className="container relative mx-auto px-4 z-10 text-center pt-20">
           <div className="max-w-3xl mx-auto animate-slide-up">
@@ -152,19 +152,19 @@ const Solutions = () => {
       </section>
 
       {/* Solutions Grid */}
-      <section className="py-24 relative z-10">
+      <section className="py-24 relative z-10 bg-ash/50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {solutions.map((solution, index) => (
               <Card
                 key={index}
-                className="group glass-card card-hover-glow transition-all duration-500 animate-slide-up overflow-hidden border-white/5 h-full flex flex-col"
+                className="group bg-card hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 animate-slide-up overflow-hidden border-border h-full flex flex-col"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 <CardHeader className="relative z-10">
-                  <div className="h-1 w-12 bg-primary rounded-full mb-6 group-hover:w-full transition-all duration-500 shadow-blue-glow"></div>
-                  <CardTitle className="text-2xl text-white group-hover:text-primary transition-colors">{solution.title}</CardTitle>
+                  <div className="h-1 w-12 bg-primary rounded-full mb-6 group-hover:w-full transition-all duration-500"></div>
+                  <CardTitle className="text-2xl text-foreground group-hover:text-primary transition-colors">{solution.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="relative z-10 flex-grow flex flex-col">
                   <p className="text-muted-foreground mb-6 flex-grow text-lg">{solution.description}</p>
@@ -172,7 +172,7 @@ const Solutions = () => {
                     {solution.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-sm text-white/70">{feature}</span>
+                        <span className="text-sm text-muted-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -184,13 +184,12 @@ const Solutions = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 overflow-hidden border-t border-white/5">
+      <section className="relative py-32 overflow-hidden border-t border-border bg-navy">
         <div className="absolute inset-0 bg-primary/5"></div>
-        <div className="absolute inset-0 data-rain-bg opacity-10 pointer-events-none"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[150px] mix-blend-screen pointer-events-none animate-pulse"></div>
+        <div className="absolute inset-0 data-rain-bg opacity-5 pointer-events-none"></div>
 
         <div className="container relative mx-auto px-4 text-center z-10">
-          <div className="max-w-4xl mx-auto glass-card p-12 md:p-20 rounded-[3rem] border-primary/20 shadow-blue-glow">
+          <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md p-12 md:p-20 rounded-[3rem] border border-white/10 shadow-xl">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
               Ready to Transform Your Business?
             </h2>
@@ -199,12 +198,12 @@ const Solutions = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link to="/book-consultation" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full glow-button bg-primary text-white hover:bg-primary font-bold text-lg px-10 py-7 rounded-full shadow-blue-glow">
+                <Button size="lg" className="w-full glow-button bg-primary text-white hover:bg-secondary font-bold text-lg px-10 py-7 rounded-full shadow-lg">
                   Book Free Consultation
                 </Button>
               </Link>
               <Link to="/contact" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full glass border-white/20 text-white hover:bg-white/10 hover:text-primary hover:border-primary/50 font-bold text-lg px-10 py-7 transition-all duration-300 rounded-full">
+                <Button size="lg" variant="outline" className="w-full bg-transparent border-white/20 text-white hover:bg-white/10 hover:border-white/50 font-bold text-lg px-10 py-7 transition-all duration-300 rounded-full">
                   Contact Us
                 </Button>
               </Link>

@@ -4,7 +4,7 @@ import cohbyLogo from "@/assets/cohby-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-white/10 text-white overflow-hidden relative">
+    <footer className="bg-navy border-t border-white/10 text-white overflow-hidden relative">
       {/* Decorative gradient blur */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2"></div>
       

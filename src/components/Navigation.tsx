@@ -51,7 +51,7 @@ const Navigation = () => {
     <nav 
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
-          ? "bg-background/80 backdrop-blur-xl border-b border-white/10 shadow-lg" 
+          ? "bg-background/95 backdrop-blur-xl border-b border-border shadow-md" 
           : "bg-transparent border-b border-transparent"
       }`}
     >
@@ -60,8 +60,8 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 transition-opacity hover:opacity-80">
             <div className="flex items-center gap-3">
-              <img src={cohbyLogo} alt="Cohby Consulting Services" className="h-12 w-12 object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]" />
-              <span className="text-xl font-bold hidden sm:inline text-white">Cohby Consulting</span>
+              <img src={cohbyLogo} alt="Cohby Consulting Services" className="h-12 w-12 object-contain" />
+              <span className={`text-xl font-bold hidden sm:inline transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>Cohby Consulting</span>
             </div>
           </Link>
 
@@ -72,8 +72,12 @@ const Navigation = () => {
                 <NavigationMenuItem>
                   <Link to="/">
                     <NavigationMenuLink
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-white/10 hover:text-primary ${
-                        isActive("/") ? "text-primary" : "text-white/90"
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                        isActive("/") 
+                          ? "text-primary" 
+                          : scrolled 
+                            ? "text-foreground hover:bg-muted hover:text-primary" 
+                            : "text-white hover:bg-white/10"
                       }`}
                     >
                       Home
@@ -84,8 +88,12 @@ const Navigation = () => {
                 <NavigationMenuItem>
                   <Link to="/about">
                     <NavigationMenuLink
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-white/10 hover:text-primary ${
-                        isActive("/about") ? "text-primary" : "text-white/90"
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                        isActive("/about") 
+                          ? "text-primary" 
+                          : scrolled 
+                            ? "text-foreground hover:bg-muted hover:text-primary" 
+                            : "text-white hover:bg-white/10"
                       }`}
                     >
                       About Us
@@ -94,11 +102,17 @@ const Navigation = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-white/90 hover:text-primary hover:bg-white/5 data-[state=open]:bg-white/10">
+                  <NavigationMenuTrigger 
+                    className={`text-sm font-medium transition-colors data-[state=open]:text-foreground data-[state=open]:bg-muted ${
+                      scrolled 
+                        ? "text-foreground hover:text-primary hover:bg-muted" 
+                        : "text-white hover:bg-white/10"
+                    }`}
+                  >
                     Solutions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-white/10 shadow-xl rounded-xl">
+                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-border shadow-xl rounded-xl">
                       <li className="mb-2">
                         <div className="text-sm font-medium text-primary mb-1">Our Services</div>
                         <p className="text-xs text-muted-foreground">Comprehensive digital transformation.</p>
@@ -117,14 +131,20 @@ const Navigation = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-white/90 hover:text-primary hover:bg-white/5 data-[state=open]:bg-white/10">
+                  <NavigationMenuTrigger 
+                    className={`text-sm font-medium transition-colors data-[state=open]:text-foreground data-[state=open]:bg-muted ${
+                      scrolled 
+                        ? "text-foreground hover:text-primary hover:bg-muted" 
+                        : "text-white hover:bg-white/10"
+                    }`}
+                  >
                     AI & Automation
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-white/10 shadow-xl rounded-xl">
+                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-border shadow-xl rounded-xl">
                       <li>
                         <Link to="/ai-automation">
-                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary">
+                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/5 hover:text-primary">
                             <div className="text-sm font-medium leading-none">AI & Automation Overview</div>
                             <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1">
                               Intelligent solutions for modern businesses
@@ -132,7 +152,7 @@ const Navigation = () => {
                           </NavigationMenuLink>
                         </Link>
                       </li>
-                      <div className="h-px bg-white/10 my-1"></div>
+                      <div className="h-px bg-border my-1"></div>
                       {aiAutomationLinks.map((link) => (
                         <li key={link.href}>
                           <Link to={link.href}>
@@ -147,14 +167,20 @@ const Navigation = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-white/90 hover:text-primary hover:bg-white/5 data-[state=open]:bg-white/10">
+                  <NavigationMenuTrigger 
+                    className={`text-sm font-medium transition-colors data-[state=open]:text-foreground data-[state=open]:bg-muted ${
+                      scrolled 
+                        ? "text-foreground hover:text-primary hover:bg-muted" 
+                        : "text-white hover:bg-white/10"
+                    }`}
+                  >
                     Non-Profits
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-white/10 shadow-xl rounded-xl">
+                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-border shadow-xl rounded-xl">
                       <li>
                         <Link to="/non-profits">
-                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary">
+                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/5 hover:text-primary">
                             <div className="text-sm font-medium leading-none">Non-Profits Overview</div>
                             <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1">
                               Salesforce solutions for non-profit organisations
@@ -162,7 +188,7 @@ const Navigation = () => {
                           </NavigationMenuLink>
                         </Link>
                       </li>
-                      <div className="h-px bg-white/10 my-1"></div>
+                      <div className="h-px bg-border my-1"></div>
                       {nonprofitLinks.map((link) => (
                         <li key={link.href}>
                           <Link to={link.href}>
@@ -179,8 +205,12 @@ const Navigation = () => {
                 <NavigationMenuItem>
                   <Link to="/contact">
                     <NavigationMenuLink
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors hover:bg-white/10 hover:text-primary ${
-                        isActive("/contact") ? "text-primary" : "text-white/90"
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                        isActive("/contact") 
+                          ? "text-primary" 
+                          : scrolled 
+                            ? "text-foreground hover:bg-muted hover:text-primary" 
+                            : "text-white hover:bg-white/10"
                       }`}
                     >
                       Contact Us
@@ -191,7 +221,7 @@ const Navigation = () => {
             </NavigationMenu>
 
             <Link to="/book-consultation">
-              <Button className="ml-4 glow-button bg-primary text-white hover:bg-primary border border-primary/50 shadow-[0_0_15px_rgba(43,158,255,0.4)]">
+              <Button className="ml-4 glow-button bg-primary text-primary-foreground hover:bg-secondary border shadow-md">
                 Book Consultation
               </Button>
             </Link>
@@ -199,7 +229,7 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-white hover:text-primary transition-colors"
+            className={`lg:hidden p-2 transition-colors ${scrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -208,30 +238,30 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 space-y-2 animate-fade-in bg-background/95 backdrop-blur-xl border border-white/10 rounded-xl mt-2 p-4 shadow-2xl absolute left-4 right-4 max-h-[80vh] overflow-y-auto">
+          <div className="lg:hidden py-4 space-y-2 animate-fade-in bg-background/95 backdrop-blur-xl border border-border rounded-xl mt-2 p-4 shadow-xl absolute left-4 right-4 max-h-[80vh] overflow-y-auto">
             <Link
               to="/"
-              className={`block px-4 py-3 rounded-md transition-colors ${isActive('/') ? 'bg-primary/20 text-primary' : 'hover:bg-white/5 text-white/90'}`}
+              className={`block px-4 py-3 rounded-md transition-colors ${isActive('/') ? 'bg-primary/10 text-primary' : 'hover:bg-muted text-foreground'}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className={`block px-4 py-3 rounded-md transition-colors ${isActive('/about') ? 'bg-primary/20 text-primary' : 'hover:bg-white/5 text-white/90'}`}
+              className={`block px-4 py-3 rounded-md transition-colors ${isActive('/about') ? 'bg-primary/10 text-primary' : 'hover:bg-muted text-foreground'}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               About Us
             </Link>
             
-            <div className="px-4 py-2 border-t border-white/10 mt-2">
+            <div className="px-4 py-2 border-t border-border mt-2">
               <div className="font-medium mb-2 text-primary">Solutions</div>
               <div className="ml-4 space-y-1">
                 {solutionsLinks.map((link) => (
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="block py-2 text-sm text-white/80 hover:text-white"
+                    className="block py-2 text-sm text-foreground/80 hover:text-foreground"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.title}
@@ -240,12 +270,12 @@ const Navigation = () => {
               </div>
             </div>
 
-            <div className="px-4 py-2 border-t border-white/10 mt-2">
+            <div className="px-4 py-2 border-t border-border mt-2">
               <div className="font-medium mb-2 text-primary">AI & Automation</div>
               <div className="ml-4 space-y-1">
                 <Link
                   to="/ai-automation"
-                  className="block py-2 text-sm text-white/80 hover:text-white"
+                  className="block py-2 text-sm text-foreground/80 hover:text-foreground"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Overview
@@ -254,7 +284,7 @@ const Navigation = () => {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="block py-2 text-sm text-white/80 hover:text-white"
+                    className="block py-2 text-sm text-foreground/80 hover:text-foreground"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.title}
@@ -263,12 +293,12 @@ const Navigation = () => {
               </div>
             </div>
 
-            <div className="px-4 py-2 border-t border-white/10 mt-2">
+            <div className="px-4 py-2 border-t border-border mt-2">
               <div className="font-medium mb-2 text-primary">Non-Profits</div>
               <div className="ml-4 space-y-1">
                 <Link
                   to="/non-profits"
-                  className="block py-2 text-sm text-white/80 hover:text-white"
+                  className="block py-2 text-sm text-foreground/80 hover:text-foreground"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Overview
@@ -277,7 +307,7 @@ const Navigation = () => {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="block py-2 text-sm text-white/80 hover:text-white"
+                    className="block py-2 text-sm text-foreground/80 hover:text-foreground"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.title}
@@ -286,10 +316,10 @@ const Navigation = () => {
               </div>
             </div>
             
-            <div className="border-t border-white/10 mt-2 pt-2">
+            <div className="border-t border-border mt-2 pt-2">
               <Link
                 to="/contact"
-                className={`block px-4 py-3 rounded-md transition-colors ${isActive('/contact') ? 'bg-primary/20 text-primary' : 'hover:bg-white/5 text-white/90'}`}
+                className={`block px-4 py-3 rounded-md transition-colors ${isActive('/contact') ? 'bg-primary/10 text-primary' : 'hover:bg-muted text-foreground'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact Us
@@ -302,7 +332,7 @@ const Navigation = () => {
                 className="block w-full"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <Button className="w-full glow-button bg-primary hover:bg-primary text-white shadow-lg">
+                <Button className="w-full glow-button bg-primary hover:bg-secondary text-primary-foreground shadow-md">
                   Book Free Consultation
                 </Button>
               </Link>

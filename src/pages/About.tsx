@@ -6,16 +6,16 @@ const About = () => {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
       
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-hero border-b border-border z-10">
-         <div className="absolute inset-0 data-rain-bg opacity-5"></div>
-         <div className="absolute inset-0 hero-grid-pattern opacity-5"></div>
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-navy z-10">
+         <div className="absolute inset-0 data-rain-bg opacity-10"></div>
+         <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
          <div className="absolute top-[20%] right-[15%] w-96 h-96 bg-primary/10 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
          <div className="absolute bottom-[10%] left-[10%] w-80 h-80 bg-accent/10 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '1.5s' }}></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-slide-up pt-20">
-            <h1 className="text-5xl md:text-7xl font-black mb-6 text-foreground tracking-tight">About <span className="text-transparent bg-clip-text bg-gradient-primary">Cohby</span></h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight">About <span className="text-transparent bg-clip-text bg-gradient-primary">Cohby</span></h1>
+            <p className="text-xl md:text-2xl text-white/80 font-medium">
               Your elite engineering partner in cloud, data, and business transformation.
             </p>
           </div>
@@ -43,7 +43,7 @@ const About = () => {
       </section>
 
       {/* Our Values */}
-      <section className="py-32 bg-muted/30 relative overflow-hidden border-b border-border">
+      <section className="py-32 bg-ash/50 relative overflow-hidden border-b border-border">
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
 
         <div className="container mx-auto px-4 relative z-10">

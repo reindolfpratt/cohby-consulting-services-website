@@ -76,9 +76,9 @@ const DataAnalysis = () => {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
       
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-hero border-b border-border z-10">
-        <div className="absolute inset-0 data-rain-bg opacity-5"></div>
-        <div className="absolute inset-0 hero-grid-pattern opacity-5"></div>
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-navy z-10">
+        <div className="absolute inset-0 data-rain-bg opacity-10"></div>
+        <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
         <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
         <div className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '2s' }}></div>
 
@@ -87,7 +87,7 @@ const DataAnalysis = () => {
           {[...Array(20)].map((_, i) => (
             <div 
               key={i}
-              className="absolute w-1.5 h-1.5 bg-primary/50 flex items-center justify-center animate-particle-drift rounded-full shadow-sm"
+              className="absolute w-1.5 h-1.5 bg-primary/30 flex items-center justify-center animate-particle-drift rounded-full shadow-sm"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -100,14 +100,14 @@ const DataAnalysis = () => {
 
         <div className="container relative mx-auto px-4 py-32 z-10 pt-40">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-card border border-border mb-8 animate-fade-in shadow-md">
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 animate-fade-in shadow-md">
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-              <span className="text-sm font-bold text-foreground tracking-widest uppercase">
+              <span className="text-sm font-bold text-white tracking-widest uppercase">
                 Data & Analytics
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] text-foreground animate-slide-up tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] text-white animate-slide-up tracking-tight">
               HARNESS YOUR <br className="hidden md:block"/>
               <span className="text-transparent bg-clip-text bg-gradient-primary filter drop-shadow-[0_0_15px_rgba(27,156,217,0.4)]">
                 DATA POTENTIAL
@@ -115,7 +115,7 @@ const DataAnalysis = () => {
             </h1>
 
             <p
-              className="text-xl md:text-2xl mb-12 text-muted-foreground animate-slide-up font-medium"
+              className="text-xl md:text-2xl mb-12 text-white/80 animate-slide-up font-medium"
               style={{ animationDelay: "0.1s" }}
             >
               Transform raw complex data into an actionable strategic asset with predictive modeling and powerful BI.
@@ -128,7 +128,7 @@ const DataAnalysis = () => {
               <Link to="/book-consultation" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full glow-button bg-primary text-primary-foreground hover:bg-secondary font-bold text-lg px-10 py-7 shadow-lg rounded-full"
+                  className="w-full glow-button bg-primary text-white hover:bg-secondary font-bold text-lg px-10 py-7 shadow-lg rounded-full"
                 >
                   Unlock Your Data
                   <ArrowRight className="ml-2 h-6 w-6" />
@@ -141,7 +141,7 @@ const DataAnalysis = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-32 relative z-10">
+      <section className="py-32 relative z-10 bg-ash/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground tracking-tight">
@@ -219,22 +219,22 @@ const DataAnalysis = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 overflow-hidden border-t border-border">
+      <section className="relative py-32 overflow-hidden border-t border-border bg-navy">
         <div className="absolute inset-0 bg-primary/5"></div>
         <div className="absolute inset-0 data-rain-bg opacity-5 pointer-events-none"></div>
 
         <div className="container relative mx-auto px-4 text-center z-10">
-           <div className="max-w-4xl mx-auto bg-card p-12 md:p-20 rounded-[3rem] border border-border shadow-xl">
-            <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground">
+           <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md p-12 md:p-20 rounded-[3rem] border border-white/10 shadow-xl">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
               Stop Guessing, Start Knowing
             </h2>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
               Our data engineers can turn your messy data into a powerful engine for predictable growth.
             </p>
             <Link to="/book-consultation" className="inline-block w-full sm:w-auto">
               <Button
                 size="lg"
-                className="w-full glow-button bg-primary text-primary-foreground hover:bg-secondary font-bold text-xl px-12 py-8 rounded-full shadow-lg"
+                className="w-full glow-button bg-primary text-white hover:bg-secondary font-bold text-xl px-12 py-8 rounded-full shadow-lg"
               >
                 Schedule an Assessment
                 <ArrowRight className="ml-3 h-6 w-6" />
