@@ -130,7 +130,7 @@ const Home = () => {
               className="text-xl md:text-3xl font-medium mb-12 text-white/80 animate-slide-up tracking-wide"
               style={{ animationDelay: "0.1s" }}
             >
-              Unlock your digital transformation today!
+              Salesforce, Data and AI solutions that actually move your business forward.
             </p>
 
             <div

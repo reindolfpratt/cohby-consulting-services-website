@@ -88,10 +88,10 @@ const BookConsultation = () => {
                       <div>
                         <p className="font-semibold mb-1">Canada</p>
                         <a
-                          href="tel:+13432971992"
+                          href="tel:+13438832087"
                           className="text-primary hover:text-primary/80 transition-colors"
                         >
-                          +1 343 297 1992
+                          +1 343 883 2087
                         </a>
                       </div>
                       
