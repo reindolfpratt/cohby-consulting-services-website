@@ -3,19 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useEffect } from "react";
 
 const Contact = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://form.jotform.com/jsform/251077501258050';
-    script.type = 'text/javascript';
-    document.getElementById('jotform-container')?.appendChild(script);
-    
-    return () => {
-      const container = document.getElementById('jotform-container');
-      if (container) {
-        container.innerHTML = '';
-      }
-    };
-  }, []);
+  // Jotform effect removed. Form is now Salesforce Web-to-Lead.
 
   return (
     <div className="min-h-screen">
@@ -85,7 +73,121 @@ const Contact = () => {
             <Card>
               <CardContent className="p-8">
                 <h2 className="text-2xl font-bold mb-6 text-center">Send Us a Message</h2>
-                <div id="jotform-container" className="w-full"></div>
+                <form 
+                  action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgD000000GzkH" 
+                  method="POST" 
+                  className="space-y-6 w-full"
+                >
+                  <input type="hidden" name="oid" value="00DgD000000GzkH" />
+                  <input type="hidden" name="retURL" value="https://cohbyconsultingservices.com/" />
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="first_name" className="text-sm font-medium">First Name</label>
+                      <input id="first_name" maxLength={40} name="first_name" type="text" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" required />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="last_name" className="text-sm font-medium">Last Name</label>
+                      <input id="last_name" maxLength={80} name="last_name" type="text" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" required />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium">Email</label>
+                      <input id="email" maxLength={80} name="email" type="email" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" required />
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="mobile" className="text-sm font-medium">Mobile</label>
+                      <input id="mobile" maxLength={40} name="mobile" type="tel" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="company" className="text-sm font-medium">Company</label>
+                      <input id="company" maxLength={40} name="company" type="text" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" required />
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="city" className="text-sm font-medium">City</label>
+                      <input id="city" maxLength={40} name="city" type="text" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="00NSj000002VLgX" className="text-sm font-medium">Country of Operation</label>
+                    <select id="00NSj000002VLgX" name="00NSj000002VLgX" title="Country of Operation" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                      <option value="">--None--</option>
+                      <option value="UK">UK</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2 border-t border-border pt-6 mt-6">
+                    <h3 className="text-lg font-semibold mb-4 text-primary">Project Details</h3>
+                    
+                    <div className="space-y-4">
+                      <div className="space-y-2">
+                        <label htmlFor="00NgD000000x7rt" className="text-sm font-medium text-muted-foreground tracking-wide">WHAT SERVICE ARE YOU INTERESTED IN?</label>
+                        <select id="00NgD000000x7rt" multiple={true} name="00NgD000000x7rt" title="What service are you interested in?" className="flex p-2 w-full min-h-[120px] rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 shadow-sm">
+                          <option value="Salesforce Implementation &amp; Customization">Salesforce Implementation &amp; Customization</option>
+                          <option value="Data Migration &amp; Integration">Data Migration &amp; Integration</option>
+                          <option value="Analytics &amp; Reporting">Analytics &amp; Reporting</option>
+                          <option value="Ongoing Support &amp; Training">Ongoing Support &amp; Training</option>
+                          <option value="Other">Other</option>
+                        </select>
+                        <p className="text-xs text-muted-foreground mt-1 text-right">Hold Cmd/Ctrl to select multiple</p>
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="00NgD000000x7tV" className="text-sm font-medium text-muted-foreground tracking-wide mt-2 block">CURRENT SALESFORCE USAGE</label>
+                        <select id="00NgD000000x7tV" name="00NgD000000x7tV" title="Current Salesforce Usage" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                          <option value="">--None--</option>
+                          <option value="Not using Salesforce yet">Not using Salesforce yet</option>
+                          <option value="Using Salesforce but need improvements">Using Salesforce but need improvements</option>
+                          <option value="Other CRM system">Other CRM system</option>
+                        </select>
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="00NgD000000x7qH" className="text-sm font-medium text-muted-foreground tracking-wide mt-2 block">ESTIMATED PROJECT TIMELINE</label>
+                        <select id="00NgD000000x7qH" name="00NgD000000x7qH" title="Estimated Project Timeline" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                          <option value="">--None--</option>
+                          <option value="immediate (within 1 month">immediate (within 1 month</option>
+                          <option value="1-3 months">1-3 months</option>
+                          <option value="3+ months">3+ months</option>
+                        </select>
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="00NSj000002VM4j" className="text-sm font-medium text-muted-foreground tracking-wide mt-2 block">PROJECT DESCRIPTION</label>
+                        <textarea id="00NSj000002VM4j" name="00NSj000002VM4j" rows={4} className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" wrap="soft" placeholder="Tell us more about your challenges or goals..."></textarea>
+                      </div>
+
+                      <div className="space-y-2">
+                        <label htmlFor="00NSj000002VLjl" className="text-sm font-medium text-muted-foreground tracking-wide mt-2 block">HOW DID YOU HEAR ABOUT US?</label>
+                        <select id="00NSj000002VLjl" name="00NSj000002VLjl" title="How Did You Hear About Us" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                          <option value="">--None--</option>
+                          <option value="Referral">Referral</option>
+                          <option value="Google_Search">Google Search</option>
+                          <option value="Social_Media">Social Media</option>
+                          <option value="Flyer">Flyer</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-4">
+                    <button type="submit" name="submit" className="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8 bg-primary text-primary-foreground hover:bg-secondary glow-button shadow-md">
+                      Send Message
+                    </button>
+                  </div>
+                </form>
               </CardContent>
             </Card>
           </div>
