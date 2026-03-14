@@ -79,7 +79,7 @@ const Contact = () => {
                   className="space-y-6 w-full"
                 >
                   <input type="hidden" name="oid" value="00DgD000000GzkH" />
-                  <input type="hidden" name="retURL" value="https://cohbyconsultingservices.com/" />
+                  <input type="hidden" name="retURL" value="https://cohbyconsultingservices.com/thank-you" />
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">

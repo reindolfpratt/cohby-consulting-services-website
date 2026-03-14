@@ -17,6 +17,7 @@ import Challenges from "./pages/nonprofit-subpages/Challenges";
 import AIAutomation from "./pages/AIAutomation";
 import CloudSolutions from "./pages/CloudSolutions";
 import DataAnalysis from "./pages/DataAnalysis";
+import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +44,7 @@ const App = () => (
               <Route path="/ai-automation" element={<AIAutomation />} />
               <Route path="/cloud-solutions" element={<CloudSolutions />} />
               <Route path="/data-analysis" element={<DataAnalysis />} />
+              <Route path="/thank-you" element={<ThankYou />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
