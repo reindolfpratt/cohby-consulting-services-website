@@ -34,7 +34,7 @@ const Navigation = () => {
   ];
   
   const productsLinks = [
-    { title: "CohbyLearn LMS", href: "/products/cohbylearn" },
+    { title: "Cohby LMS", href: "/products/cohbylearn" },
   ];
 
   const nonprofitLinks = [

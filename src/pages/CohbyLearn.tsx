@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { 
-  Sparkles, 
   Video, 
   Megaphone, 
   Zap, 
@@ -15,7 +14,8 @@ import {
   Settings,
   Users,
   CheckCircle2,
-  AlertTriangle
+  AlertTriangle,
+  Rocket
 } from "lucide-react";
 
 const CohbyLearn = () => {
@@ -36,12 +36,12 @@ const CohbyLearn = () => {
         <div className="container relative mx-auto px-4 z-10">
           <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-primary-foreground mb-8 backdrop-blur-xl animate-fade-in shadow-xl">
-              <Sparkles size={18} className="text-primary animate-pulse" />
+              <Rocket size={18} className="text-primary animate-pulse" />
               <span className="text-sm font-bold tracking-widest uppercase">The Next Generation of LMS</span>
             </div>
             
             <h1 className="text-6xl md:text-9xl font-black mb-8 text-white tracking-tighter leading-[0.9] animate-slide-up">
-              Cohby<span className="text-transparent bg-clip-text bg-gradient-primary">Learn</span>
+              Cohby
             </h1>
             
             <p className="text-2xl md:text-3xl text-white/70 font-medium max-w-3xl mb-12 leading-tight animate-slide-up" style={{ animationDelay: '0.1s' }}>
@@ -49,10 +49,12 @@ const CohbyLearn = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <Button size="lg" className="glow-button bg-primary text-white hover:bg-secondary h-16 px-12 rounded-full text-xl font-black shadow-blue-glow">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-6 w-6" />
-              </Button>
+              <a href="http://www.cohbylearn.com/" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="glow-button bg-primary text-white hover:bg-secondary h-16 px-12 rounded-full text-xl font-black shadow-blue-glow">
+                  Start Free Trial
+                  <ArrowRight className="ml-2 h-6 w-6" />
+                </Button>
+              </a>
               <Button size="lg" variant="outline" className="h-16 px-12 rounded-full text-xl font-bold bg-white/5 border-white/20 text-white hover:bg-white/10 backdrop-blur-sm">
                 Watch Demo
                 <Play className="ml-2 h-6 w-6 fill-white" />
@@ -79,7 +81,7 @@ const CohbyLearn = () => {
       <section className="py-32 relative z-10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-foreground mb-6">Why CohbyLearn?</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-foreground mb-6">Why Cohby?</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Everything you need to build, deliver, and scale your learning experiences.</p>
           </div>
 
@@ -100,12 +102,11 @@ const CohbyLearn = () => {
               <CardContent className="relative z-10 p-10 pt-0">
                  <div className="mt-8 flex gap-4">
                     <span className="px-4 py-2 rounded-full bg-primary/5 text-primary text-sm font-bold border border-primary/20">Agentic Loop</span>
-                    <span className="px-4 py-2 rounded-full bg-primary/5 text-primary text-sm font-bold border border-primary/20">DeepSeek Powered</span>
                  </div>
               </CardContent>
               {/* Visual Element */}
               <div className="absolute right-0 bottom-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                 <Sparkles size={240} className="text-primary" />
+                                   <Rocket size={240} className="text-primary" />
               </div>
             </Card>
 
@@ -136,7 +137,7 @@ const CohbyLearn = () => {
                  </div>
                  <CardTitle className="text-3xl font-black">Live Learning Engine</CardTitle>
                  <p className="text-lg text-muted-foreground pt-4 leading-relaxed">
-                    Powered by Daily.co. Zoom-style conferencing built natively into the platform. No installs, just learning.
+                     Zoom-style conferencing built natively into the platform. No installs, just learning.
                  </p>
               </CardHeader>
               <CardContent className="mt-auto p-10">
@@ -190,7 +191,7 @@ const CohbyLearn = () => {
             <div className="flex-1 space-y-8">
               <h2 className="text-4xl md:text-6xl font-black leading-none">Modular Course <br/> <span className="text-primary">Building Blocks</span></h2>
               <p className="text-xl text-white/60 leading-relaxed max-w-xl">
-                 Courses are more than just text. CohbyLearn uses a modular "Block" system that allows for rich, interactive curriculum design.
+                 Courses are more than just text. Cohby uses a modular "Block" system that allows for rich, interactive curriculum design.
               </p>
               <div className="grid grid-cols-2 gap-6">
                  {[
@@ -274,26 +275,16 @@ const CohbyLearn = () => {
                   Start creating courses today with the AI Architect. No credit card required for trial organizations.
                </p>
                <div className="flex flex-col sm:flex-row justify-center gap-8">
-                  <Button size="lg" className="glow-button bg-primary text-white h-20 px-16 rounded-full text-2xl font-black shadow-blue-glow">
-                     Launch Free Trial
-                  </Button>
+                  <a href="http://www.cohbylearn.com/" target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" className="glow-button bg-primary text-white h-20 px-16 rounded-full text-2xl font-black shadow-blue-glow">
+                       Launch Free Trial
+                    </Button>
+                  </a>
                   <Link to="/contact">
                      <Button size="lg" variant="outline" className="h-20 px-16 rounded-full text-2xl font-black bg-white/5 border-white/20 text-white hover:bg-white/10 backdrop-blur-sm">
                         Contact Sales
                      </Button>
                   </Link>
-               </div>
-               
-               <div className="mt-20 flex flex-col items-center">
-                  <div className="p-6 bg-white/5 rounded-[2.5rem] border border-white/10 backdrop-blur-xl">
-                     <div className="flex items-center gap-3 text-white/80 font-bold mb-4">
-                        <AlertTriangle className="text-primary h-5 w-5" />
-                        <span>Technical Advisory</span>
-                     </div>
-                     <p className="text-white/40 text-sm max-w-md text-left leading-relaxed">
-                        *Daily.co Cloud Recordings require a paid account and a single line code activation. SCORM tracking requires modern browser support.
-                     </p>
-                  </div>
                </div>
             </div>
          </div>

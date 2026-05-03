@@ -1,17 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Shield, Rocket } from "lucide-react";
+import { ArrowRight, Shield, Rocket } from "lucide-react";
 
 const Products = () => {
   const products = [
     {
-      title: "CohbyLearn LMS",
+      title: "Cohby LMS",
       tagline: "AI-Driven, Enterprise-Grade Learning",
-      description: "A multi-tenant learning management system designed for the future. From AI course generation to SCORM compliance, CohbyLearn handles it all.",
+      description: "A multi-tenant learning management system designed for the future. From AI course generation to SCORM compliance, Cohby handles it all.",
       features: ["AI Architect", "SCORM 1.2/2004", "Live Learning Engine"],
       link: "/products/cohbylearn",
-      icon: <Sparkles className="h-6 w-6 text-primary" />,
+      icon: <Rocket className="h-6 w-6 text-primary" />,
       color: "from-blue-500/20 to-cyan-500/20",
     }
   ];
@@ -81,7 +81,7 @@ const Products = () => {
                   <div className="flex-1 w-full aspect-video bg-navy/50 rounded-3xl border border-white/5 relative overflow-hidden group-hover:border-primary/30 transition-colors">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
                     <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                       <Sparkles size={120} className="text-primary animate-pulse-glow" />
+                       <Rocket size={120} className="text-primary animate-pulse-glow" />
                     </div>
                   </div>
                 </div>
