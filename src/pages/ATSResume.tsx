@@ -266,7 +266,7 @@ const ATSResume = () => {
                   Land the Role <br/> <span className="text-transparent bg-clip-text bg-gradient-primary">Instantly</span>
                </h2>
                <p className="text-2xl text-white/60 mb-16 max-w-2xl mx-auto leading-relaxed">
-                  Join thousands of applicants who have optimized their career search with ATS Resume Tailor.
+                  Join hundreds of applicants who have optimized their career search with ATS Resume Tailor.
                </p>
                <div className="flex flex-col sm:flex-row justify-center gap-8">
                   <a href="https://www.atsresumetailor.com/" target="_blank" rel="noopener noreferrer">
