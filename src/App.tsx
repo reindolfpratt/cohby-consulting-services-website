@@ -17,7 +17,6 @@ import Challenges from "./pages/nonprofit-subpages/Challenges";
 import AIAutomation from "./pages/AIAutomation";
 import CloudSolutions from "./pages/CloudSolutions";
 import DataAnalysis from "./pages/DataAnalysis";
-import Products from "./pages/Products";
 import CohbyLearn from "./pages/CohbyLearn";
 import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
@@ -46,7 +45,6 @@ const App = () => (
               <Route path="/ai-automation" element={<AIAutomation />} />
               <Route path="/cloud-solutions" element={<CloudSolutions />} />
               <Route path="/data-analysis" element={<DataAnalysis />} />
-              <Route path="/products" element={<Products />} />
               <Route path="/products/cohbylearn" element={<CohbyLearn />} />
               <Route path="/thank-you" element={<ThankYou />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -146,17 +146,6 @@ const Navigation = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 bg-background border border-border shadow-xl rounded-xl">
-                      <li>
-                        <Link to="/products">
-                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/5 hover:text-primary">
-                            <div className="text-sm font-medium leading-none">Product Suite</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1">
-                              Enterprise-grade tools for growth.
-                            </p>
-                          </NavigationMenuLink>
-                        </Link>
-                      </li>
-                      <div className="h-px bg-border my-1"></div>
                       {productsLinks.map((link) => (
                         <li key={link.href}>
                           <Link to={link.href}>
@@ -313,13 +302,6 @@ const Navigation = () => {
             <div className="px-4 py-2 border-t border-border mt-2">
               <div className="font-medium mb-2 text-primary">Products</div>
               <div className="ml-4 space-y-1">
-                <Link
-                  to="/products"
-                  className="block py-2 text-sm text-foreground/80 hover:text-foreground"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Overview
-                </Link>
                 {productsLinks.map((link) => (
                   <Link
                     key={link.href}
