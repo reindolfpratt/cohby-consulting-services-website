@@ -35,6 +35,7 @@ const Navigation = () => {
   
   const productsLinks = [
     { title: "Cohby LMS", href: "/products/cohbylearn" },
+    { title: "ATS Resume", href: "/products/ats-resume" },
   ];
 
   const nonprofitLinks = [
