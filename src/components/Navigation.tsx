@@ -32,6 +32,10 @@ const Navigation = () => {
     { title: "Cloud Solutions", href: "/cloud-solutions" },
     { title: "Data Analysis", href: "/data-analysis" },
   ];
+  
+  const productsLinks = [
+    { title: "CohbyLearn LMS", href: "/products/cohbylearn" },
+  ];
 
   const nonprofitLinks = [
     { title: "Free Salesforce for Non-Profits", href: "/non-profits/free-salesforce" },
@@ -121,6 +125,42 @@ const Navigation = () => {
                         <li key={link.href}>
                           <Link to={link.href}>
                             <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary">
+                              <div className="text-sm font-medium leading-none">{link.title}</div>
+                            </NavigationMenuLink>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger 
+                    className={`text-sm font-medium transition-colors data-[state=open]:text-foreground data-[state=open]:bg-muted ${
+                      scrolled 
+                        ? "text-foreground hover:text-primary hover:bg-muted" 
+                        : "text-white hover:bg-white/10"
+                    }`}
+                  >
+                    Products
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-border shadow-xl rounded-xl">
+                      <li>
+                        <Link to="/products">
+                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/5 hover:text-primary">
+                            <div className="text-sm font-medium leading-none">Product Suite</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1">
+                              Enterprise-grade tools for growth.
+                            </p>
+                          </NavigationMenuLink>
+                        </Link>
+                      </li>
+                      <div className="h-px bg-border my-1"></div>
+                      {productsLinks.map((link) => (
+                        <li key={link.href}>
+                          <Link to={link.href}>
+                            <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary">
                               <div className="text-sm font-medium leading-none">{link.title}</div>
                             </NavigationMenuLink>
                           </Link>
@@ -258,6 +298,29 @@ const Navigation = () => {
               <div className="font-medium mb-2 text-primary">Solutions</div>
               <div className="ml-4 space-y-1">
                 {solutionsLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="px-4 py-2 border-t border-border mt-2">
+              <div className="font-medium mb-2 text-primary">Products</div>
+              <div className="ml-4 space-y-1">
+                <Link
+                  to="/products"
+                  className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Overview
+                </Link>
+                {productsLinks.map((link) => (
                   <Link
                     key={link.href}
                     to={link.href}
