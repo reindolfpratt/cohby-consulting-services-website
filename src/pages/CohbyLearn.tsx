@@ -35,8 +35,7 @@ const CohbyLearn = () => {
 
         <div className="container relative mx-auto px-4 z-10">
           <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-primary-foreground mb-8 backdrop-blur-xl animate-fade-in shadow-xl">
-              <Rocket size={18} className="text-primary animate-pulse" />
+            <div className="inline-flex items-center px-6 py-2 rounded-full bg-white/5 border border-white/10 text-primary-foreground mb-8 backdrop-blur-xl animate-fade-in shadow-xl">
               <span className="text-sm font-bold tracking-widest uppercase">The Next Generation of LMS</span>
             </div>
             
