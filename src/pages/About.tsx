@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import LiquidGlassBackground from "@/components/LiquidGlassBackground";
 
 const About = () => {
   return (
@@ -6,15 +7,12 @@ const About = () => {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
       
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-navy z-10">
-         <div className="absolute inset-0 data-rain-bg opacity-10"></div>
-         <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
-         <div className="absolute top-[20%] right-[15%] w-96 h-96 bg-primary/10 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
-         <div className="absolute bottom-[10%] left-[10%] w-80 h-80 bg-accent/10 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '1.5s' }}></div>
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden z-10">
+        <LiquidGlassBackground variant="hero" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-slide-up pt-20">
-            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight">About <span className="text-transparent bg-clip-text bg-gradient-primary">Cohby</span></h1>
+            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight">About <span className="text-transparent bg-clip-text gradient-primary">Cohby</span></h1>
             <p className="text-xl md:text-2xl text-white/80 font-medium">
               Your elite engineering partner in cloud, data, and business transformation.
             </p>
@@ -49,7 +47,7 @@ const About = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
              <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground">Core Values</h2>
-             <div className="h-1 w-24 bg-gradient-primary mx-auto rounded-full"></div>
+             <div className="h-1 w-24 gradient-primary mx-auto rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">

@@ -1,11 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import LiquidGlassBackground from "@/components/LiquidGlassBackground";
+import { useEffect } from "react";
 
 const AIAutomation = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 150);
+      }
+    }
+  }, [location]);
+
   const services = [
     {
+      id: "engineering",
       title: "AI Engineering & Integrations",
       description:
         "Custom machine learning pipelines and deep integrations with your existing platforms. We build intelligent systems that scale and adapt to your complex data architecture.",
@@ -18,6 +35,7 @@ const AIAutomation = () => {
       ],
     },
     {
+      id: "automations",
       title: "Intelligent Automations",
       description:
         "Streamline your operations with intelligent workflow automation. We build custom solutions that save time, reduce errors, and let your team focus on high-impact work.",
@@ -30,6 +48,7 @@ const AIAutomation = () => {
       ],
     },
     {
+      id: "chatbots",
       title: "Conversational AI Chatbots",
       description:
         "Engage customers 24/7 with advanced conversational AI. Our agents understand context, handle complex queries, and seamlessly hand off to human reps when necessary.",
@@ -42,6 +61,7 @@ const AIAutomation = () => {
       ],
     },
     {
+      id: "websites",
       title: "AI-Powered Platforms",
       description:
         "Next-generation portals and websites that work smarter. Our platforms adapt to users, personalise content, and generate actionable insights automatically.",
@@ -51,6 +71,18 @@ const AIAutomation = () => {
         "Automated SEO optimization",
         "Smart lead capture",
         "Performance self-optimisation",
+      ],
+    },
+    {
+      id: "social",
+      title: "Social Media Automations",
+      description:
+        "Maintain a powerful social presence without the manual grind. Automate posting, engagement, and performance analytics across all major channels.",
+      features: [
+        "Scheduled content publishing",
+        "Cross-platform management",
+        "Automated engagement responses",
+        "Performance analytics & reporting",
       ],
     },
   ];
@@ -79,11 +111,8 @@ const AIAutomation = () => {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
       
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-navy z-10">
-        <div className="absolute inset-0 data-rain-bg opacity-10"></div>
-        <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
-        <div className="absolute top-[20%] left-[10%] w-96 h-96 bg-primary/10 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-80 h-80 bg-accent/10 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '2s' }}></div>
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden z-10">
+        <LiquidGlassBackground variant="hero" />
 
         {/* AI Tech Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -103,16 +132,9 @@ const AIAutomation = () => {
 
         <div className="container relative mx-auto px-4 py-32 z-10 pt-40">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 animate-fade-in shadow-md">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-              <span className="text-sm font-bold text-white tracking-widest uppercase">
-                AI Automation & Engineering
-              </span>
-            </div>
-
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] text-white animate-slide-up tracking-tight">
               ENGINEER YOUR <br className="hidden md:block"/>
-              <span className="text-transparent bg-clip-text bg-gradient-primary filter drop-shadow-[0_0_15px_rgba(27,156,217,0.4)]">
+              <span className="text-transparent bg-clip-text gradient-primary filter drop-shadow-[0_0_15px_rgba(27,156,217,0.4)]">
                 FUTURE
               </span>
             </h1>
@@ -140,7 +162,6 @@ const AIAutomation = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
       {/* Services Section */}
@@ -150,7 +171,7 @@ const AIAutomation = () => {
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground tracking-tight">
               Engineering Capabilities
             </h2>
-            <div className="h-1 w-24 bg-gradient-primary mx-auto rounded-full mb-6"></div>
+            <div className="h-1 w-24 gradient-primary mx-auto rounded-full mb-6"></div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Advanced technical solutions tailored for ambitious enterprises.
             </p>
@@ -160,7 +181,8 @@ const AIAutomation = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group bg-card hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 animate-slide-up overflow-hidden border-border h-full flex flex-col"
+                id={service.id}
+                className="group bg-card hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 animate-slide-up overflow-hidden border-border h-full flex flex-col scroll-mt-24"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-10 relative flex flex-col h-full">
@@ -198,7 +220,7 @@ const AIAutomation = () => {
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground">
               The Engineering ROI
             </h2>
-            <div className="h-1 w-24 bg-gradient-primary mx-auto rounded-full mb-6"></div>
+            <div className="h-1 w-24 gradient-primary mx-auto rounded-full mb-6"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -222,9 +244,8 @@ const AIAutomation = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 overflow-hidden border-t border-border bg-navy">
-        <div className="absolute inset-0 bg-primary/5"></div>
-        <div className="absolute inset-0 data-rain-bg opacity-5 pointer-events-none"></div>
+      <section className="relative py-32 overflow-hidden border-t border-border">
+        <LiquidGlassBackground variant="cta" />
 
         <div className="container relative mx-auto px-4 text-center z-10">
            <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md p-12 md:p-20 rounded-[3rem] border border-white/10 shadow-xl">

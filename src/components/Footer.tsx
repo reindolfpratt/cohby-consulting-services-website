@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
 import cohbyLogo from "@/assets/cohby-logo.png";
+import LiquidGlassBackground from "@/components/LiquidGlassBackground";
 
 const Footer = () => {
   return (
-    <footer className="bg-navy border-t border-white/10 text-white overflow-hidden relative">
-      {/* Decorative gradient blur */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2"></div>
+    <footer className="border-t border-white/10 text-white overflow-hidden relative">
+      <LiquidGlassBackground variant="footer" />
       
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">

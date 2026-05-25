@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import {
   CheckCircle2
 } from "lucide-react";
+import LiquidGlassBackground from "@/components/LiquidGlassBackground";
 
 const Solutions = () => {
   const solutions = [
@@ -135,15 +136,12 @@ const Solutions = () => {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
       
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-navy z-10">
-        <div className="absolute inset-0 data-rain-bg opacity-10"></div>
-        <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
-        <div className="absolute top-[20%] right-[15%] w-96 h-96 bg-primary/10 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
-        <div className="absolute bottom-[10%] left-[10%] w-80 h-80 bg-accent/10 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '1.5s' }}></div>
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden z-10">
+        <LiquidGlassBackground variant="hero" />
 
         <div className="container relative mx-auto px-4 z-10 text-center pt-20">
           <div className="max-w-3xl mx-auto animate-slide-up">
-            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight">Our <span className="text-transparent bg-clip-text bg-gradient-primary">Solutions</span></h1>
+            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight">Our <span className="text-transparent bg-clip-text gradient-primary">Solutions</span></h1>
             <p className="text-xl md:text-2xl text-white/80 font-medium">
               Comprehensive cloud, data, and engineering solutions designed to transform your business.
             </p>
@@ -184,9 +182,8 @@ const Solutions = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 overflow-hidden border-t border-border bg-navy">
-        <div className="absolute inset-0 bg-primary/5"></div>
-        <div className="absolute inset-0 data-rain-bg opacity-5 pointer-events-none"></div>
+      <section className="relative py-32 overflow-hidden border-t border-border">
+        <LiquidGlassBackground variant="cta" />
 
         <div className="container relative mx-auto px-4 text-center z-10">
           <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md p-12 md:p-20 rounded-[3rem] border border-white/10 shadow-xl">

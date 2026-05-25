@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowRight
 } from "lucide-react";
+import LiquidGlassBackground from "@/components/LiquidGlassBackground";
 
 const Home = () => {
   const services = [
@@ -86,57 +87,28 @@ const Home = () => {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-navy z-10">
-        
-        {/* Data Rain Background */}
-        <div className="absolute inset-0 data-rain-bg opacity-10"></div>
-        
-        {/* Animated Grid Pattern */}
-        <div className="absolute inset-0 hero-grid-pattern opacity-10"></div>
+      <section className="relative min-h-screen flex items-center overflow-hidden z-10">
+        <LiquidGlassBackground variant="hero" />
 
-        {/* Floating Decorative Shapes (Cloud Glows) */}
-        <div className="absolute top-[20%] right-[15%] w-96 h-96 bg-primary/10 rounded-full blur-[120px] mix-blend-screen animate-cloud-glow"></div>
-        <div className="absolute bottom-[10%] left-[10%] w-80 h-80 bg-accent/10 rounded-full blur-[100px] mix-blend-screen animate-cloud-glow" style={{ animationDelay: '1.5s' }}></div>
-
-        {/* Tech Particles */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(15)].map((_, i) => (
-            <div 
-              key={i}
-              className="absolute w-1 h-1 bg-primary/30 flex items-center justify-center animate-particle-drift rounded-full"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDuration: `${Math.random() * 10 + 10}s`,
-                animationDelay: `${Math.random() * 5}s`
-              }}
-            />
-          ))}
-        </div>
-
-        <div className="container relative mx-auto px-4 py-32 z-10 pt-40">
+        <div className="container relative mx-auto px-4 z-10 pt-40 pb-32">
           <div className="max-w-5xl mx-auto text-center">
-            
+
             <div className="h-8"></div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-[1.1] tracking-tight text-white animate-slide-up">
-              SALESFORCE, DATA & AI <br className="hidden md:block"/>
-              <span className="text-transparent bg-clip-text bg-gradient-primary filter drop-shadow-[0_0_20px_rgba(27,156,217,0.4)]">
-                SOLUTIONS
-              </span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-[1.05] tracking-tight text-white animate-slide-up" style={{ animationDelay: "0.08s" }}>
+              Smart Solutions.
+              <br />
+              Real Results.
             </h1>
 
             <p
-              className="text-xl md:text-3xl font-medium mb-12 text-white/80 animate-slide-up tracking-wide"
-              style={{ animationDelay: "0.1s" }}
+              className="text-xl md:text-2xl font-medium mb-10 text-white/70 tracking-wide max-w-2xl mx-auto animate-slide-up"
+              style={{ animationDelay: "0.12s" }}
             >
               Salesforce, Data and AI solutions that actually move your business forward.
             </p>
 
-            <div
-              className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up"
-              style={{ animationDelay: "0.2s" }}
-            >
+            <div className="flex flex-col sm:flex-row gap-5 justify-center mb-16 animate-slide-up" style={{ animationDelay: "0.16s" }}>
               <Link to="/book-consultation">
                 <Button
                   size="lg"
@@ -150,17 +122,29 @@ const Home = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto bg-transparent border-white/20 text-white hover:bg-white/10 hover:border-white/50 font-bold text-lg px-10 py-7 transition-all duration-300 rounded-full"
+                  className="w-full sm:w-auto border-white/20 text-white hover:bg-white/10 hover:border-white/50 font-bold text-lg px-10 py-7 transition-all duration-300 rounded-full bg-transparent"
                 >
                   Explore Services
                 </Button>
               </Link>
             </div>
+
+            {/* Floating glass capability chips */}
+            <div
+              className="animate-slide-up flex flex-wrap justify-center gap-3"
+              style={{ animationDelay: "0.16s" }}
+            >
+              {["Salesforce Consulting", "AI Automation", "Data Analysis", "Cloud Solutions", "Nonprofits"].map(
+                (tag) => (
+                  <div key={tag} className="liquid-glass-chip px-4 py-1.5 rounded-full text-sm text-white/55 font-medium">
+                    {tag}
+                  </div>
+                )
+              )}
+            </div>
           </div>
         </div>
 
-        {/* Gradient Fade to next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
       {/* Services Section */}
@@ -170,7 +154,7 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-foreground tracking-tight">
               Our Expertise
             </h2>
-            <div className="h-1 w-24 bg-gradient-primary mx-auto rounded-full mb-6"></div>
+            <div className="h-1 w-24 gradient-primary mx-auto rounded-full mb-6"></div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Comprehensive technical solutions engineered to scale and perform.
             </p>
@@ -213,7 +197,7 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground">
               The Cohby Advantage
             </h2>
-            <div className="h-1 w-24 bg-gradient-primary mx-auto rounded-full"></div>
+            <div className="h-1 w-24 gradient-primary mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -243,7 +227,7 @@ const Home = () => {
         <div className="container mx-auto px-4 z-10 relative">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground">Our Methodology</h2>
-            <div className="h-1 w-24 bg-gradient-primary mx-auto rounded-full mb-6"></div>
+            <div className="h-1 w-24 gradient-primary mx-auto rounded-full mb-6"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto relative mt-16">
@@ -284,9 +268,8 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 overflow-hidden border-t border-border bg-navy">
-        <div className="absolute inset-0 bg-primary/5"></div>
-        <div className="absolute inset-0 data-rain-bg opacity-5 pointer-events-none"></div>
+      <section className="relative py-32 overflow-hidden border-t border-border">
+        <LiquidGlassBackground variant="cta" />
 
         <div className="container relative mx-auto px-4 text-center z-10">
           <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md p-12 md:p-20 rounded-[3rem] border border-white/10 relative overflow-hidden shadow-xl">
