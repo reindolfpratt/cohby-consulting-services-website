@@ -101,6 +101,9 @@ const Home = () => {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden z-10 border-b border-white/10">
         <LiquidGlassBackground variant="hero" />
 
+        {/* Giant Frosted Glass Arch Frame behind Hero Content */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] md:w-[65%] h-[320px] md:h-[450px] rounded-t-[12rem] md:rounded-t-[20rem] border-t border-x border-white/10 bg-white/[0.01] backdrop-blur-[10px] shadow-[inset_0_2px_20px_rgba(255,255,255,0.05)] z-0 pointer-events-none"></div>
+
         <div className="container relative mx-auto px-4 md:px-8 z-10 pt-36 pb-20 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
@@ -159,7 +162,7 @@ const Home = () => {
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className="grid grid-cols-1 lg:grid-cols-12 py-12 items-center border-t border-white/10 hover:bg-white/[0.01] transition-all duration-300 group relative"
+                className="grid grid-cols-1 lg:grid-cols-12 py-12 items-center border-t border-white/10 hover:bg-white/[0.02] transition-all duration-300 group relative glass-sheen-sweep"
               >
                 {/* 1. Category Tag */}
                 <div className="lg:col-span-3 text-xs font-mono text-rose/50 uppercase tracking-[0.2em] mb-4 lg:mb-0">
@@ -174,7 +177,7 @@ const Home = () => {
                 </div>
 
                 {/* 3. Description */}
-                <div className="lg:col-span-4 text-white/50 text-sm leading-relaxed pr-6 mb-4 lg:mb-0">
+                <div className="lg:col-span-4 text-white/50 text-sm leading-relaxed pr-6 mb-4 lg:mb-0 font-sans">
                   {service.description}
                 </div>
 
@@ -205,12 +208,12 @@ const Home = () => {
             </h2>
             
             {/* Differentiators Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 border-t border-white/10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 border-t border-white/10">
               {differentiators.map((item, index) => (
-                <div key={index} className="group">
-                  <span className="text-xs font-mono text-rose/60 block mb-3">// FEATURE 0{index + 1}</span>
+                <div key={index} className="group p-8 rounded-2xl bg-white/[0.01] border border-white/5 hover:border-white/10 hover:bg-white/[0.02] transition-all duration-300 relative overflow-hidden glass-sheen-sweep">
+                  <span className="text-xs font-mono text-rose/60 block mb-4">// FEATURE 0{index + 1}</span>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-rose transition-colors">{item.title}</h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{item.description}</p>
+                  <p className="text-white/50 text-sm leading-relaxed font-sans">{item.description}</p>
                 </div>
               ))}
             </div>

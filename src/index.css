@@ -661,4 +661,91 @@
       linear-gradient(to right, rgba(237, 193, 203, 0.006) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(237, 193, 203, 0.006) 1px, transparent 1px);
   }
+
+  /* ──── Liquid Glass Arches & 3D Reflections ──── */
+  .liquid-glass-arch {
+    position: relative;
+    border-top-left-radius: 8rem;
+    border-top-right-radius: 8rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    backdrop-filter: blur(20px) saturate(1.2);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.4),
+      inset 0 1.5px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .liquid-glass-arch::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-top-left-radius: 8rem;
+    border-top-right-radius: 8rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%,
+      rgba(237, 193, 203, 0.02) 100%
+    );
+    pointer-events: none;
+  }
+
+  .liquid-glass-arch:hover {
+    transform: translateY(-8px);
+    border-color: rgba(237, 193, 203, 0.25);
+    box-shadow: 
+      0 40px 80px rgba(0, 0, 0, 0.6),
+      0 0 40px rgba(237, 193, 203, 0.08),
+      inset 0 1.5px 0 rgba(255, 255, 255, 0.15);
+  }
+
+  /* Sweep reflection highlight */
+  .glass-sheen-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-sheen-sweep::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.04) 20%,
+      rgba(255, 255, 255, 0.15) 60%,
+      transparent 100%
+    );
+    transform: skewX(-25deg);
+    transition: none;
+    pointer-events: none;
+  }
+
+  .glass-sheen-sweep:hover::after {
+    left: 150%;
+    transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Warp wave distortion filter for images inside glass */
+  .liquid-distort {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .liquid-glass-arch:hover .liquid-distort {
+    transform: scale(1.04);
+  }
 }
