@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx playwright *)",
+      "Bash(node -e ' *)",
+      "Read(//Users/macbookpro/.nvm/versions/node/v18.20.8/lib/node_modules/**)",
+      "Bash(npm install *)",
+      "Read(//tmp/**)",
+      "Read(//private/tmp/**)"
+    ]
+  }
+}

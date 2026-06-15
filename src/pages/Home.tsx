@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowRight
 } from "lucide-react";
@@ -10,31 +9,37 @@ const Home = () => {
   const services = [
     {
       title: "Salesforce Consulting",
+      category: "Salesforce",
       description:
         "Tailored Salesforce solutions, implementation, and customisation that fit your unique business needs.",
     },
     {
       title: "Cloud Solutions",
+      category: "Cloud",
       description:
         "Comprehensive cloud architecture, migration, and infrastructure management for modern enterprises.",
     },
     {
       title: "AI Automation & Engineering",
+      category: "Intelligence",
       description:
         "Intelligent AI pipelines, machine learning models, and automated workflows that save time and reduce errors.",
     },
     {
       title: "Data Analysis",
+      category: "Data",
       description:
         "Deep insights through advanced BI, predictive analytics, and transformative data engineering.",
     },
     {
       title: "Data Migration & Integration",
+      category: "Integrations",
       description:
         "Seamless transfer and connection of your critical data across platforms and cloud environments.",
     },
     {
       title: "Ongoing Support & Training",
+      category: "Support",
       description:
         "Continuous guidance to ensure your tech stack and team evolve with your business.",
     },
@@ -82,196 +87,185 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden selection:bg-rose/30">
-      {/* Dynamic Background Blend */}
-      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
+    <div className="min-h-screen bg-background overflow-hidden selection:bg-rose/30 relative grid-blueprint">
       
+      {/* 4-Column Blueprint Vertical Grid Lines Overlay */}
+      <div className="absolute inset-0 grid grid-cols-4 pointer-events-none z-0 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="border-r border-white/[0.02] h-full"></div>
+        <div className="border-r border-white/[0.02] h-full"></div>
+        <div className="border-r border-white/[0.02] h-full"></div>
+        <div className="h-full"></div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative min-h-[90dvh] flex items-center overflow-hidden z-10">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden z-10 border-b border-white/10">
         <LiquidGlassBackground variant="hero" />
 
-        <div className="container relative mx-auto px-4 z-10 pt-32 pb-20">
-          <div className="max-w-5xl mx-auto text-center">
-            <span className="block text-xs uppercase tracking-[0.25em] text-rose/90 font-mono mb-6 animate-slide-up" style={{ animationDelay: "0.04s" }}>
-              Elite Digital Engineering
-            </span>
-
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight text-white animate-slide-up" style={{ animationDelay: "0.08s" }}>
-              Smart Solutions.
-              <br />
-              Real <span className="text-rose font-extrabold italic">Results</span>.
-            </h1>
-
-            <p
-              className="text-lg md:text-xl font-medium mb-12 text-white/70 tracking-wide max-w-2xl mx-auto animate-slide-up"
-              style={{ animationDelay: "0.12s" }}
-            >
-              Salesforce, Cloud, and AI systems engineered for scale.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-5 justify-center mb-16 animate-slide-up" style={{ animationDelay: "0.16s" }}>
-              <Link to="/book-consultation">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto glow-button bg-rose text-black hover:bg-white font-bold text-lg px-10 py-7 shadow-lg rounded-full"
-                >
-                  Book Consultation
-                  <ArrowRight className="ml-2 h-5 w-5 text-black" />
-                </Button>
-              </Link>
-              <Link to="/solutions">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto border-white/10 text-white hover:bg-white/5 hover:border-white/20 font-bold text-lg px-10 py-7 transition-all duration-300 rounded-full bg-transparent"
-                >
-                  Explore Services
-                </Button>
-              </Link>
+        <div className="container relative mx-auto px-4 md:px-8 z-10 pt-36 pb-20 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            {/* Left Vertical Info */}
+            <div className="lg:col-span-2 hidden lg:block pt-12">
+              <span className="text-[10px] font-mono text-rose/50 uppercase tracking-[0.3em] block origin-left rotate-90 translate-y-24 whitespace-nowrap">
+                // COHBY . STUDIO . 2026
+              </span>
             </div>
 
-            {/* Floating glass capability chips */}
-            <div
-              className="animate-slide-up flex flex-wrap justify-center gap-3"
-              style={{ animationDelay: "0.2s" }}
-            >
-              {["Salesforce Consulting", "AI Automation", "Data Analysis", "Cloud Solutions", "Nonprofits"].map(
-                (tag) => (
-                  <div key={tag} className="liquid-glass-tag px-5 py-2 rounded-full text-xs text-white/60 font-medium flex items-center border border-white/5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-rose/85 mr-2"></span>
-                    {tag}
-                  </div>
-                )
-              )}
+            {/* Main Typographic Headline */}
+            <div className="lg:col-span-6 animate-fade-in">
+              <span className="text-xs uppercase tracking-[0.2em] text-rose font-mono mb-6 block">// ELITE DIGITAL ENGINEERING</span>
+              <h1 className="text-6xl md:text-8xl font-black tracking-[-0.04em] leading-[0.9] text-white uppercase mb-8">
+                Smart <br />
+                Solutions. <br />
+                Real <span className="text-rose font-extrabold italic font-serif lowercase tracking-wide">results</span>.
+              </h1>
             </div>
+
+            {/* Right Explainer & CTA */}
+            <div className="lg:col-span-4 lg:pt-16 flex flex-col space-y-10 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+              <p className="text-lg text-white/50 leading-relaxed max-w-[32ch]">
+                Salesforce, Cloud, and AI systems engineered for scale. Built custom to adapt to your enterprise workflow.
+              </p>
+              
+              <div className="flex flex-col space-y-4 items-start">
+                <Link to="/book-consultation">
+                  <Button className="glow-button bg-rose text-black hover:bg-white font-mono text-xs uppercase tracking-wider px-8 py-6 rounded-full shadow-lg transition-all">
+                    Book Consultation →
+                  </Button>
+                </Link>
+                <Link to="/solutions" className="text-xs font-mono uppercase tracking-[0.2em] text-white/60 hover:text-rose transition-colors pt-2">
+                  // EXPLORE SERVICES
+                </Link>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-32 relative z-10 border-t border-border bg-background">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="mb-20 text-left md:max-w-2xl animate-slide-up">
-            <span className="text-xs uppercase tracking-[0.25em] text-rose/80 font-mono mb-4 block">Expertise Areas</span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white tracking-tight">
+      {/* Services Showcase - Row List Style (Anti-Card Grid) */}
+      <section className="py-32 relative z-10 border-b border-white/10 bg-background/50">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+          
+          <div className="mb-24 text-left max-w-2xl">
+            <span className="text-xs uppercase tracking-[0.2em] text-rose font-mono mb-4 block">// EXPERTISE</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight uppercase">
               Our Capabilities
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Technical excellence and platform execution built for modern speed.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Row Stack List */}
+          <div className="border-b border-white/10">
             {services.map((service, index) => (
-              <Card
-                key={index}
-                className="group bg-card hover:border-rose/30 transition-all duration-500 animate-slide-up overflow-hidden border-border"
-                style={{ animationDelay: `${index * 80}ms` }}
-              >
-                <CardContent className="p-10 relative h-full flex flex-col">
-                  {/* Glowing background on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-rose/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-
-                  <div className="relative z-10 flex-grow">
-                    <div className="text-rose font-mono text-sm mb-8 block transition-transform group-hover:translate-x-1 duration-300">
-                      // {service.title.toUpperCase()}
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-rose transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground text-base leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What Sets Us Apart - Asymmetric Split Screen layout to prevent repetition */}
-      <section className="py-32 bg-ash relative overflow-hidden border-y border-border">
-        {/* Background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-rose/5 rounded-full blur-[150px] pointer-events-none"></div>
-
-        <div className="container mx-auto px-4 relative z-10 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            
-            {/* Left Column: Editorial Thesis */}
-            <div className="lg:col-span-5 flex flex-col justify-center">
-              <span className="text-xs uppercase tracking-[0.25em] text-rose/80 font-mono mb-4 block">The Cohby Thesis</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-8">
-                We reject templated systems.
-              </h2>
-              <p className="text-lg text-white/60 leading-relaxed">
-                Your business is unique. We build tailored digital architecture that integrates with your workflow, rather than forcing you into rigid templates.
-              </p>
-            </div>
-
-            {/* Right Column: Structured List with hairline dividers */}
-            <div className="lg:col-span-7 flex flex-col justify-center space-y-12">
-              {differentiators.map((item, index) => (
-                <div key={index} className="border-t border-white/10 pt-8 first:border-0 first:pt-0 group">
-                  <span className="text-xs font-mono text-rose/60 block mb-3">// FEATURE 0{index + 1}</span>
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-rose transition-colors">{item.title}</h3>
-                  <p className="text-white/65 text-base leading-relaxed">{item.description}</p>
-                </div>
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* How We Work - Minimalist spacing and clear design flow */}
-      <section className="py-32 relative overflow-hidden bg-background">
-        <div className="container mx-auto px-4 max-w-7xl relative">
-          <div className="mb-20 text-left md:max-w-2xl animate-slide-up">
-            <span className="text-xs uppercase tracking-[0.25em] text-rose/80 font-mono mb-4 block">Our Process</span>
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">Our Methodology</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-16">
-            {workProcess.map((step, index) => (
               <div
-                key={index}
-                className="relative group border-l border-white/10 pl-6 py-4 transition-all duration-300 hover:border-rose/50"
+                key={service.title}
+                className="grid grid-cols-1 lg:grid-cols-12 py-12 items-center border-t border-white/10 hover:bg-white/[0.01] transition-all duration-300 group relative"
               >
-                <span className="text-4xl font-mono font-black text-white/10 group-hover:text-rose/30 transition-colors block mb-4">
-                  {step.number}
-                </span>
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-rose transition-colors">
-                  {step.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                {/* 1. Category Tag */}
+                <div className="lg:col-span-3 text-xs font-mono text-rose/50 uppercase tracking-[0.2em] mb-4 lg:mb-0">
+                  // {service.category.toUpperCase()}
+                </div>
+
+                {/* 2. Headline */}
+                <div className="lg:col-span-4 mb-4 lg:mb-0">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-rose transition-colors">
+                    {service.title}
+                  </h3>
+                </div>
+
+                {/* 3. Description */}
+                <div className="lg:col-span-4 text-white/50 text-sm leading-relaxed pr-6 mb-4 lg:mb-0">
+                  {service.description}
+                </div>
+
+                {/* 4. Arrow Link */}
+                <div className="lg:col-span-1 flex lg:justify-end">
+                  <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-rose/50 group-hover:translate-x-2 transition-all duration-300">
+                    <ArrowRight className="h-4 w-4 text-white/40 group-hover:text-rose" />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
+
+        </div>
+      </section>
+
+      {/* The Cohby Thesis - Big Typographic Statement */}
+      <section className="py-32 bg-ash relative overflow-hidden border-b border-white/10">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-rose/5 rounded-full blur-[180px] pointer-events-none"></div>
+
+        <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-7xl">
+          <div className="max-w-5xl mx-auto text-left">
+            <span className="text-xs font-mono text-rose/50 uppercase tracking-[0.25em] block mb-8">
+              // OUR THESIS
+            </span>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.05] uppercase mb-20">
+              We reject templated systems. We build bespoke digital architecture that integrates with your workflow, rather than forcing you into rigid templates.
+            </h2>
+            
+            {/* Differentiators Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 border-t border-white/10">
+              {differentiators.map((item, index) => (
+                <div key={index} className="group">
+                  <span className="text-xs font-mono text-rose/60 block mb-3">// FEATURE 0{index + 1}</span>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-rose transition-colors">{item.title}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology Section - Grid Column Alignment */}
+      <section className="py-32 relative overflow-hidden bg-background/30">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl relative">
+          
+          <div className="mb-20 text-left">
+            <span className="text-xs uppercase tracking-[0.2em] text-rose font-mono mb-4 block">// PROCESS</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight uppercase">Our Methodology</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-white/10 mt-16 border-t border-b border-white/10">
+            {workProcess.map((step, index) => (
+              <div
+                key={index}
+                className="p-8 lg:p-12 group hover:bg-white/[0.01] transition-all duration-300"
+              >
+                <span className="text-xs font-mono text-rose/50 block mb-6">// STEP {step.number}</span>
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-rose transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-white/50 text-sm leading-relaxed">{step.description}</p>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 
       {/* CTA Section - Consistently uses unique intent labels */}
-      <section className="relative py-32 overflow-hidden border-t border-border">
+      <section className="relative py-32 overflow-hidden border-t border-white/10 bg-background">
         <LiquidGlassBackground variant="cta" />
 
-        <div className="container relative mx-auto px-4 text-center z-10">
+        <div className="container relative mx-auto px-4 md:px-8 text-center z-10 max-w-7xl">
           <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md p-12 md:p-20 rounded-[3rem] border border-white/10 relative overflow-hidden shadow-xl">
             <div className="absolute inset-0 bg-gradient-to-br from-rose/10 to-transparent pointer-events-none"></div>
             
-            <h2 className="text-4xl md:text-6xl font-black mb-8 text-white relative z-10">
-              Ready to Upgrade?
+            <h2 className="text-4xl md:text-6xl font-black mb-8 text-white relative z-10 uppercase tracking-tighter">
+              Let's Build the Future
             </h2>
-            <p className="text-lg md:text-xl mb-12 text-white/70 relative z-10 max-w-2xl mx-auto">
-              Let's discuss how we can build custom Salesforce, Cloud, or AI solutions for your organization.
+            <p className="text-base md:text-lg mb-12 text-white/60 relative z-10 max-w-2xl mx-auto leading-relaxed">
+              Collaborate with us to architect custom Salesforce, Cloud, and AI systems built specifically for your scale.
             </p>
+            
             <Link to="/book-consultation" className="relative z-10 inline-block">
               <Button
                 size="lg"
-                className="glow-button bg-rose text-black hover:bg-white font-bold text-lg px-12 py-8 rounded-full shadow-lg w-full sm:w-auto"
+                className="glow-button bg-rose text-black hover:bg-white font-mono text-xs uppercase tracking-wider px-10 py-7 rounded-full shadow-lg"
               >
-                Book Consultation
-                <ArrowRight className="ml-3 h-5 w-5 text-black" />
+                Book Consultation →
               </Button>
             </Link>
           </div>

@@ -603,20 +603,20 @@
   .satin-glass-bg {
     background: radial-gradient(
       circle at 50% 35%,
-      #08172c 0%,
-      #030a16 50%,
-      #010306 100%
+      #070708 0%,
+      #030303 50%,
+      #000000 100%
     );
   }
 
   .satin-glass-sheen {
     background: linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.02) 0%,
       rgba(255, 255, 255, 0) 35%,
-      rgba(0, 240, 255, 0) 50%,
+      rgba(237, 193, 203, 0) 50%,
       rgba(255, 255, 255, 0) 65%,
-      rgba(255, 255, 255, 0.02) 100%
+      rgba(255, 255, 255, 0.01) 100%
     );
     pointer-events: none;
   }
@@ -624,14 +624,14 @@
   .satin-glass-wave {
     background: radial-gradient(
       ellipse at 50% 100%,
-      rgba(8, 23, 44, 0.3) 0%,
+      rgba(7, 7, 8, 0.5) 0%,
       transparent 70%
     );
     pointer-events: none;
   }
 
   .satin-noise-overlay {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
     pointer-events: none;
   }
 
@@ -639,11 +639,26 @@
     background: linear-gradient(
       90deg,
       transparent 0%,
-      rgba(0, 240, 255, 0.15) 20%,
-      rgba(255, 255, 255, 0.25) 40%,
-      rgba(255, 173, 0, 0.1) 60%,
-      rgba(0, 80, 255, 0.12) 80%,
+      rgba(237, 193, 203, 0.08) 20%,
+      rgba(255, 255, 255, 0.15) 40%,
+      rgba(237, 193, 203, 0.08) 60%,
+      rgba(200, 80, 120, 0.05) 80%,
       transparent 100%
     );
+  }
+
+  /* ──── Grid Wireframe / Blueprint Aesthetic ──── */
+  .grid-blueprint {
+    background-size: 80px 80px;
+    background-image: 
+      linear-gradient(to right, rgba(237, 193, 203, 0.012) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(237, 193, 203, 0.012) 1px, transparent 1px);
+  }
+
+  .grid-blueprint-fine {
+    background-size: 20px 20px;
+    background-image: 
+      linear-gradient(to right, rgba(237, 193, 203, 0.006) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(237, 193, 203, 0.006) 1px, transparent 1px);
   }
 }

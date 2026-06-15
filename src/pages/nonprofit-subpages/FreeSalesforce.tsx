@@ -1,35 +1,44 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Gift, CheckCircle2, ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import LiquidGlassBackground from "@/components/LiquidGlassBackground";
 
 const FreeSalesforce = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background overflow-hidden selection:bg-rose/30 relative grid-blueprint">
+      
+      {/* 4-Column Blueprint Vertical Grid Lines Overlay */}
+      <div className="absolute inset-0 grid grid-cols-4 pointer-events-none z-0 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="border-r border-white/[0.02] h-full"></div>
+        <div className="border-r border-white/[0.02] h-full"></div>
+        <div className="border-r border-white/[0.02] h-full"></div>
+        <div className="h-full"></div>
+      </div>
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-secondary text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <div className="mb-6 flex justify-center">
-              <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm">
-                <Gift className="h-16 w-16" />
-              </div>
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden z-10 border-b border-white/10">
+        <LiquidGlassBackground variant="hero" />
+        
+        <div className="container relative mx-auto px-4 md:px-8 z-10 max-w-7xl pt-36 pb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-2 hidden lg:block"></div>
+            <div className="lg:col-span-10 animate-fade-in">
+              <span className="text-xs uppercase tracking-[0.2em] text-rose font-mono mb-4 block">// STRATEGY & LICENSING</span>
+              <h1 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight uppercase leading-[0.95]">Free CRM <span className="text-rose font-extrabold italic font-serif lowercase tracking-wide">outcomes</span></h1>
+              <p className="text-lg md:text-xl text-white/50 font-medium max-w-2xl">
+                Access powerful Salesforce tools at no cost through the Power of Us Programme.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Free CRM for Non-Profits? Yes!
-            </h1>
-            <p className="text-xl text-white/90">
-              Access powerful Salesforce tools at no cost through the Power of Us Programme
-            </p>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground mb-8">
+      <section className="py-24 relative z-10 bg-background/30">
+        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
+          <div className="space-y-12 text-white/70">
+            
+            <p className="text-lg leading-relaxed text-white/80">
               What if you could get powerful CRM software, designed for non-profits, for free? 
               Many charities and non-profit organisations are concerned about technology costs. 
               Salesforce, a global leader in CRM, offers a solution that removes this barrier. 
@@ -37,114 +46,125 @@ const FreeSalesforce = () => {
               through the Power of Us Programme.
             </p>
 
-            <Card className="mb-12 bg-accent/5 border-accent/20">
-              <CardContent className="p-8">
-                <h2 className="text-2xl font-bold mb-4">What is the Power of Us Programme?</h2>
-                <p className="text-muted-foreground mb-4">
-                  The Salesforce Power of Us Programme is a donation scheme that gives eligible 
-                  non-profits <strong>10 free licences</strong> for either Nonprofit Cloud or Sales 
-                  Cloud Enterprise Edition.
-                </p>
-                <p className="text-muted-foreground">
-                  Nonprofit Cloud is Salesforce's modern CRM solution for non-profits, with tools 
-                  for donor management, fundraising, grant tracking, and programme delivery. 
-                  Alternatively, you can use the Nonprofit Success Pack (NPSP), which is a set of 
-                  features tailored for non-profit needs and can be added to Sales Cloud.
-                </p>
-              </CardContent>
-            </Card>
-
-            <h2 className="text-3xl font-bold mb-6">Who Qualifies?</h2>
-            <p className="text-muted-foreground mb-6">
-              To benefit from the Salesforce Power of Us Programme, your organisation must be a 
-              registered non-profit or charity and meet certain criteria. This includes being 
-              recognised as a charitable organisation in your country and using the CRM for 
-              mission-related work.
-            </p>
-            
-            <a
-              href="https://www.salesforce.com/en-us/wp-content/uploads/sites/4/documents/company/p10-eligibility-guidelines-English-2023.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
-            >
-              View full eligibility guidelines
-              <ExternalLink className="h-4 w-4" />
-            </a>
-
-            <h2 className="text-3xl font-bold mb-6 mt-12">
-              Beyond the Free Licences: Nonprofit Cloud and NPSP
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              Once you have your free licences, you gain access to either Nonprofit Cloud or 
-              Sales Cloud with the Nonprofit Success Pack (NPSP). Both options are designed to 
-              help non-profits manage:
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-              {[
-                "Donors and constituents",
-                "Fundraising campaigns",
-                "Grants and applications",
-                "Programme delivery and outcomes",
-                "Volunteer management",
-                "Impact reporting",
-              ].map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">{item}</span>
-                </div>
-              ))}
+            <div className="border-t border-b border-white/10 py-10 my-10 space-y-6">
+              <h2 className="text-2xl font-bold text-white uppercase tracking-tight">What is the Power of Us Programme?</h2>
+              <p className="text-sm text-white/50 leading-relaxed">
+                The Salesforce Power of Us Programme is a donation scheme that gives eligible 
+                non-profits <strong>10 free licences</strong> for either Nonprofit Cloud or Sales 
+                Cloud Enterprise Edition.
+              </p>
+              <p className="text-sm text-white/50 leading-relaxed">
+                Nonprofit Cloud is Salesforce's modern CRM solution for non-profits, with tools 
+                for donor management, fundraising, grant tracking, and programme delivery. 
+                Alternatively, you can use the Nonprofit Success Pack (NPSP), which is a set of 
+                features tailored for non-profit needs and can be added to Sales Cloud.
+              </p>
             </div>
 
-            <Card className="my-12 bg-primary/5 border-primary/20">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-bold mb-3">Getting Started Is Simple</h3>
-                <ol className="space-y-3 text-muted-foreground">
-                  <li className="flex gap-3">
-                    <span className="font-semibold text-primary">1.</span>
-                    <span>Check your organisation's eligibility</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="font-semibold text-primary">2.</span>
-                    <span>Apply for the Power of Us Programme through Salesforce.org</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="font-semibold text-primary">3.</span>
-                    <span>Receive your free licences and start building your CRM</span>
-                  </li>
-                </ol>
-              </CardContent>
-            </Card>
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold text-white uppercase tracking-tight">Who Qualifies?</h2>
+              <p className="text-sm text-white/50 leading-relaxed">
+                To benefit from the Salesforce Power of Us Programme, your organisation must be a 
+                registered non-profit or charity and meet certain criteria. This includes being 
+                recognised as a charitable organisation in your country and using the CRM for 
+                mission-related work.
+              </p>
+              
+              <a
+                href="https://www.salesforce.com/en-us/wp-content/uploads/sites/4/documents/company/p10-eligibility-guidelines-English-2023.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.15em] text-rose hover:text-white transition-colors"
+              >
+                View full eligibility guidelines
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
 
-            <h2 className="text-3xl font-bold mb-6">Need Help Getting Started?</h2>
-            <p className="text-muted-foreground mb-8">
-              Setting up Salesforce, even with free licences, can feel overwhelming. That's where 
-              we come in. At Cohby Consulting Services, we specialise in helping non-profits get 
-              the most out of their Salesforce investment (or in this case, donation!).
+            <div className="space-y-6 pt-6">
+              <h2 className="text-2xl font-bold text-white uppercase tracking-tight">
+                Beyond the Free Licences: Nonprofit Cloud and NPSP
+              </h2>
+              <p className="text-sm text-white/50 leading-relaxed">
+                Once you have your free licences, you gain access to either Nonprofit Cloud or 
+                Sales Cloud with the Nonprofit Success Pack (NPSP). Both options are designed to 
+                help non-profits manage:
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                {[
+                  "Donors and constituents",
+                  "Fundraising campaigns",
+                  "Grants and applications",
+                  "Programme delivery and outcomes",
+                  "Volunteer management",
+                  "Impact reporting",
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-rose/60"></span>
+                    <span className="text-xs text-white/60">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="border-t border-b border-white/10 py-10 my-10 space-y-6 bg-white/[0.01] px-6 rounded-2xl">
+              <h3 className="text-xl font-bold text-white uppercase tracking-tight">Getting Started Is Simple</h3>
+              <ol className="space-y-4 text-xs font-mono text-white/50">
+                <li className="flex gap-3">
+                  <span className="text-rose">01.</span>
+                  <span>Check your organisation's eligibility</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-rose">02.</span>
+                  <span>Apply for the Power of Us Programme through Salesforce.org</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-rose">03.</span>
+                  <span>Receive your free licences and start building your CRM</span>
+                </li>
+              </ol>
+            </div>
+
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold text-white uppercase tracking-tight">Need Help Getting Started?</h2>
+              <p className="text-sm text-white/50 leading-relaxed">
+                Setting up Salesforce, even with free licences, can feel overwhelming. That's where 
+                we come in. At Cohby Consulting Services, we specialise in helping non-profits get 
+                the most out of their Salesforce investment (or in this case, donation!).
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative py-32 overflow-hidden border-t border-white/10 bg-background">
+        <LiquidGlassBackground variant="cta" />
+
+        <div className="container relative mx-auto px-4 md:px-8 text-center z-10 max-w-7xl">
+          <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md p-12 md:p-20 rounded-[3rem] border border-white/10 relative overflow-hidden shadow-xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-rose/10 to-transparent pointer-events-none"></div>
+            
+            <h3 className="text-4xl md:text-5xl font-black mb-6 text-white relative z-10 uppercase tracking-tighter">
+              Transform Your Non-Profit
+            </h3>
+            <p className="text-base mb-10 text-white/60 relative z-10 max-w-2xl mx-auto leading-relaxed">
+              Let's discuss how we can help you leverage free Salesforce tools to maximize your impact.
             </p>
-
-            <Card className="bg-gradient-to-br from-primary to-secondary text-white">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Non-Profit?</h3>
-                <p className="text-white/90 mb-6">
-                  Let's discuss how we can help you leverage free Salesforce tools to maximize your impact
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/book-consultation">
-                    <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                      Book Free Consultation
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                  </Link>
-                  <Link to="/non-profits">
-                    <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                      Back to Non-Profits
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+              <Link to="/book-consultation">
+                <Button size="lg" className="glow-button bg-rose text-black hover:bg-white font-mono text-xs uppercase tracking-wider px-8 py-6 rounded-full shadow-lg">
+                  Book Free Consultation →
+                </Button>
+              </Link>
+              <Link to="/non-profits">
+                <Button size="lg" variant="outline" className="font-mono text-xs uppercase tracking-wider px-8 py-6 rounded-full border-white/20 text-white hover:bg-white hover:text-black transition-colors">
+                  Back to Non-Profits
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

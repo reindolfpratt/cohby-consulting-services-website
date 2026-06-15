@@ -56,7 +56,7 @@ const Navigation = () => {
     <nav 
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
-          ? "bg-background/95 backdrop-blur-xl border-b border-border shadow-md" 
+          ? "bg-background/80 backdrop-blur-md border-b border-white/5 shadow-2xl" 
           : "bg-transparent border-b border-transparent"
       }`}
     >
@@ -65,8 +65,8 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 transition-opacity hover:opacity-80">
             <div className="flex items-center gap-3">
-              <img src={cohbyLogo} alt="Cohby Consulting Services" className="h-12 w-12 object-contain" />
-              <span className={`text-xl font-bold hidden sm:inline transition-colors ${scrolled ? 'text-foreground' : 'text-white'}`}>Cohby Consulting</span>
+              <img src={cohbyLogo} alt="Cohby Consulting Services" className="h-10 w-10 object-contain" />
+              <span className={`text-sm font-mono tracking-[0.2em] uppercase hidden sm:inline transition-colors ${scrolled ? 'text-white' : 'text-white'}`}>Cohby Consulting</span>
             </div>
           </Link>
 
@@ -77,12 +77,10 @@ const Navigation = () => {
                 <NavigationMenuItem>
                   <Link to="/">
                     <NavigationMenuLink
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                      className={`px-4 py-2 rounded-md text-[11px] font-mono uppercase tracking-[0.2em] transition-colors ${
                         isActive("/") 
-                          ? "text-primary" 
-                          : scrolled 
-                            ? "text-foreground hover:bg-muted hover:text-primary" 
-                            : "text-white hover:bg-white/10"
+                          ? "text-rose" 
+                          : "text-white/60 hover:text-rose"
                       }`}
                     >
                       Home
@@ -93,40 +91,34 @@ const Navigation = () => {
                 <NavigationMenuItem>
                   <Link to="/about">
                     <NavigationMenuLink
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                      className={`px-4 py-2 rounded-md text-[11px] font-mono uppercase tracking-[0.2em] transition-colors ${
                         isActive("/about") 
-                          ? "text-primary" 
-                          : scrolled 
-                            ? "text-foreground hover:bg-muted hover:text-primary" 
-                            : "text-white hover:bg-white/10"
+                          ? "text-rose" 
+                          : "text-white/60 hover:text-rose"
                       }`}
                     >
-                      About Us
+                      About
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className={`text-sm font-medium transition-colors data-[state=open]:text-foreground data-[state=open]:bg-muted ${
-                      scrolled 
-                        ? "text-foreground hover:text-primary hover:bg-muted" 
-                        : "text-white hover:bg-white/10"
-                    }`}
+                    className="text-[11px] font-mono uppercase tracking-[0.2em] transition-colors bg-transparent hover:bg-transparent focus:bg-transparent text-white/60 hover:text-rose data-[state=open]:text-rose data-[state=open]:bg-transparent"
                   >
                     Solutions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-border shadow-xl rounded-xl">
-                      <li className="mb-2">
-                        <div className="text-sm font-medium text-primary mb-1">Our Services</div>
-                        <p className="text-xs text-muted-foreground">Comprehensive digital transformation.</p>
+                    <ul className="grid w-[400px] gap-2 p-6 bg-background/95 backdrop-blur-md border border-white/10 shadow-2xl rounded-2xl">
+                      <li className="mb-3">
+                        <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-rose/80">Our Services</div>
+                        <p className="text-[11px] text-white/40 mt-1 font-mono">// Enterprise digital engineering.</p>
                       </li>
                       {solutionsLinks.map((link) => (
                         <li key={link.href}>
                           <Link to={link.href}>
-                            <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary">
-                              <div className="text-sm font-medium leading-none">{link.title}</div>
+                            <NavigationMenuLink className="block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-white/[0.03] group">
+                              <div className="text-[11px] font-mono uppercase tracking-wider text-white/80 group-hover:text-rose transition-colors">{link.title}</div>
                             </NavigationMenuLink>
                           </Link>
                         </li>
@@ -137,21 +129,17 @@ const Navigation = () => {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className={`text-sm font-medium transition-colors data-[state=open]:text-foreground data-[state=open]:bg-muted ${
-                      scrolled 
-                        ? "text-foreground hover:text-primary hover:bg-muted" 
-                        : "text-white hover:bg-white/10"
-                    }`}
+                    className="text-[11px] font-mono uppercase tracking-[0.2em] transition-colors bg-transparent hover:bg-transparent focus:bg-transparent text-white/60 hover:text-rose data-[state=open]:text-rose data-[state=open]:bg-transparent"
                   >
                     Products
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-border shadow-xl rounded-xl">
+                    <ul className="grid w-[400px] gap-2 p-6 bg-background/95 backdrop-blur-md border border-white/10 shadow-2xl rounded-2xl">
                       {productsLinks.map((link) => (
                         <li key={link.href}>
                           <Link to={link.href}>
-                            <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary">
-                              <div className="text-sm font-medium leading-none">{link.title}</div>
+                            <NavigationMenuLink className="block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-white/[0.03] group">
+                              <div className="text-[11px] font-mono uppercase tracking-wider text-white/80 group-hover:text-rose transition-colors">{link.title}</div>
                             </NavigationMenuLink>
                           </Link>
                         </li>
@@ -162,32 +150,28 @@ const Navigation = () => {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className={`text-sm font-medium transition-colors data-[state=open]:text-foreground data-[state=open]:bg-muted ${
-                      scrolled 
-                        ? "text-foreground hover:text-primary hover:bg-muted" 
-                        : "text-white hover:bg-white/10"
-                    }`}
+                    className="text-[11px] font-mono uppercase tracking-[0.2em] transition-colors bg-transparent hover:bg-transparent focus:bg-transparent text-white/60 hover:text-rose data-[state=open]:text-rose data-[state=open]:bg-transparent"
                   >
                     AI & Automation
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-border shadow-xl rounded-xl">
+                    <ul className="grid w-[400px] gap-2 p-6 bg-background/95 backdrop-blur-md border border-white/10 shadow-2xl rounded-2xl">
                       <li>
                         <Link to="/ai-automation">
-                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/5 hover:text-primary">
-                            <div className="text-sm font-medium leading-none">AI & Automation Overview</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1">
-                              Intelligent solutions for modern businesses
+                          <NavigationMenuLink className="block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-white/[0.03] group">
+                            <div className="text-[11px] font-mono uppercase tracking-wider text-white group-hover:text-rose">Overview</div>
+                            <p className="line-clamp-2 text-[10px] leading-snug text-white/40 mt-1 font-mono">
+                              // Intelligent systems for scale.
                             </p>
                           </NavigationMenuLink>
                         </Link>
                       </li>
-                      <div className="h-px bg-border my-1"></div>
+                      <div className="h-px bg-white/5 my-2"></div>
                       {aiAutomationLinks.map((link) => (
                         <li key={link.href}>
                           <Link to={link.href}>
-                            <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary">
-                              <div className="text-sm font-medium leading-none">{link.title}</div>
+                            <NavigationMenuLink className="block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-white/[0.03] group">
+                              <div className="text-[11px] font-mono uppercase tracking-wider text-white/80 group-hover:text-rose transition-colors">{link.title}</div>
                             </NavigationMenuLink>
                           </Link>
                         </li>
@@ -198,32 +182,28 @@ const Navigation = () => {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className={`text-sm font-medium transition-colors data-[state=open]:text-foreground data-[state=open]:bg-muted ${
-                      scrolled 
-                        ? "text-foreground hover:text-primary hover:bg-muted" 
-                        : "text-white hover:bg-white/10"
-                    }`}
+                    className="text-[11px] font-mono uppercase tracking-[0.2em] transition-colors bg-transparent hover:bg-transparent focus:bg-transparent text-white/60 hover:text-rose data-[state=open]:text-rose data-[state=open]:bg-transparent"
                   >
                     Non-Profits
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 bg-background border border-border shadow-xl rounded-xl">
+                    <ul className="grid w-[400px] gap-2 p-6 bg-background/95 backdrop-blur-md border border-white/10 shadow-2xl rounded-2xl">
                       <li>
                         <Link to="/non-profits">
-                          <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/5 hover:text-primary">
-                            <div className="text-sm font-medium leading-none">Non-Profits Overview</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1">
-                              Salesforce solutions for non-profit organisations
+                          <NavigationMenuLink className="block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-white/[0.03] group">
+                            <div className="text-[11px] font-mono uppercase tracking-wider text-white group-hover:text-rose">Overview</div>
+                            <p className="line-clamp-2 text-[10px] leading-snug text-white/40 mt-1 font-mono">
+                              // Salesforce for non-profit organizations.
                             </p>
                           </NavigationMenuLink>
                         </Link>
                       </li>
-                      <div className="h-px bg-border my-1"></div>
+                      <div className="h-px bg-white/5 my-2"></div>
                       {nonprofitLinks.map((link) => (
                         <li key={link.href}>
                           <Link to={link.href}>
-                            <NavigationMenuLink className="block select-none space-y-1 rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-primary/20 hover:text-primary">
-                              <div className="text-sm font-medium leading-none">{link.title}</div>
+                            <NavigationMenuLink className="block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-white/[0.03] group">
+                              <div className="text-[11px] font-mono uppercase tracking-wider text-white/80 group-hover:text-rose transition-colors">{link.title}</div>
                             </NavigationMenuLink>
                           </Link>
                         </li>
@@ -235,15 +215,13 @@ const Navigation = () => {
                 <NavigationMenuItem>
                   <Link to="/contact">
                     <NavigationMenuLink
-                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                      className={`px-4 py-2 rounded-md text-[11px] font-mono uppercase tracking-[0.2em] transition-colors ${
                         isActive("/contact") 
-                          ? "text-primary" 
-                          : scrolled 
-                            ? "text-foreground hover:bg-muted hover:text-primary" 
-                            : "text-white hover:bg-white/10"
+                          ? "text-rose" 
+                          : "text-white/60 hover:text-rose"
                       }`}
                     >
-                      Contact Us
+                      Contact
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -251,7 +229,7 @@ const Navigation = () => {
             </NavigationMenu>
 
             <Link to="/book-consultation">
-              <Button className="ml-4 glow-button bg-primary text-primary-foreground hover:bg-secondary border shadow-md">
+              <Button className="ml-4 glow-button bg-rose text-black hover:bg-white font-mono text-[10px] uppercase tracking-[0.15em] px-6 py-5 rounded-full shadow-lg transition-all duration-300">
                 Book Consultation
               </Button>
             </Link>
@@ -259,39 +237,39 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <button
-            className={`lg:hidden p-2 transition-colors ${scrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-white/80'}`}
+            className={`lg:hidden p-2 transition-colors ${scrolled ? 'text-white hover:text-rose' : 'text-white hover:text-rose'}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 space-y-2 animate-fade-in bg-background/95 backdrop-blur-xl border border-border rounded-xl mt-2 p-4 shadow-xl absolute left-4 right-4 max-h-[80vh] overflow-y-auto">
+          <div className="lg:hidden py-4 space-y-2 animate-fade-in bg-background/95 backdrop-blur-xl border border-white/10 rounded-2xl mt-2 p-6 shadow-2xl absolute left-4 right-4 max-h-[80vh] overflow-y-auto font-mono">
             <Link
               to="/"
-              className={`block px-4 py-3 rounded-md transition-colors ${isActive('/') ? 'bg-primary/10 text-primary' : 'hover:bg-muted text-foreground'}`}
+              className={`block px-4 py-3 rounded-xl transition-colors text-xs uppercase tracking-wider ${isActive('/') ? 'bg-rose/10 text-rose' : 'hover:bg-white/5 text-white/80'}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className={`block px-4 py-3 rounded-md transition-colors ${isActive('/about') ? 'bg-primary/10 text-primary' : 'hover:bg-muted text-foreground'}`}
+              className={`block px-4 py-3 rounded-xl transition-colors text-xs uppercase tracking-wider ${isActive('/about') ? 'bg-rose/10 text-rose' : 'hover:bg-white/5 text-white/80'}`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              About Us
+              About
             </Link>
             
-            <div className="px-4 py-2 border-t border-border mt-2">
-              <div className="font-medium mb-2 text-primary">Solutions</div>
+            <div className="px-4 py-2 border-t border-white/5 mt-2">
+              <div className="text-[10px] tracking-widest text-rose uppercase mb-2">// Solutions</div>
               <div className="ml-4 space-y-1">
                 {solutionsLinks.map((link) => (
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                    className="block py-2 text-xs text-white/60 hover:text-rose uppercase tracking-wider"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.title}
@@ -300,14 +278,14 @@ const Navigation = () => {
               </div>
             </div>
 
-            <div className="px-4 py-2 border-t border-border mt-2">
-              <div className="font-medium mb-2 text-primary">Products</div>
+            <div className="px-4 py-2 border-t border-white/5 mt-2">
+              <div className="text-[10px] tracking-widest text-rose uppercase mb-2">// Products</div>
               <div className="ml-4 space-y-1">
                 {productsLinks.map((link) => (
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                    className="block py-2 text-xs text-white/60 hover:text-rose uppercase tracking-wider"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.title}
@@ -316,12 +294,12 @@ const Navigation = () => {
               </div>
             </div>
 
-            <div className="px-4 py-2 border-t border-border mt-2">
-              <div className="font-medium mb-2 text-primary">AI & Automation</div>
+            <div className="px-4 py-2 border-t border-white/5 mt-2">
+              <div className="text-[10px] tracking-widest text-rose uppercase mb-2">// AI & Automation</div>
               <div className="ml-4 space-y-1">
                 <Link
                   to="/ai-automation"
-                  className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                  className="block py-2 text-xs text-white/60 hover:text-rose uppercase tracking-wider"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Overview
@@ -330,7 +308,7 @@ const Navigation = () => {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                    className="block py-2 text-xs text-white/60 hover:text-rose uppercase tracking-wider"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.title}
@@ -339,12 +317,12 @@ const Navigation = () => {
               </div>
             </div>
 
-            <div className="px-4 py-2 border-t border-border mt-2">
-              <div className="font-medium mb-2 text-primary">Non-Profits</div>
+            <div className="px-4 py-2 border-t border-white/5 mt-2">
+              <div className="text-[10px] tracking-widest text-rose uppercase mb-2">// Non-Profits</div>
               <div className="ml-4 space-y-1">
                 <Link
                   to="/non-profits"
-                  className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                  className="block py-2 text-xs text-white/60 hover:text-rose uppercase tracking-wider"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Overview
@@ -353,7 +331,7 @@ const Navigation = () => {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                    className="block py-2 text-xs text-white/60 hover:text-rose uppercase tracking-wider"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.title}
@@ -362,13 +340,13 @@ const Navigation = () => {
               </div>
             </div>
             
-            <div className="border-t border-border mt-2 pt-2">
+            <div className="border-t border-white/5 mt-2 pt-2">
               <Link
                 to="/contact"
-                className={`block px-4 py-3 rounded-md transition-colors ${isActive('/contact') ? 'bg-primary/10 text-primary' : 'hover:bg-muted text-foreground'}`}
+                className={`block px-4 py-3 rounded-xl transition-colors text-xs uppercase tracking-wider ${isActive('/contact') ? 'bg-rose/10 text-rose' : 'hover:bg-white/5 text-white/80'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact Us
+                Contact
               </Link>
             </div>
             
@@ -378,8 +356,8 @@ const Navigation = () => {
                 className="block w-full"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <Button className="w-full glow-button bg-primary hover:bg-secondary text-primary-foreground shadow-md">
-                  Book Free Consultation
+                <Button className="w-full glow-button bg-rose text-black hover:bg-white font-mono text-xs uppercase tracking-wider py-6 rounded-full shadow-lg">
+                  Book Consultation
                 </Button>
               </Link>
             </div>

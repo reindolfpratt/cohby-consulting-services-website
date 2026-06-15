@@ -196,33 +196,41 @@ const Solutions = () => {
             })}
           </div>
 
-          {/* Solutions Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {/* Solutions List (Anti-Card Grid) */}
+          <div className="border-b border-white/10 mt-12">
             {filteredSolutions.map((solution, index) => (
-              <Card
+              <div
                 key={solution.title}
-                className="group bg-card hover:border-rose/30 transition-all duration-500 animate-slide-up overflow-hidden border-border h-full flex flex-col"
-                style={{ animationDelay: `${(index % 3) * 80}ms` }}
+                className="grid grid-cols-1 lg:grid-cols-12 py-12 items-start border-t border-white/10 hover:bg-white/[0.01] transition-all duration-300 group relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-rose/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                <CardHeader className="relative z-10 pb-4">
-                  <div className="text-rose font-mono text-xs mb-4 block">
-                    // {solution.category.toUpperCase()}
-                  </div>
-                  <CardTitle className="text-2xl text-white group-hover:text-rose transition-colors">{solution.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="relative z-10 flex-grow flex flex-col pt-0">
-                  <p className="text-muted-foreground mb-6 flex-grow text-base leading-relaxed">{solution.description}</p>
-                  <ul className="space-y-3 border-t border-white/5 pt-6 mt-auto">
+                {/* 1. Category Tag */}
+                <div className="lg:col-span-3 text-xs font-mono text-rose/50 uppercase tracking-[0.2em] mb-4 lg:mb-0 lg:pt-1">
+                  // {solution.category.toUpperCase()}
+                </div>
+
+                {/* 2. Headline & Description */}
+                <div className="lg:col-span-5 pr-8 mb-6 lg:mb-0">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-rose transition-colors mb-3">
+                    {solution.title}
+                  </h3>
+                  <p className="text-white/50 text-sm leading-relaxed">
+                    {solution.description}
+                  </p>
+                </div>
+
+                {/* 3. Features List */}
+                <div className="lg:col-span-4 mb-4 lg:mb-0 lg:pt-1">
+                  <span className="text-[10px] font-mono text-white/30 uppercase tracking-widest block mb-4">// Core Inclusions</span>
+                  <ul className="grid grid-cols-1 gap-3">
                     {solution.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="h-4 w-4 text-rose mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      <li key={idx} className="flex items-center gap-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-rose/60"></span>
+                        <span className="text-xs text-white/60">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
 
