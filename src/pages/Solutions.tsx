@@ -1,15 +1,22 @@
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  CheckCircle2
+  CheckCircle2,
+  ArrowRight
 } from "lucide-react";
 import LiquidGlassBackground from "@/components/LiquidGlassBackground";
 
 const Solutions = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const categories = ["All", "Salesforce", "Cloud & Data", "AI & Automation", "Support"];
+
   const solutions = [
     {
       title: "Salesforce Implementation",
+      category: "Salesforce",
       description: "Full end-to-end Salesforce implementation tailored to your business processes. We configure, customise, and optimise your Salesforce environment for maximum efficiency.",
       features: [
         "Requirements gathering and discovery",
@@ -20,6 +27,7 @@ const Solutions = () => {
     },
     {
       title: "Cloud Solutions",
+      category: "Cloud & Data",
       description: "Scale your business with secure, high-performance cloud infrastructure tailored for modern enterprises.",
       features: [
         "Cloud architecture design",
@@ -30,6 +38,7 @@ const Solutions = () => {
     },
     {
       title: "AI Automation & Engineering",
+      category: "AI & Automation",
       description: "Streamline your operations with intelligent workflow automation. Save time, reduce errors, and let your team focus on what matters.",
       features: [
         "Machine learning pipelines",
@@ -40,6 +49,7 @@ const Solutions = () => {
     },
     {
       title: "Data Analysis",
+      category: "Cloud & Data",
       description: "Transform your data into actionable insights with powerful data engineering and predictive analytics.",
       features: [
         "Predictive analytics & modeling",
@@ -50,6 +60,7 @@ const Solutions = () => {
     },
     {
       title: "Data Migration & Integration",
+      category: "Cloud & Data",
       description: "Seamlessly migrate your data and integrate with your existing systems for a unified view of your business.",
       features: [
         "Data cleansing and preparation",
@@ -60,6 +71,7 @@ const Solutions = () => {
     },
     {
       title: "Salesforce Customisation",
+      category: "Salesforce",
       description: "Make Salesforce truly yours with custom solutions built for your unique workflows and business requirements.",
       features: [
         "Custom app development",
@@ -70,6 +82,7 @@ const Solutions = () => {
     },
     {
       title: "Training & Support",
+      category: "Support",
       description: "Empower your team with comprehensive training and ongoing support to maximise your tech investment.",
       features: [
         "User and admin training",
@@ -80,6 +93,7 @@ const Solutions = () => {
     },
     {
       title: "Non-Profit Solutions",
+      category: "Salesforce",
       description: "Specialised tech solutions for non-profit organisations, including free licensing guidance and implementation.",
       features: [
         "Power of Us programme assistance",
@@ -90,6 +104,7 @@ const Solutions = () => {
     },
     {
       title: "Health Check & Optimisation",
+      category: "Salesforce",
       description: "Already using complex tech stacks? We'll review your setup and identify opportunities for improvement and optimisation.",
       features: [
         "Comprehensive system audit",
@@ -100,6 +115,7 @@ const Solutions = () => {
     },
     {
       title: "AI-Powered Websites",
+      category: "AI & Automation",
       description: "Next-generation websites that work smarter, not harder. Adapt to visitors, personalise content, and convert more leads.",
       features: [
         "Intelligent content personalisation",
@@ -110,6 +126,7 @@ const Solutions = () => {
     },
     {
       title: "AI Chatbots",
+      category: "AI & Automation",
       description: "Engage customers 24/7 with intelligent conversational AI that understands context and handles complex queries.",
       features: [
         "Natural language understanding",
@@ -120,6 +137,7 @@ const Solutions = () => {
     },
     {
       title: "Social Media Automations",
+      category: "AI & Automation",
       description: "Maintain a powerful social presence without the manual grind. Automate posting, engagement, and analytics.",
       features: [
         "Scheduled content publishing",
@@ -130,8 +148,12 @@ const Solutions = () => {
     },
   ];
 
+  const filteredSolutions = activeCategory === "All"
+    ? solutions
+    : solutions.filter((s) => s.category === activeCategory);
+
   return (
-    <div className="min-h-screen bg-background selection:bg-primary/30 relative">
+    <div className="min-h-screen bg-background selection:bg-rose/30 relative">
       {/* Dynamic Background Blend */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
       
@@ -139,37 +161,62 @@ const Solutions = () => {
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden z-10">
         <LiquidGlassBackground variant="hero" />
 
-        <div className="container relative mx-auto px-4 z-10 text-center pt-20">
+        <div className="container relative mx-auto px-4 z-10 text-center pt-24">
           <div className="max-w-3xl mx-auto animate-slide-up">
-            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight">Our <span className="text-transparent bg-clip-text gradient-primary">Solutions</span></h1>
-            <p className="text-xl md:text-2xl text-white/80 font-medium">
-              Comprehensive cloud, data, and engineering solutions designed to transform your business.
+            <span className="text-xs uppercase tracking-[0.25em] text-rose/90 font-mono mb-4 block">Our Offerings</span>
+            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight">Our <span className="text-rose font-extrabold italic">Solutions</span></h1>
+            <p className="text-lg md:text-xl text-white/70 font-medium">
+              Enterprise engineering designed to automate, scale, and transform.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Solutions Grid */}
-      <section className="py-24 relative z-10 bg-ash/50">
-        <div className="container mx-auto px-4">
+      {/* Solutions Section */}
+      <section className="py-24 relative z-10 bg-background border-t border-border">
+        <div className="container mx-auto px-4 max-w-7xl">
+          
+          {/* Category Filter Bar */}
+          <div className="flex flex-wrap justify-center gap-3 mb-16">
+            {categories.map((cat) => {
+              const active = activeCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-6 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
+                    active
+                      ? "bg-rose text-black font-semibold shadow-lg shadow-rose/10"
+                      : "bg-white/5 text-white/50 hover:text-white hover:bg-white/10"
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Solutions Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {solutions.map((solution, index) => (
+            {filteredSolutions.map((solution, index) => (
               <Card
-                key={index}
-                className="group bg-card hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 animate-slide-up overflow-hidden border-border h-full flex flex-col"
-                style={{ animationDelay: `${index * 50}ms` }}
+                key={solution.title}
+                className="group bg-card hover:border-rose/30 transition-all duration-500 animate-slide-up overflow-hidden border-border h-full flex flex-col"
+                style={{ animationDelay: `${(index % 3) * 80}ms` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                <CardHeader className="relative z-10">
-                  <div className="h-1 w-12 bg-primary rounded-full mb-6 group-hover:w-full transition-all duration-500"></div>
-                  <CardTitle className="text-2xl text-foreground group-hover:text-primary transition-colors">{solution.title}</CardTitle>
+                <div className="absolute inset-0 bg-gradient-to-br from-rose/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <CardHeader className="relative z-10 pb-4">
+                  <div className="text-rose font-mono text-xs mb-4 block">
+                    // {solution.category.toUpperCase()}
+                  </div>
+                  <CardTitle className="text-2xl text-white group-hover:text-rose transition-colors">{solution.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="relative z-10 flex-grow flex flex-col">
-                  <p className="text-muted-foreground mb-6 flex-grow text-lg">{solution.description}</p>
-                  <ul className="space-y-3">
+                <CardContent className="relative z-10 flex-grow flex flex-col pt-0">
+                  <p className="text-muted-foreground mb-6 flex-grow text-base leading-relaxed">{solution.description}</p>
+                  <ul className="space-y-3 border-t border-white/5 pt-6 mt-auto">
                     {solution.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <CheckCircle2 className="h-4 w-4 text-rose mt-0.5 flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">{feature}</span>
                       </li>
                     ))}
@@ -178,30 +225,27 @@ const Solutions = () => {
               </Card>
             ))}
           </div>
+
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 overflow-hidden border-t border-border">
+      <section className="relative py-32 overflow-hidden border-t border-border bg-background">
         <LiquidGlassBackground variant="cta" />
 
         <div className="container relative mx-auto px-4 text-center z-10">
           <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md p-12 md:p-20 rounded-[3rem] border border-white/10 shadow-xl">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
-              Ready to Transform Your Business?
+              Ready to Upgrade?
             </h2>
-            <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Let's discuss how we can help you achieve your goals with our tailored tech solutions.
+            <p className="text-lg text-white/70 mb-10 max-w-2xl mx-auto">
+              Let's discuss how we can build custom Salesforce, Cloud, or AI solutions for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link to="/book-consultation" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full glow-button bg-primary text-white hover:bg-secondary font-bold text-lg px-10 py-7 rounded-full shadow-lg">
-                  Book Free Consultation
-                </Button>
-              </Link>
-              <Link to="/contact" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full bg-transparent border-white/20 text-white hover:bg-white/10 hover:border-white/50 font-bold text-lg px-10 py-7 transition-all duration-300 rounded-full">
-                  Contact Us
+                <Button size="lg" className="w-full glow-button bg-rose text-black hover:bg-white font-bold text-lg px-10 py-7 rounded-full shadow-lg">
+                  Book Consultation
+                  <ArrowRight className="ml-2 h-5 w-5 text-black" />
                 </Button>
               </Link>
             </div>

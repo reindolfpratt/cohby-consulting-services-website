@@ -82,47 +82,48 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden selection:bg-primary/30">
+    <div className="min-h-screen bg-background overflow-hidden selection:bg-rose/30">
       {/* Dynamic Background Blend */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background z-0"></div>
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden z-10">
+      <section className="relative min-h-[90dvh] flex items-center overflow-hidden z-10">
         <LiquidGlassBackground variant="hero" />
 
-        <div className="container relative mx-auto px-4 z-10 pt-40 pb-32">
+        <div className="container relative mx-auto px-4 z-10 pt-32 pb-20">
           <div className="max-w-5xl mx-auto text-center">
+            <span className="block text-xs uppercase tracking-[0.25em] text-rose/90 font-mono mb-6 animate-slide-up" style={{ animationDelay: "0.04s" }}>
+              Elite Digital Engineering
+            </span>
 
-            <div className="h-8"></div>
-
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-[1.05] tracking-tight text-white animate-slide-up" style={{ animationDelay: "0.08s" }}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.05] tracking-tight text-white animate-slide-up" style={{ animationDelay: "0.08s" }}>
               Smart Solutions.
               <br />
-              Real Results.
+              Real <span className="text-rose font-extrabold italic">Results</span>.
             </h1>
 
             <p
-              className="text-xl md:text-2xl font-medium mb-10 text-white/70 tracking-wide max-w-2xl mx-auto animate-slide-up"
+              className="text-lg md:text-xl font-medium mb-12 text-white/70 tracking-wide max-w-2xl mx-auto animate-slide-up"
               style={{ animationDelay: "0.12s" }}
             >
-              Salesforce, Data and AI solutions that actually move your business forward.
+              Salesforce, Cloud, and AI systems engineered for scale.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center mb-16 animate-slide-up" style={{ animationDelay: "0.16s" }}>
               <Link to="/book-consultation">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto glow-button bg-primary text-white hover:bg-secondary font-bold text-lg px-10 py-7 shadow-lg rounded-full"
+                  className="w-full sm:w-auto glow-button bg-rose text-black hover:bg-white font-bold text-lg px-10 py-7 shadow-lg rounded-full"
                 >
-                  Start Your Journey
-                  <ArrowRight className="ml-2 h-6 w-6" />
+                  Book Consultation
+                  <ArrowRight className="ml-2 h-5 w-5 text-black" />
                 </Button>
               </Link>
               <Link to="/solutions">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto border-white/20 text-white hover:bg-white/10 hover:border-white/50 font-bold text-lg px-10 py-7 transition-all duration-300 rounded-full bg-transparent"
+                  className="w-full sm:w-auto border-white/10 text-white hover:bg-white/5 hover:border-white/20 font-bold text-lg px-10 py-7 transition-all duration-300 rounded-full bg-transparent"
                 >
                   Explore Services
                 </Button>
@@ -132,11 +133,12 @@ const Home = () => {
             {/* Floating glass capability chips */}
             <div
               className="animate-slide-up flex flex-wrap justify-center gap-3"
-              style={{ animationDelay: "0.16s" }}
+              style={{ animationDelay: "0.2s" }}
             >
               {["Salesforce Consulting", "AI Automation", "Data Analysis", "Cloud Solutions", "Nonprofits"].map(
                 (tag) => (
-                  <div key={tag} className="liquid-glass-chip px-4 py-1.5 rounded-full text-sm text-white/55 font-medium">
+                  <div key={tag} className="liquid-glass-tag px-5 py-2 rounded-full text-xs text-white/60 font-medium flex items-center border border-white/5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-rose/85 mr-2"></span>
                     {tag}
                   </div>
                 )
@@ -144,19 +146,18 @@ const Home = () => {
             </div>
           </div>
         </div>
-
       </section>
 
       {/* Services Section */}
-      <section className="py-32 relative z-10 border-t border-border">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-20 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-foreground tracking-tight">
-              Our Expertise
+      <section className="py-32 relative z-10 border-t border-border bg-background">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="mb-20 text-left md:max-w-2xl animate-slide-up">
+            <span className="text-xs uppercase tracking-[0.25em] text-rose/80 font-mono mb-4 block">Expertise Areas</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white tracking-tight">
+              Our Capabilities
             </h2>
-            <div className="h-1 w-24 gradient-primary mx-auto rounded-full mb-6"></div>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive technical solutions engineered to scale and perform.
+            <p className="text-lg text-muted-foreground">
+              Technical excellence and platform execution built for modern speed.
             </p>
           </div>
 
@@ -164,19 +165,21 @@ const Home = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group bg-card hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 animate-slide-up overflow-hidden border-border"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group bg-card hover:border-rose/30 transition-all duration-500 animate-slide-up overflow-hidden border-border"
+                style={{ animationDelay: `${index * 80}ms` }}
               >
                 <CardContent className="p-10 relative h-full flex flex-col">
                   {/* Glowing background on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-rose/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
                   <div className="relative z-10 flex-grow">
-                    <div className="h-1 w-12 bg-primary rounded-full mb-8 group-hover:w-24 transition-all duration-500"></div>
-                    <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
+                    <div className="text-rose font-mono text-sm mb-8 block transition-transform group-hover:translate-x-1 duration-300">
+                      // {service.title.toUpperCase()}
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-rose transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
+                    <p className="text-muted-foreground text-base leading-relaxed">
                       {service.description}
                     </p>
                   </div>
@@ -187,107 +190,88 @@ const Home = () => {
         </div>
       </section>
 
-      {/* What Sets Us Apart */}
+      {/* What Sets Us Apart - Asymmetric Split Screen layout to prevent repetition */}
       <section className="py-32 bg-ash relative overflow-hidden border-y border-border">
         {/* Background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-rose/5 rounded-full blur-[150px] pointer-events-none"></div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground">
-              The Cohby Advantage
-            </h2>
-            <div className="h-1 w-24 gradient-primary mx-auto rounded-full"></div>
-          </div>
+        <div className="container mx-auto px-4 relative z-10 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            {/* Left Column: Editorial Thesis */}
+            <div className="lg:col-span-5 flex flex-col justify-center">
+              <span className="text-xs uppercase tracking-[0.25em] text-rose/80 font-mono mb-4 block">The Cohby Thesis</span>
+              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-8">
+                We reject templated systems.
+              </h2>
+              <p className="text-lg text-white/60 leading-relaxed">
+                Your business is unique. We build tailored digital architecture that integrates with your workflow, rather than forcing you into rigid templates.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {differentiators.map((item, index) => (
-              <div
-                key={index}
-                className="group text-center animate-slide-up p-10 rounded-3xl bg-card border border-border hover:shadow-xl hover:shadow-primary/5 transition-all duration-500"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <div className="mb-6 flex justify-center">
-                  <div className="text-4xl font-black text-muted-foreground/30 group-hover:text-primary transition-colors duration-500">
-                    0{index + 1}
-                  </div>
+            {/* Right Column: Structured List with hairline dividers */}
+            <div className="lg:col-span-7 flex flex-col justify-center space-y-12">
+              {differentiators.map((item, index) => (
+                <div key={index} className="border-t border-white/10 pt-8 first:border-0 first:pt-0 group">
+                  <span className="text-xs font-mono text-rose/60 block mb-3">// FEATURE 0{index + 1}</span>
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-rose transition-colors">{item.title}</h3>
+                  <p className="text-white/65 text-base leading-relaxed">{item.description}</p>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-foreground">{item.title}</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* How We Work */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="container mx-auto px-4 z-10 relative">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground">Our Methodology</h2>
-            <div className="h-1 w-24 gradient-primary mx-auto rounded-full mb-6"></div>
+      {/* How We Work - Minimalist spacing and clear design flow */}
+      <section className="py-32 relative overflow-hidden bg-background">
+        <div className="container mx-auto px-4 max-w-7xl relative">
+          <div className="mb-20 text-left md:max-w-2xl animate-slide-up">
+            <span className="text-xs uppercase tracking-[0.25em] text-rose/80 font-mono mb-4 block">Our Process</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">Our Methodology</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto relative mt-16">
-            {/* Connecting Line */}
-            <div className="hidden lg:block absolute top-[4.5rem] left-[15%] right-[15%] h-px">
-              <div className="h-full bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-16">
             {workProcess.map((step, index) => (
               <div
                 key={index}
-                className="relative animate-slide-up group"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="relative group border-l border-white/10 pl-6 py-4 transition-all duration-300 hover:border-rose/50"
               >
-                <div className="text-center relative z-10">
-                  <div className="relative inline-block mb-8">
-                    {/* Number background shadow */}
-                    <div className="text-9xl font-black text-muted/50 absolute -top-10 -left-6 group-hover:text-primary/10 transition-colors duration-500 select-none">
-                      {step.number}
-                    </div>
-                    {/* Glowing dot */}
-                    <div className="relative w-20 h-20 rounded-full bg-card border border-border flex items-center justify-center shadow-lg group-hover:shadow-primary/20 group-hover:scale-110 group-hover:border-primary/50 transition-all duration-300">
-                      <span className="text-primary font-bold text-2xl">
-                        {step.number}
-                      </span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors mt-4">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground text-lg">{step.description}</p>
-                </div>
+                <span className="text-4xl font-mono font-black text-white/10 group-hover:text-rose/30 transition-colors block mb-4">
+                  {step.number}
+                </span>
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-rose transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Consistently uses unique intent labels */}
       <section className="relative py-32 overflow-hidden border-t border-border">
         <LiquidGlassBackground variant="cta" />
 
         <div className="container relative mx-auto px-4 text-center z-10">
           <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-md p-12 md:p-20 rounded-[3rem] border border-white/10 relative overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-rose/10 to-transparent pointer-events-none"></div>
             
             <h2 className="text-4xl md:text-6xl font-black mb-8 text-white relative z-10">
               Ready to Upgrade?
             </h2>
-            <p className="text-xl md:text-2xl mb-12 text-white/80 relative z-10 max-w-2xl mx-auto">
-              Let's talk about transforming your business. No pressure, just strategic advice.
+            <p className="text-lg md:text-xl mb-12 text-white/70 relative z-10 max-w-2xl mx-auto">
+              Let's discuss how we can build custom Salesforce, Cloud, or AI solutions for your organization.
             </p>
             <Link to="/book-consultation" className="relative z-10 inline-block">
               <Button
                 size="lg"
-                className="glow-button bg-primary text-white hover:bg-secondary font-bold text-xl px-12 py-8 rounded-full shadow-lg w-full sm:w-auto"
+                className="glow-button bg-rose text-black hover:bg-white font-bold text-lg px-12 py-8 rounded-full shadow-lg w-full sm:w-auto"
               >
-                Book Your Strategy Call
-                <ArrowRight className="ml-3 h-6 w-6" />
+                Book Consultation
+                <ArrowRight className="ml-3 h-5 w-5 text-black" />
               </Button>
             </Link>
           </div>

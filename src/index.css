@@ -8,15 +8,15 @@
 
 @layer base {
   :root {
-    /* Light Theme (Logo Match) */
-    --background: 0 0% 100%; /* Pure White */
-    --foreground: 224 38% 16%; /* Dark Navy */
+    /* Cohby Consulting — Midnight & Rose Premium Design System */
+    --background: 240 7% 4%; /* Midnight Charcoal #070708 */
+    --foreground: 0 0% 98%; /* High Contrast White #fafafa */
 
-    --card: 0 0% 100%;
-    --card-foreground: 224 38% 16%;
+    --card: 240 7% 6%; /* Sleek dark card #0c0c0d */
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 38% 16%;
+    --popover: 240 7% 5%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 200 78% 48%; /* Cloud Cyan */
     --primary-foreground: 0 0% 100%;
@@ -24,24 +24,27 @@
     --secondary: 209 65% 33%; /* Medium Blue */
     --secondary-foreground: 0 0% 100%;
 
-    --navy: 224 38% 16%; /* Dark Navy */
+    --rose: 346 52% 84%; /* Unseen Rose Accent #EDC1CB */
+    --rose-foreground: 240 7% 4%;
+
+    --navy: 224 38% 16%; /* Kept for compatibility */
     --navy-foreground: 0 0% 100%;
 
-    --ash: 215 15% 96%; /* Light Ash / Silver Grey */
-    --ash-foreground: 224 38% 16%;
+    --ash: 240 6% 8%; /* Midnight Ash #131315 */
+    --ash-foreground: 0 0% 98%;
 
-    --muted: 213 27% 95%; /* Very Light Grey */
-    --muted-foreground: 215 10% 65%; /* Silver Grey */
+    --muted: 240 5% 15%; /* Muted Charcoal #242426 */
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 200 78% 48%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 346 52% 84%; /* Accent becomes Unseen Rose */
+    --accent-foreground: 240 7% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 10% 85%; /* Light Grey Border */
-    --input: 215 10% 85%;
-    --ring: 200 78% 48%;
+    --border: 240 5% 12%; /* Thin elegant border */
+    --input: 240 5% 12%;
+    --ring: 346 52% 84%;
 
     --radius: 0.75rem;
 
@@ -49,31 +52,31 @@
     --gradient-primary: linear-gradient(
       135deg,
       hsl(200, 78%, 48%),
-      hsl(209, 65%, 33%)
+      hsl(346, 52%, 84%)
     );
     --gradient-hero: linear-gradient(
       135deg,
-      hsl(0, 0%, 100%),
-      hsl(213, 27%, 95%),
-      hsl(213, 27%, 90%)
+      hsl(240, 7%, 4%),
+      hsl(240, 6% , 8%),
+      hsl(240, 5% , 15%)
     );
     --gradient-accent: linear-gradient(
       90deg,
-      hsl(200, 78%, 48%),
-      hsl(209, 65%, 33%)
+      hsl(346, 52%, 84%),
+      hsl(200, 78%, 48%)
     );
     --gradient-card: linear-gradient(
       145deg,
-      hsl(0, 0%, 100%),
-      hsl(213, 27%, 98%)
+      hsl(240, 7%, 6%),
+      hsl(240, 7%, 4%)
     );
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px -2px hsl(207 90% 54% / 0.08);
-    --shadow-md: 0 4px 16px -4px hsl(207 90% 54% / 0.12);
-    --shadow-lg: 0 12px 32px -8px hsl(207 90% 54% / 0.2);
-    --shadow-glow: 0 0 32px hsl(207 90% 54% / 0.25);
-    --shadow-blue-glow: 0 0 40px hsl(207 90% 54% / 0.3), 0 0 80px hsl(207 90% 54% / 0.1);
+    --shadow-sm: 0 2px 8px -2px hsl(346 52% 84% / 0.08);
+    --shadow-md: 0 4px 16px -4px hsl(346 52% 84% / 0.12);
+    --shadow-lg: 0 12px 32px -8px hsl(346 52% 84% / 0.2);
+    --shadow-glow: 0 0 32px hsl(346 52% 84% / 0.25);
+    --shadow-blue-glow: 0 0 40px hsl(346 52% 84% / 0.3), 0 0 80px hsl(346 52% 84% / 0.1);
 
     /* Transitions */
     --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -105,14 +108,14 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: hsl(214, 40%, 18%);
+    background: hsl(240, 7%, 4%);
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(214, 15%, 35%);
+    background: hsl(240, 5%, 20%);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(207, 90%, 54%);
+    background: hsl(346, 52%, 84%);
   }
 }
 
@@ -504,8 +507,8 @@
   .liquid-orb-1 {
     background: radial-gradient(
       circle at 38% 38%,
-      rgba(27, 156, 217, 0.45),
-      rgba(15, 82, 186, 0.28) 42%,
+      rgba(27, 156, 217, 0.35),
+      rgba(15, 82, 186, 0.18) 42%,
       transparent 68%
     );
     filter: blur(80px);
@@ -515,8 +518,8 @@
   .liquid-orb-2 {
     background: radial-gradient(
       circle at 62% 62%,
-      rgba(20, 80, 200, 0.35),
-      rgba(10, 60, 160, 0.2) 42%,
+      rgba(237, 193, 203, 0.25),
+      rgba(10, 60, 160, 0.1) 42%,
       transparent 68%
     );
     filter: blur(90px);
@@ -526,7 +529,7 @@
   .liquid-orb-3 {
     background: radial-gradient(
       circle at 50% 50%,
-      rgba(56, 189, 248, 0.22),
+      rgba(237, 193, 203, 0.2),
       transparent 62%
     );
     filter: blur(60px);
@@ -536,12 +539,23 @@
   .liquid-orb-4 {
     background: radial-gradient(
       circle at 50% 50%,
-      rgba(30, 100, 220, 0.22),
-      rgba(10, 60, 160, 0.12) 40%,
+      rgba(27, 156, 217, 0.2),
+      rgba(10, 60, 160, 0.08) 40%,
       transparent 65%
     );
     filter: blur(70px);
     animation: liquid-float-b 16s ease-in-out infinite reverse;
+  }
+
+  .liquid-orb-rose {
+    background: radial-gradient(
+      circle at 45% 45%,
+      rgba(237, 193, 203, 0.35),
+      rgba(200, 80, 120, 0.15) 45%,
+      transparent 70%
+    );
+    filter: blur(80px);
+    animation: liquid-float-a 15s ease-in-out infinite;
   }
 
   /* ──── Chrome Glass Reflective Text ──── */
