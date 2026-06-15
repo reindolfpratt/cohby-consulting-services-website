@@ -8,14 +8,14 @@
 
 @layer base {
   :root {
-    /* Cohby Consulting — Midnight & Rose Premium Design System */
-    --background: 240 7% 4%; /* Midnight Charcoal #070708 */
+    /* Cohby Consulting — Deep Indigo & Rose Premium Design System */
+    --background: 237 45% 9%; /* Rich Deep Indigo */
     --foreground: 0 0% 98%; /* High Contrast White #fafafa */
 
-    --card: 240 7% 6%; /* Sleek dark card #0c0c0d */
+    --card: 237 40% 11%; /* Indigo card */
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 7% 5%;
+    --popover: 237 42% 8%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 200 78% 48%; /* Cloud Cyan */
@@ -30,11 +30,11 @@
     --navy: 224 38% 16%; /* Kept for compatibility */
     --navy-foreground: 0 0% 100%;
 
-    --ash: 240 6% 8%; /* Midnight Ash #131315 */
+    --ash: 237 38% 12%; /* Indigo Ash */
     --ash-foreground: 0 0% 98%;
 
-    --muted: 240 5% 15%; /* Muted Charcoal #242426 */
-    --muted-foreground: 240 5% 65%;
+    --muted: 237 30% 18%; /* Muted Indigo */
+    --muted-foreground: 237 15% 70%;
 
     --accent: 346 52% 84%; /* Accent becomes Unseen Rose */
     --accent-foreground: 240 7% 4%;
@@ -42,8 +42,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 5% 12%; /* Thin elegant border */
-    --input: 240 5% 12%;
+    --border: 237 28% 14%; /* Indigo border */
+    --input: 237 28% 14%;
     --ring: 346 52% 84%;
 
     --radius: 0.75rem;
@@ -56,9 +56,9 @@
     );
     --gradient-hero: linear-gradient(
       135deg,
-      hsl(240, 7%, 4%),
-      hsl(240, 6% , 8%),
-      hsl(240, 5% , 15%)
+      hsl(237, 45%, 9%),
+      hsl(237, 38%, 12%),
+      hsl(237, 30%, 18%)
     );
     --gradient-accent: linear-gradient(
       90deg,
@@ -67,8 +67,8 @@
     );
     --gradient-card: linear-gradient(
       145deg,
-      hsl(240, 7%, 6%),
-      hsl(240, 7%, 4%)
+      hsl(237, 40%, 11%),
+      hsl(237, 45%, 9%)
     );
 
     /* Shadows */
@@ -507,54 +507,55 @@
   .liquid-orb-1 {
     background: radial-gradient(
       circle at 38% 38%,
-      rgba(27, 156, 217, 0.35),
-      rgba(15, 82, 186, 0.18) 42%,
+      rgba(30, 200, 255, 0.72),
+      rgba(15, 110, 230, 0.38) 42%,
       transparent 68%
     );
-    filter: blur(80px);
+    filter: blur(55px);
     animation: liquid-float-a 14s ease-in-out infinite;
   }
 
   .liquid-orb-2 {
     background: radial-gradient(
       circle at 62% 62%,
-      rgba(237, 193, 203, 0.25),
-      rgba(10, 60, 160, 0.1) 42%,
+      rgba(255, 90, 145, 0.62),
+      rgba(180, 30, 100, 0.30) 42%,
       transparent 68%
     );
-    filter: blur(90px);
+    filter: blur(65px);
     animation: liquid-float-b 18s ease-in-out infinite;
   }
 
   .liquid-orb-3 {
     background: radial-gradient(
       circle at 50% 50%,
-      rgba(237, 193, 203, 0.2),
-      transparent 62%
+      rgba(130, 70, 255, 0.55),
+      rgba(80, 20, 200, 0.25) 48%,
+      transparent 68%
     );
-    filter: blur(60px);
+    filter: blur(70px);
     animation: liquid-float-a 11s ease-in-out infinite reverse;
   }
 
   .liquid-orb-4 {
     background: radial-gradient(
       circle at 50% 50%,
-      rgba(27, 156, 217, 0.2),
-      rgba(10, 60, 160, 0.08) 40%,
+      rgba(30, 210, 240, 0.55),
+      rgba(10, 140, 200, 0.25) 40%,
       transparent 65%
     );
-    filter: blur(70px);
+    filter: blur(60px);
     animation: liquid-float-b 16s ease-in-out infinite reverse;
   }
 
   .liquid-orb-rose {
     background: radial-gradient(
       circle at 45% 45%,
-      rgba(237, 193, 203, 0.35),
-      rgba(200, 80, 120, 0.15) 45%,
+      rgba(255, 120, 170, 0.62),
+      rgba(220, 50, 120, 0.28) 45%,
       transparent 70%
     );
-    filter: blur(80px);
+    filter: blur(60px);
     animation: liquid-float-a 15s ease-in-out infinite;
   }
 
@@ -727,10 +728,10 @@
   /* ──── Uniform Satin Glass & Dark Metallic Reflections ──── */
   .satin-glass-bg {
     background: radial-gradient(
-      circle at 50% 35%,
-      #070708 0%,
-      #030303 50%,
-      #000000 100%
+      ellipse at 50% 30%,
+      hsl(237, 45%, 13%) 0%,
+      hsl(238, 50%, 8%) 55%,
+      hsl(240, 55%, 5%) 100%
     );
   }
 

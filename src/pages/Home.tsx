@@ -85,15 +85,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden selection:bg-rose/30 relative grid-blueprint">
-
-      {/* Blueprint vertical grid lines */}
-      <div className="absolute inset-0 grid grid-cols-4 pointer-events-none z-0 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="border-r border-white/[0.02] h-full" />
-        <div className="border-r border-white/[0.02] h-full" />
-        <div className="border-r border-white/[0.02] h-full" />
-        <div className="h-full" />
-      </div>
+    <div className="min-h-screen bg-background overflow-hidden selection:bg-rose/30 relative">
 
       {/* ── Hero Section ── */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden z-10 border-b border-white/10">

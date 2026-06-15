@@ -53,7 +53,7 @@ const Navigation = () => {
   ];
 
   const dropdownMenuClass =
-    "grid w-[400px] gap-1 p-5 bg-[rgba(7,7,8,0.92)] backdrop-blur-[48px] border border-white/10 shadow-2xl rounded-2xl";
+    "grid w-[400px] gap-1 p-5 bg-[rgba(14,16,38,0.94)] backdrop-blur-[48px] border border-white/10 shadow-2xl rounded-2xl";
 
   const dropdownLinkClass =
     "block select-none rounded-xl p-3 leading-none no-underline outline-none transition-colors hover:bg-white/[0.04] group cursor-pointer";
