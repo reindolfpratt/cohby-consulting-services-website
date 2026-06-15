@@ -581,6 +581,131 @@
   }
 }
 
+/* ──── Floating Glass Nav ──── */
+.liquid-glass-nav {
+  background: linear-gradient(
+    180deg,
+    rgba(27, 156, 217, 0.055) 0%,
+    rgba(255, 255, 255, 0.028) 50%,
+    rgba(0, 0, 0, 0.18) 100%
+  );
+  backdrop-filter: blur(48px) saturate(2.2) brightness(1.08);
+  -webkit-backdrop-filter: blur(48px) saturate(2.2) brightness(1.08);
+  border: 1px solid rgba(255, 255, 255, 0.115);
+  box-shadow:
+    0 4px 32px rgba(0, 0, 0, 0.45),
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.14),
+    0 0 0 1px rgba(255, 255, 255, 0.028);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .liquid-glass-nav {
+    background: rgba(5, 5, 7, 0.97);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* ──── Strong Elevated Glass Card ──── */
+.liquid-glass-card-strong {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.075) 0%,
+    rgba(255, 255, 255, 0.028) 45%,
+    rgba(27, 156, 217, 0.04) 100%
+  );
+  backdrop-filter: blur(32px) saturate(1.8) brightness(1.05);
+  -webkit-backdrop-filter: blur(32px) saturate(1.8) brightness(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.16),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-glass-card-strong:hover {
+  border-color: rgba(237, 193, 203, 0.22);
+  box-shadow:
+    0 16px 52px rgba(0, 0, 0, 0.48),
+    0 0 32px rgba(237, 193, 203, 0.07),
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .liquid-glass-card-strong {
+    background: rgba(18, 18, 22, 0.95);
+  }
+}
+
+/* ──── CTA Glass Panel ──── */
+.liquid-glass-cta-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(237, 193, 203, 0.065) 0%,
+    rgba(255, 255, 255, 0.038) 30%,
+    rgba(27, 156, 217, 0.045) 70%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+  backdrop-filter: blur(48px) saturate(2) brightness(1.07);
+  -webkit-backdrop-filter: blur(48px) saturate(2) brightness(1.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 20px 80px rgba(0, 0, 0, 0.55),
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1.5px 0 rgba(0, 0, 0, 0.18),
+    0 0 80px rgba(237, 193, 203, 0.055),
+    0 0 0 1px rgba(255, 255, 255, 0.025);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .liquid-glass-cta-panel {
+    background: rgba(12, 12, 16, 0.98);
+  }
+}
+
+/* ──── Service Row Glass Enhancement ──── */
+.service-row-glass {
+  position: relative;
+  transition: background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-row-glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.025) 40%,
+    rgba(27, 156, 217, 0.025) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.service-row-glass:hover::after {
+  opacity: 1;
+}
+
+/* ──── Methodology Step ──── */
+.method-step-glass {
+  transition: background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.method-step-glass:hover {
+  background: rgba(255, 255, 255, 0.025) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07),
+              0 0 24px rgba(237, 193, 203, 0.05);
+  border-color: rgba(237, 193, 203, 0.12) !important;
+}
+
 /* ──── Liquid Float Keyframes ──── */
 @keyframes liquid-float-a {
   0%, 100% { transform: translate(0px, 0px) scale(1); }
