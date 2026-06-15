@@ -15,15 +15,26 @@ import {
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [overLight, setOverLight] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const y = window.scrollY;
+      setScrolled(y > 20);
+      // Switch to dark solid nav when scrolled into the light clay sections.
+      // Hero is ~100vh; use 80% of window height as the threshold.
+      setOverLight(y > window.innerHeight * 0.8);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Reset overLight when navigating to a new page
+  useEffect(() => {
+    setOverLight(false);
+    setScrolled(false);
+  }, [location.pathname]);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -61,14 +72,24 @@ const Navigation = () => {
   const dropdownTextClass =
     "text-[11px] font-mono uppercase tracking-wider text-white/85 group-hover:text-rose transition-colors";
 
+  // Derived style tokens based on background context
+  const navBg = overLight
+    ? "bg-[#0e0e12] border border-white/[0.07] shadow-[0_4px_32px_rgba(0,0,0,0.35)]"
+    : scrolled
+    ? "liquid-glass-nav"
+    : "";
+
+  const linkColor = "text-white/70 hover:text-white";
+  const activeLinkColor = "text-rose";
+  const logoTextColor = "text-white";
+  const mobileButtonColor = "text-white/80 hover:text-rose";
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
       {/* Floating glass pill */}
       <div className="px-4 pt-4">
         <div
-          className={`max-w-7xl mx-auto rounded-2xl transition-all duration-500 ${
-            scrolled ? "liquid-glass-nav" : ""
-          }`}
+          className={`max-w-7xl mx-auto rounded-2xl transition-all duration-300 ${navBg}`}
         >
           <div className="px-4 md:px-6 flex h-16 items-center justify-between">
             {/* Logo */}
@@ -81,7 +102,7 @@ const Navigation = () => {
                 alt="Cohby Consulting Services"
                 className="h-9 w-9 object-contain"
               />
-              <span className="text-sm font-mono tracking-[0.2em] uppercase hidden sm:inline text-white">
+              <span className={`text-sm font-mono tracking-[0.2em] uppercase hidden sm:inline ${logoTextColor}`}>
                 Cohby Consulting
               </span>
             </Link>
@@ -94,9 +115,7 @@ const Navigation = () => {
                     <Link to="/">
                       <NavigationMenuLink
                         className={`px-4 py-2 rounded-md text-[11px] font-mono uppercase tracking-[0.2em] transition-colors cursor-pointer ${
-                          isActive("/")
-                            ? "text-rose"
-                            : "text-white/70 hover:text-white"
+                          isActive("/") ? activeLinkColor : linkColor
                         }`}
                       >
                         Home
@@ -108,9 +127,7 @@ const Navigation = () => {
                     <Link to="/about">
                       <NavigationMenuLink
                         className={`px-4 py-2 rounded-md text-[11px] font-mono uppercase tracking-[0.2em] transition-colors cursor-pointer ${
-                          isActive("/about")
-                            ? "text-rose"
-                            : "text-white/70 hover:text-white"
+                          isActive("/about") ? activeLinkColor : linkColor
                         }`}
                       >
                         About
@@ -232,9 +249,7 @@ const Navigation = () => {
                     <Link to="/contact">
                       <NavigationMenuLink
                         className={`px-4 py-2 rounded-md text-[11px] font-mono uppercase tracking-[0.2em] transition-colors cursor-pointer ${
-                          isActive("/contact")
-                            ? "text-rose"
-                            : "text-white/70 hover:text-white"
+                          isActive("/contact") ? activeLinkColor : linkColor
                         }`}
                       >
                         Contact
@@ -253,7 +268,7 @@ const Navigation = () => {
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden p-2 text-white/80 hover:text-rose transition-colors cursor-pointer"
+              className={`lg:hidden p-2 transition-colors cursor-pointer ${mobileButtonColor}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
