@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import LiquidGlassBackground from "@/components/LiquidGlassBackground";
 
 const Home = () => {
@@ -45,16 +45,19 @@ const Home = () => {
 
   const differentiators = [
     {
+      number: "01",
       title: "Hands-On, Practical Expertise",
       description:
         "We're certified pros who get our hands dirty with your data and workflows. No jargon, just results.",
     },
     {
+      number: "02",
       title: "Tailored Solutions, Not Templates",
       description:
         "Your business isn't one-size-fits-all, and neither are our solutions. We customise everything to fit your way of working.",
     },
     {
+      number: "03",
       title: "Transparent, Collaborative Partnership",
       description:
         "We work with you every step of the way, keeping you in control and informed throughout.",
@@ -85,10 +88,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden selection:bg-rose/30 relative grid-blueprint">
+    <div className="min-h-screen bg-background overflow-x-hidden selection:bg-rose/30">
 
-      {/* ── Hero Section ── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 border-b border-white/[0.06] bg-background">
+      {/* ── Hero Section — Dark ── */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 border-b border-white/[0.06] bg-background grid-blueprint">
         <LiquidGlassBackground variant="hero" />
 
         {/* 4-Column Blueprint Vertical Grid Lines Overlay */}
@@ -154,7 +157,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── Services Showcase ── */}
+      {/* ── Services Showcase — Dark ── */}
       <section className="py-32 relative z-10 border-b border-white/10 bg-background/50">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
 
@@ -203,94 +206,105 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── Thesis Section ── */}
-      <section className="py-32 bg-ash relative overflow-hidden border-b border-white/10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-rose/[0.04] rounded-full blur-[200px] pointer-events-none" />
+      {/* ── Studio Gallery Transition ── */}
+      {/* Gradient fade from dark to light clay */}
+      <div className="h-48 w-full pointer-events-none" style={{background: "linear-gradient(180deg, hsl(240,10%,4%) 0%, #f0ede9 100%)"}} />
 
-        <div className="container mx-auto px-4 md:px-8 relative z-10 max-w-7xl">
-          <div className="max-w-5xl mx-auto text-left">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.05] uppercase mb-20">
-              We reject templated systems. We build bespoke digital architecture that integrates with your workflow, rather than forcing you into rigid templates.
-            </h2>
+      {/* ── Why Us Section — Light Clay ── */}
+      <section className="bg-studio-light relative pt-4 pb-28 overflow-hidden">
 
-            {/* Differentiators - proper glass cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-16 border-t border-white/10">
-              {differentiators.map((item, index) => (
-                <div
-                  key={index}
-                  className="group p-8 rounded-2xl relative overflow-hidden liquid-glass-card-strong glass-sheen-sweep"
-                >
-                  <div className="text-4xl font-black text-white/[0.04] font-mono mb-6 select-none leading-none">
-                    0{index + 1}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-rose transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-white/70 text-sm leading-relaxed font-sans">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+        {/* Side Arch Pillars */}
+        <div className="studio-pillar-left" aria-hidden="true" />
+        <div className="studio-pillar-right" aria-hidden="true" />
+
+        <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+
+          {/* Section Header */}
+          <div className="pt-4 pb-16 border-b studio-rule">
+            <div className="flex items-baseline justify-between">
+              <span className="studio-label">// Why Cohby</span>
+              <span className="studio-label">03 pillars</span>
             </div>
+          </div>
+
+          {/* Big Statement */}
+          <div className="py-20 border-b studio-rule">
+            <h2 className="studio-heading text-4xl md:text-6xl lg:text-7xl max-w-4xl leading-[0.95]">
+              We reject templated systems. We build bespoke digital architecture that integrates with your workflow.
+            </h2>
+          </div>
+
+          {/* Differentiators Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 pt-2">
+            {differentiators.map((item, index) => (
+              <div
+                key={index}
+                className="py-12 pr-12 border-b md:border-b-0 md:border-r studio-rule last:border-r-0 last:border-b-0 group"
+              >
+                <span className="studio-label block mb-8">// {item.number}</span>
+                <h3 className="text-xl font-bold text-[#121214] mb-4 leading-tight tracking-tight group-hover:opacity-60 transition-opacity">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed studio-subtext">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Methodology Section ── */}
-      <section className="py-32 relative overflow-hidden bg-background/30">
-        <div className="container mx-auto px-4 md:px-8 max-w-7xl relative">
+      {/* ── Methodology Section — Light Clay ── */}
+      <section className="bg-studio-light relative pb-28 overflow-hidden">
 
-          <div className="mb-20 text-left">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight uppercase">
-              Our Methodology
-            </h2>
+        {/* Side Arch Pillars */}
+        <div className="studio-pillar-left" aria-hidden="true" />
+        <div className="studio-pillar-right" aria-hidden="true" />
+
+        <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+
+          {/* Section Header */}
+          <div className="pb-12 border-b studio-rule">
+            <div className="flex items-baseline justify-between">
+              <h2 className="studio-heading text-4xl md:text-5xl">Our Methodology</h2>
+              <span className="studio-label">Process</span>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-white/[0.07] mt-16 border-t border-b border-white/[0.07]">
+          {/* Process Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x" style={{borderColor: "rgba(18,18,20,0.1)"}}>
             {workProcess.map((step, index) => (
               <div
                 key={index}
-                className="p-8 lg:p-12 group method-step-glass"
+                className="py-12 pr-0 md:pr-10 pl-0 md:pl-10 first:pl-0 group"
               >
-                <span className="text-xs font-mono text-rose/75 block mb-6 uppercase tracking-[0.2em]">
-                  // {step.number}
-                </span>
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-rose transition-colors">
+                <span className="studio-label block mb-8">// {step.number}</span>
+                <h3 className="text-2xl font-bold text-[#121214] mb-4 tracking-tight uppercase group-hover:opacity-60 transition-opacity">
                   {step.title}
                 </h3>
-                <p className="text-white/70 text-sm leading-relaxed">
+                <p className="text-sm leading-relaxed studio-subtext">
                   {step.description}
                 </p>
               </div>
             ))}
           </div>
 
-        </div>
-      </section>
-
-      {/* ── CTA Section ── */}
-      <section className="relative py-32 overflow-hidden border-t border-white/10 bg-background">
-        <LiquidGlassBackground variant="cta" />
-
-        <div className="container relative mx-auto px-4 md:px-8 text-center z-10 max-w-7xl">
-          <div className="max-w-4xl mx-auto liquid-glass-cta-panel p-12 md:p-20 rounded-[3rem] relative overflow-hidden">
-            {/* Inner rose gradient accent */}
-            <div className="absolute inset-0 bg-gradient-to-br from-rose/[0.08] via-transparent to-primary/[0.06] pointer-events-none rounded-[3rem]" />
-
-            <h2 className="text-4xl md:text-6xl font-black mb-8 text-white relative z-10 uppercase tracking-tighter">
-              Let's Build the Future
+          {/* CTA Block */}
+          <div className="mt-16 studio-cta-block p-14 md:p-20 text-center relative overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{backgroundImage:"url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")"}} />
+            <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-white/40 block mb-6">// Next Step</span>
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight text-white mb-6 leading-[0.95]">
+              Let's Build<br />
+              <span className="italic font-serif lowercase tracking-normal text-rose">the future</span>
             </h2>
-            <p className="text-base md:text-lg mb-12 text-white/75 relative z-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base text-white/50 max-w-md mx-auto mb-10 leading-relaxed">
               Collaborate with us to architect custom Salesforce, Cloud, and AI systems built specifically for your scale.
             </p>
-
-            <Link to="/book-consultation" className="relative z-10 inline-block">
-              <Button
-                size="lg"
-                className="glow-button bg-rose text-black hover:bg-white font-mono text-xs uppercase tracking-wider px-10 py-7 rounded-full shadow-lg cursor-pointer"
-              >
-                Book Consultation &rarr;
-              </Button>
+            <Link
+              to="/book-consultation"
+              className="inline-flex items-center gap-3 bg-white text-black font-mono text-xs uppercase tracking-wider px-8 py-4 rounded-full hover:bg-rose transition-colors duration-300 font-semibold"
+            >
+              Book Consultation <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
