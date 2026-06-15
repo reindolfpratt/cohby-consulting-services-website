@@ -8,14 +8,14 @@
 
 @layer base {
   :root {
-    /* Cohby Consulting — Deep Indigo & Rose Premium Design System */
-    --background: 237 45% 9%; /* Rich Deep Indigo */
+    /* Cohby Consulting — True Midnight Black & Rose Premium Design System */
+    --background: 240 10% 3.5%; /* Midnight Black #070709 */
     --foreground: 0 0% 98%; /* High Contrast White #fafafa */
 
-    --card: 237 40% 11%; /* Indigo card */
+    --card: 240 8% 6%; /* Deep Charcoal #0e0e11 */
     --card-foreground: 0 0% 98%;
 
-    --popover: 237 42% 8%;
+    --popover: 240 8% 5%; /* #0b0b0e */
     --popover-foreground: 0 0% 98%;
 
     --primary: 200 78% 48%; /* Cloud Cyan */
@@ -30,11 +30,11 @@
     --navy: 224 38% 16%; /* Kept for compatibility */
     --navy-foreground: 0 0% 100%;
 
-    --ash: 237 38% 12%; /* Indigo Ash */
+    --ash: 240 6% 5%; /* Dark Ash #0b0b0d */
     --ash-foreground: 0 0% 98%;
 
-    --muted: 237 30% 18%; /* Muted Indigo */
-    --muted-foreground: 237 15% 70%;
+    --muted: 240 5% 12%; /* Muted Dark #1c1c20 */
+    --muted-foreground: 240 5% 65%;
 
     --accent: 346 52% 84%; /* Accent becomes Unseen Rose */
     --accent-foreground: 240 7% 4%;
@@ -42,8 +42,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 237 28% 14%; /* Indigo border */
-    --input: 237 28% 14%;
+    --border: 240 5% 10%; /* Fine border #16161a */
+    --input: 240 5% 10%;
     --ring: 346 52% 84%;
 
     --radius: 0.75rem;
@@ -56,9 +56,9 @@
     );
     --gradient-hero: linear-gradient(
       135deg,
-      hsl(237, 45%, 9%),
-      hsl(237, 38%, 12%),
-      hsl(237, 30%, 18%)
+      hsl(240, 10%, 3.5%),
+      hsl(240, 6%, 5%),
+      hsl(240, 5%, 12%)
     );
     --gradient-accent: linear-gradient(
       90deg,
@@ -67,8 +67,8 @@
     );
     --gradient-card: linear-gradient(
       145deg,
-      hsl(237, 40%, 11%),
-      hsl(237, 45%, 9%)
+      hsl(240, 8% , 6%),
+      hsl(240, 10%, 3.5%)
     );
 
     /* Shadows */
@@ -506,57 +506,57 @@
 
   .liquid-orb-1 {
     background: radial-gradient(
-      circle at 38% 38%,
-      rgba(30, 200, 255, 0.72),
-      rgba(15, 110, 230, 0.38) 42%,
-      transparent 68%
+      circle at 35% 35%,
+      rgba(30, 200, 255, 0.18) 0%,
+      rgba(15, 110, 230, 0.08) 45%,
+      transparent 70%
     );
-    filter: blur(55px);
-    animation: liquid-float-a 14s ease-in-out infinite;
+    filter: blur(140px);
+    animation: liquid-float-a 25s ease-in-out infinite;
   }
 
   .liquid-orb-2 {
     background: radial-gradient(
-      circle at 62% 62%,
-      rgba(255, 90, 145, 0.62),
-      rgba(180, 30, 100, 0.30) 42%,
-      transparent 68%
+      circle at 65% 65%,
+      rgba(237, 193, 203, 0.16) 0%,
+      rgba(180, 30, 100, 0.06) 45%,
+      transparent 70%
     );
-    filter: blur(65px);
-    animation: liquid-float-b 18s ease-in-out infinite;
+    filter: blur(150px);
+    animation: liquid-float-b 30s ease-in-out infinite;
   }
 
   .liquid-orb-3 {
     background: radial-gradient(
       circle at 50% 50%,
-      rgba(130, 70, 255, 0.55),
-      rgba(80, 20, 200, 0.25) 48%,
-      transparent 68%
+      rgba(130, 70, 255, 0.12) 0%,
+      rgba(80, 20, 200, 0.04) 50%,
+      transparent 70%
     );
-    filter: blur(70px);
-    animation: liquid-float-a 11s ease-in-out infinite reverse;
+    filter: blur(160px);
+    animation: liquid-float-a 20s ease-in-out infinite reverse;
   }
 
   .liquid-orb-4 {
     background: radial-gradient(
       circle at 50% 50%,
-      rgba(30, 210, 240, 0.55),
-      rgba(10, 140, 200, 0.25) 40%,
-      transparent 65%
+      rgba(30, 210, 240, 0.14) 0%,
+      rgba(10, 140, 200, 0.05) 45%,
+      transparent 70%
     );
-    filter: blur(60px);
-    animation: liquid-float-b 16s ease-in-out infinite reverse;
+    filter: blur(140px);
+    animation: liquid-float-b 28s ease-in-out infinite reverse;
   }
 
   .liquid-orb-rose {
     background: radial-gradient(
       circle at 45% 45%,
-      rgba(255, 120, 170, 0.62),
-      rgba(220, 50, 120, 0.28) 45%,
+      rgba(237, 193, 203, 0.18) 0%,
+      rgba(220, 50, 120, 0.05) 50%,
       transparent 70%
     );
-    filter: blur(60px);
-    animation: liquid-float-a 15s ease-in-out infinite;
+    filter: blur(140px);
+    animation: liquid-float-a 22s ease-in-out infinite;
   }
 
   /* ──── Chrome Glass Reflective Text ──── */
@@ -777,15 +777,47 @@
   .grid-blueprint {
     background-size: 80px 80px;
     background-image: 
-      linear-gradient(to right, rgba(237, 193, 203, 0.012) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(237, 193, 203, 0.012) 1px, transparent 1px);
+      linear-gradient(to right, rgba(237, 193, 203, 0.007) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(237, 193, 203, 0.007) 1px, transparent 1px);
   }
 
   .grid-blueprint-fine {
     background-size: 20px 20px;
     background-image: 
-      linear-gradient(to right, rgba(237, 193, 203, 0.006) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(237, 193, 203, 0.006) 1px, transparent 1px);
+      linear-gradient(to right, rgba(237, 193, 203, 0.003) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(237, 193, 203, 0.003) 1px, transparent 1px);
+  }
+
+  /* ──── Unseen Glass Card ──── */
+  .unseen-glass-card {
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.025) 0%,
+      rgba(255, 255, 255, 0.006) 50%,
+      rgba(237, 193, 203, 0.008) 100%
+    );
+    backdrop-filter: blur(24px) saturate(1.1);
+    -webkit-backdrop-filter: blur(24px) saturate(1.1);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      inset 0 -0.5px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .unseen-glass-card:hover {
+    border-color: rgba(237, 193, 203, 0.12);
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.035) 0%,
+      rgba(255, 255, 255, 0.01) 50%,
+      rgba(237, 193, 203, 0.015) 100%
+    );
+    box-shadow: 
+      0 20px 48px rgba(0, 0, 0, 0.65),
+      0 0 24px rgba(237, 193, 203, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
 
   /* ──── Liquid Glass Arches & 3D Reflections ──── */

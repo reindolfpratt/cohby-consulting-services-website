@@ -85,66 +85,72 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden selection:bg-rose/30 relative">
+    <div className="min-h-screen bg-background overflow-hidden selection:bg-rose/30 relative grid-blueprint">
 
       {/* ── Hero Section ── */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden z-10 border-b border-white/10">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 border-b border-white/[0.06] bg-background">
         <LiquidGlassBackground variant="hero" />
 
-        {/* Frosted glass arch frame */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] md:w-[65%] h-[320px] md:h-[450px] rounded-t-[12rem] md:rounded-t-[20rem] border-t border-x border-white/[0.08] bg-white/[0.015] backdrop-blur-[12px] shadow-[inset_0_2px_24px_rgba(255,255,255,0.06)] z-0 pointer-events-none" />
+        {/* 4-Column Blueprint Vertical Grid Lines Overlay */}
+        <div className="absolute inset-0 grid grid-cols-4 pointer-events-none z-0 px-4 md:px-8 max-w-7xl mx-auto">
+          <div className="border-r border-white/[0.03] h-full"></div>
+          <div className="border-r border-white/[0.03] h-full"></div>
+          <div className="border-r border-white/[0.03] h-full"></div>
+          <div className="h-full"></div>
+        </div>
 
-        <div className="container relative mx-auto px-4 md:px-8 z-10 pt-36 pb-20 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* Giant Vertical Frosted Glass Arch Frame */}
+        <div className="absolute top-[15%] w-[85%] md:w-[50%] h-[85%] rounded-t-[16rem] border-t border-x border-white/[0.05] bg-white/[0.015] backdrop-blur-[24px] shadow-[inset_0_1.5px_0_rgba(255,255,255,0.08),0_24px_80px_rgba(0,0,0,0.65)] z-0 pointer-events-none flex flex-col justify-end p-12">
+          {/* Subtle reflection overlay inside arch */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent rounded-t-[16rem] pointer-events-none" />
+        </div>
 
-            {/* Left rotated label */}
-            <div className="lg:col-span-2 hidden lg:block pt-12">
-              <span className="text-[10px] font-mono text-rose/55 uppercase tracking-[0.3em] block origin-left rotate-90 translate-y-24 whitespace-nowrap">
-                COHBY . STUDIO . 2026
+        <div className="container relative mx-auto px-4 md:px-8 z-10 pt-40 pb-24 max-w-7xl text-center flex flex-col items-center justify-center">
+          <div className="max-w-4xl mx-auto flex flex-col items-center animate-fade-in">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-rose font-mono mb-8 block px-3 py-1 rounded-full border border-rose/20 bg-rose/[0.02] backdrop-blur-md">
+              // Elite Digital Architecture
+            </span>
+            
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-black tracking-[-0.04em] leading-[0.85] text-white uppercase mb-10 max-w-4xl select-none">
+              Bespoke <br />
+              Systems. <br />
+              Real{" "}
+              <span className="text-rose font-extrabold italic font-serif lowercase tracking-normal">
+                results
               </span>
+              .
+            </h1>
+
+            <p className="text-base md:text-xl text-white/70 leading-relaxed max-w-lg mb-12 font-sans">
+              Salesforce, Cloud, and AI platforms engineered for enterprise scale, built to integrate seamlessly with your workflow.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <Link to="/book-consultation">
+                <Button className="glow-button bg-rose text-black hover:bg-white font-mono text-xs uppercase tracking-wider px-10 py-7 rounded-full shadow-lg cursor-pointer">
+                  Book Consultation &rarr;
+                </Button>
+              </Link>
+              <Link
+                to="/solutions"
+                className="text-xs font-mono uppercase tracking-[0.25em] text-white/60 hover:text-rose transition-colors py-4 px-6 cursor-pointer"
+              >
+                Explore Services &rarr;
+              </Link>
             </div>
-
-            {/* Main headline */}
-            <div className="lg:col-span-6 animate-fade-in">
-              <span className="text-xs uppercase tracking-[0.2em] text-rose font-mono mb-6 block">
-                // ELITE DIGITAL ENGINEERING
-              </span>
-              <h1 className="text-6xl md:text-8xl font-black tracking-[-0.04em] leading-[0.9] text-white uppercase mb-8">
-                Smart <br />
-                Solutions. <br />
-                Real{" "}
-                <span className="text-rose font-extrabold italic font-serif lowercase tracking-wide">
-                  results
-                </span>
-                .
-              </h1>
-            </div>
-
-            {/* Right explainer + CTA */}
-            <div
-              className="lg:col-span-4 lg:pt-16 flex flex-col space-y-10 animate-slide-up"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <p className="text-lg text-white/75 leading-relaxed max-w-[32ch]">
-                Salesforce, Cloud, and AI systems engineered for scale. Built custom to adapt to your enterprise workflow.
-              </p>
-
-              <div className="flex flex-col space-y-4 items-start">
-                <Link to="/book-consultation">
-                  <Button className="glow-button bg-rose text-black hover:bg-white font-mono text-xs uppercase tracking-wider px-8 py-6 rounded-full shadow-lg transition-all cursor-pointer">
-                    Book Consultation &rarr;
-                  </Button>
-                </Link>
-                <Link
-                  to="/solutions"
-                  className="text-xs font-mono uppercase tracking-[0.2em] text-white/65 hover:text-rose transition-colors pt-2 cursor-pointer"
-                >
-                  Explore services &rarr;
-                </Link>
-              </div>
-            </div>
-
           </div>
+        </div>
+
+        {/* Left and Right Vertical Info Bars */}
+        <div className="absolute left-6 bottom-12 hidden xl:block z-20">
+          <span className="text-[9px] font-mono text-white/30 uppercase tracking-[0.3em] block origin-left -rotate-90 -translate-y-12">
+            // UK . CANADA . EST. 2026
+          </span>
+        </div>
+        <div className="absolute right-6 bottom-12 hidden xl:block z-20">
+          <span className="text-[9px] font-mono text-white/30 uppercase tracking-[0.3em] block origin-right rotate-90 translate-y-12">
+            SCROLL TO EXPLORE &darr;
+          </span>
         </div>
       </section>
 

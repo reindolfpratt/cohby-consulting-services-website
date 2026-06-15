@@ -177,11 +177,11 @@ const Solutions = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden z-10 border-b border-white/10 justify-center">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden z-10 border-b border-white/[0.06] justify-center">
         <LiquidGlassBackground variant="hero" />
 
         {/* Giant Frosted Glass Arch Frame behind Hero */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] md:w-[65%] h-[320px] md:h-[420px] rounded-t-[12rem] md:rounded-t-[20rem] border-t border-x border-white/10 bg-white/[0.01] backdrop-blur-[10px] shadow-[inset_0_2px_20px_rgba(255,255,255,0.05)] z-0 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] md:w-[65%] h-[320px] md:h-[420px] rounded-t-[12rem] md:rounded-t-[20rem] border-t border-x border-white/[0.06] bg-white/[0.01] backdrop-blur-[10px] shadow-[inset_0_2px_20px_rgba(255,255,255,0.04)] z-0 pointer-events-none"></div>
 
         <div className="container relative mx-auto px-4 md:px-8 z-10 pt-36 pb-20 max-w-7xl text-center">
           <div className="max-w-3xl mx-auto animate-slide-up">
@@ -221,54 +221,49 @@ const Solutions = () => {
           </div>
 
           {/* 2-Column Arched Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 max-w-6xl mx-auto mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 max-w-5xl mx-auto mt-12">
             {filteredSolutions.map((solution, index) => (
               <div
                 key={solution.title}
-                className="liquid-glass-arch p-6 glass-sheen-sweep flex flex-col justify-between group cursor-pointer"
+                className="liquid-glass-arch group relative aspect-[3/4.2] flex flex-col overflow-hidden unseen-glass-card cursor-pointer"
               >
-                {/* Curved visual representation */}
-                <div className="rounded-t-[6rem] rounded-b-[1.5rem] overflow-hidden aspect-[4/3] bg-ash/50 border border-white/5 relative mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-rose/10 via-transparent to-transparent z-10 pointer-events-none"></div>
+                {/* Arch Visual Window (Upper 70%) */}
+                <div className="relative flex-grow flex items-center justify-center border-b border-white/[0.04] bg-white/[0.005] overflow-hidden">
+                  {/* Soft radial glow behind icon */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-rose/[0.03] via-transparent to-primary/[0.01] pointer-events-none" />
                   
-                  {/* Floating abstract liquid orb inside image frame */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-white/[0.01] to-white/[0.04]">
-                    <div className="liquid-distort opacity-40 group-hover:opacity-90 group-hover:scale-110 transition-all duration-500 transform">
-                      {solution.icon}
-                    </div>
+                  {/* Floating Icon with 3D scale and motion on hover */}
+                  <div className="transform transition-all duration-500 scale-100 group-hover:scale-110 group-hover:rotate-6 filter drop-shadow-[0_0_30px_rgba(237,193,203,0.15)] text-rose/70 group-hover:text-rose">
+                    {solution.icon}
                   </div>
 
-                  {/* Feature labels overlay */}
-                  <div className="absolute bottom-4 left-6 z-20 space-y-1 text-[10px] font-mono text-white/30 tracking-widest uppercase">
-                    {solution.features.slice(0, 2).map((feat, fidx) => (
-                      <div key={fidx}>// {feat}</div>
-                    ))}
+                  {/* Feature Tags overlaying the corners */}
+                  <div className="absolute top-6 left-6 text-[8px] font-mono text-white/30 tracking-[0.25em] uppercase">
+                    // CAPABILITY_{index + 1}
                   </div>
                 </div>
 
-                {/* Text details */}
-                <div className="flex flex-col flex-grow">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-2xl font-black text-white group-hover:text-rose transition-colors uppercase tracking-tight">
+                {/* Details Panel (Lower 30%) */}
+                <div className="p-8 bg-white/[0.008] backdrop-blur-md flex flex-col justify-between h-[160px]">
+                  <div>
+                    <span className="text-[9px] font-mono text-rose/60 uppercase tracking-[0.25em] block mb-2">
+                      {solution.category}
+                    </span>
+                    <h3 className="text-xl font-bold text-white tracking-tight uppercase leading-none group-hover:text-rose transition-colors">
                       {solution.title}
                     </h3>
                   </div>
-                  <p className="text-white/50 text-sm leading-relaxed mb-6 flex-grow">
-                    {solution.description}
-                  </p>
-                </div>
 
-                {/* Bottom line detailing */}
-                <div className="flex justify-between items-end border-t border-white/5 pt-4 mt-auto">
-                  <span className="text-[10px] font-mono text-rose/50 uppercase tracking-[0.2em]">
-                    // {solution.category.toUpperCase()}
-                  </span>
-                  
-                  <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-rose/50 group-hover:bg-rose group-hover:text-black transition-all duration-300">
-                    <ArrowRight className="h-4 w-4 text-white/60 group-hover:text-black group-hover:-rotate-45 transition-transform duration-300" />
+                  <div className="flex justify-between items-center mt-4 pt-4 border-t border-white/[0.03]">
+                    <span className="text-[9px] font-mono text-white/40 tracking-[0.1em] lowercase max-w-[80%] truncate">
+                      {solution.features.slice(0, 2).join(" • ")}
+                    </span>
+                    <ArrowRight className="h-4 w-4 text-white/30 group-hover:text-rose group-hover:translate-x-1 transition-all" />
                   </div>
                 </div>
 
+                {/* spec sweep highlight */}
+                <div className="absolute inset-0 pointer-events-none glass-sheen-sweep z-20" />
               </div>
             ))}
           </div>
