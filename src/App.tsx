@@ -19,6 +19,8 @@ import CloudSolutions from "./pages/CloudSolutions";
 import DataAnalysis from "./pages/DataAnalysis";
 import CohbyLearn from "./pages/CohbyLearn";
 import ATSResume from "./pages/ATSResume";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
 
@@ -48,6 +50,8 @@ const App = () => (
               <Route path="/data-analysis" element={<DataAnalysis />} />
               <Route path="/products/cohbylearn" element={<CohbyLearn />} />
               <Route path="/products/ats-resume" element={<ATSResume />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
               <Route path="/thank-you" element={<ThankYou />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
