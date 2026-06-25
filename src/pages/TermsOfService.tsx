@@ -1,8 +1,6 @@
 import LiquidGlassBackground from "@/components/LiquidGlassBackground";
 
 const TermsOfService = () => {
-  const lastUpdated = "25 June 2025";
-
   return (
     <div className="min-h-screen bg-background overflow-x-hidden selection:bg-rose/30">
 
@@ -14,7 +12,6 @@ const TermsOfService = () => {
           <h1 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tight leading-[0.9]">
             Terms of<br />Service
           </h1>
-          <p className="text-sm text-white/40 font-mono mt-4">Last updated: {lastUpdated}</p>
         </div>
       </section>
 
