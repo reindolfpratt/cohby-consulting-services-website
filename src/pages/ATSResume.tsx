@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  FileText,
   Mail,
   MessageSquare,
   Zap,
@@ -75,16 +74,27 @@ const ATSResume = () => {
             </div>
           </div>
 
-          {/* Mockup preview */}
+          {/* Mockup preview — real product screenshot */}
           <div className="mt-16 w-full relative z-10">
-            <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.02] backdrop-blur-md overflow-hidden p-4">
-              <div className="aspect-[21/9] bg-white/[0.03] rounded-[1.5rem] flex items-center justify-center border border-white/5 relative group">
-                <div className="absolute inset-0 bg-gradient-to-tr from-rose/5 to-transparent pointer-events-none" />
-                <div className="flex flex-col items-center gap-4 opacity-40 group-hover:opacity-80 transition-all duration-300">
-                  <FileText size={48} className="text-rose" />
-                  <span className="font-mono tracking-widest uppercase text-[10px] text-white">// Tailored CV Engine Preview</span>
+            <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.02] backdrop-blur-md overflow-hidden p-3 shadow-[0_32px_80px_rgba(0,0,0,0.5)]">
+              {/* Browser chrome bar */}
+              <div className="flex items-center gap-2 px-4 py-2.5 border-b border-white/[0.06] mb-1">
+                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+                <div className="ml-4 flex-1 bg-white/[0.06] rounded-full h-5 flex items-center px-3">
+                  <span className="text-[9px] font-mono text-white/30 tracking-wider">atsresumetailor.com</span>
                 </div>
               </div>
+              <a href="https://www.atsresumetailor.com/" target="_blank" rel="noopener noreferrer" className="block group">
+                <img
+                  src="/ats-preview.png"
+                  alt="ATS Resume Tailor — app preview"
+                  className="w-full rounded-xl object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 rounded-[1.7rem] bg-rose/[0] group-hover:bg-rose/[0.03] transition-colors duration-300 pointer-events-none" />
+              </a>
             </div>
           </div>
         </div>
