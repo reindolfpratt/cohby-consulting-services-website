@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem, WordsReveal } from "@/components/motion/Reveal";
-import liquidGlassAiPedestals from "@/assets/liquid-glass-ai-pedestals.jpg";
+import aiNeuralComputation from "@/assets/ai-neural-computation.jpg";
 
 const AIAutomation = () => {
   const services = [
@@ -83,8 +83,8 @@ const AIAutomation = () => {
             <div className="glass-frame-4k glass-specular-bezel p-3 md:p-4 group">
               <div className="relative rounded-2xl overflow-hidden aspect-[16/9] md:aspect-[16/8.5] bg-[#070913]">
                 <img
-                  src={liquidGlassAiPedestals}
-                  alt="Cohby AI Intelligence Architecture Display"
+                  src={aiNeuralComputation}
+                  alt="Cohby AI Neural Computation & Machine Learning Architecture"
                   className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                   loading="eager"
                 />

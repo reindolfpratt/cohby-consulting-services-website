@@ -21,6 +21,9 @@ import liquidGlassCloud from "@/assets/liquid-glass-cloud.jpg";
 import liquidGlassDataAnalytics from "@/assets/liquid-glass-data-analytics.jpg";
 import liquidGlassAiPedestals from "@/assets/liquid-glass-ai-pedestals.jpg";
 import consultingTeamCollaboration from "@/assets/consulting-team-collaboration.jpg";
+import aiNeuralComputation from "@/assets/ai-neural-computation.jpg";
+import enterpriseCloudNetwork from "@/assets/enterprise-cloud-network.jpg";
+import smartInfrastructureGrid from "@/assets/smart-infrastructure-grid.jpg";
 
 interface SolutionItem {
   title: string;
@@ -64,7 +67,7 @@ const Solutions = () => {
       title: "High-Throughput API & Microservices",
       category: "Bespoke Software",
       index: "002",
-      image: liquidGlassBespokeSoftware,
+      image: enterpriseCloudNetwork,
       icon: <Terminal className="h-10 w-10" />,
       description:
         "Robust REST & GraphQL APIs, distributed event-driven message buses, and custom integrations connecting your systems with external services.",
@@ -79,7 +82,7 @@ const Solutions = () => {
       title: "Custom Internal Operations Dashboards",
       category: "Bespoke Software",
       index: "003",
-      image: liquidGlassBespokeSoftware,
+      image: smartInfrastructureGrid,
       icon: <LayoutGrid className="h-10 w-10" />,
       description:
         "Eliminate operational bottlenecks with bespoke administrative command centers built specifically around your company's workflows.",
@@ -124,7 +127,7 @@ const Solutions = () => {
       title: "AI Engineering & Pipelines",
       category: "AI & Automation",
       index: "006",
-      image: liquidGlassAiPedestals,
+      image: aiNeuralComputation,
       icon: <Sliders className="h-10 w-10" />,
       description:
         "Streamline your operations with intelligent workflows, machine learning models, and document extraction pipelines.",
@@ -154,7 +157,7 @@ const Solutions = () => {
       title: "Data Migration & Integration",
       category: "Cloud & Data",
       index: "008",
-      image: liquidGlassDataAnalytics,
+      image: enterpriseCloudNetwork,
       icon: <Database className="h-10 w-10" />,
       description:
         "Seamlessly migrate your data and integrate with your existing systems for a unified view of your business.",
@@ -214,7 +217,7 @@ const Solutions = () => {
       title: "System Health Checks",
       category: "Salesforce",
       index: "012",
-      image: liquidGlassCloud,
+      image: smartInfrastructureGrid,
       icon: <ShieldCheck className="h-10 w-10" />,
       description:
         "Already using complex tech stacks? We'll review your setup and identify opportunities for optimization.",
@@ -229,7 +232,7 @@ const Solutions = () => {
       title: "AI-Powered Platforms",
       category: "AI & Automation",
       index: "013",
-      image: liquidGlassBespokeSoftware,
+      image: liquidGlassAiPedestals,
       icon: <Cloud className="h-10 w-10" />,
       description:
         "Next-generation websites that work smarter. Personalize content, automate SEO, and capture leads with AI.",
@@ -244,7 +247,7 @@ const Solutions = () => {
       title: "AI Agent Chatbots",
       category: "AI & Automation",
       index: "014",
-      image: liquidGlassAiPedestals,
+      image: aiNeuralComputation,
       icon: <Sliders className="h-10 w-10" />,
       description:
         "Engage customers 24/7 with intelligent conversational agents that understand context and write leads to CRM.",
@@ -259,7 +262,7 @@ const Solutions = () => {
       title: "Social Media Automations",
       category: "AI & Automation",
       index: "015",
-      image: liquidGlassAiPedestals,
+      image: enterpriseCloudNetwork,
       icon: <Sliders className="h-10 w-10" />,
       description:
         "Maintain a powerful social presence without the manual grind. Automate posting, engagement, and reporting.",
