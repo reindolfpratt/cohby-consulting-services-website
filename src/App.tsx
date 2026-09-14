@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 import LiquidGlassBackground from "./components/LiquidGlassBackground";
 import ScrollProgress from "./components/motion/ScrollProgress";
 import RouteTransition from "./components/motion/RouteTransition";
-import CometField from "./components/motion/CometField";
 import Home from "./pages/Home";
 
 /*
@@ -92,11 +91,10 @@ const App = () => (
         <div className="flex flex-col min-h-screen">
           <ScrollToTop />
           <ScrollProgress />
-          {/* Site-wide space scene: satin base + orbs behind, comet overlay above */}
+          {/* Precision 4K Liquid Glass Atmospheric Background */}
           <div className="fixed inset-0 z-0 pointer-events-none">
             <LiquidGlassBackground variant="hero" />
           </div>
-          <CometField />
           <PrefetchPages />
           <Navigation />
           <main className="flex-grow relative z-10">

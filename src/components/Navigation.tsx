@@ -122,9 +122,10 @@ const Navigation = () => {
   const isActivePrefix = (prefix: string) => location.pathname.startsWith(prefix);
 
   const solutionsLinks: DropdownLink[] = [
-    { title: "Salesforce Consulting", href: "/solutions" },
-    { title: "Cloud Solutions",       href: "/cloud-solutions" },
-    { title: "Data Analysis",         href: "/data-analysis" },
+    { title: "Bespoke Software",      href: "/solutions", sub: "Custom enterprise platforms & APIs." },
+    { title: "Salesforce Consulting", href: "/solutions", sub: "Implementations & Customisations." },
+    { title: "Cloud Solutions",       href: "/cloud-solutions", sub: "AWS, Azure & GCP architectures." },
+    { title: "Data Analysis",         href: "/data-analysis", sub: "BI, telemetry & predictive models." },
   ];
 
   const productsLinks: DropdownLink[] = [
@@ -148,11 +149,9 @@ const Navigation = () => {
     { title: "Top 3 Challenges Non-Profits Face",href: "/non-profits/challenges" },
   ];
 
-  const navBg = overLight
-    ? "bg-[#0e0e12] border border-white/[0.07] shadow-[0_4px_32px_rgba(0,0,0,0.35)]"
-    : scrolled
-    ? "liquid-glass-nav"
-    : "";
+  const navBg = scrolled || overLight
+    ? "bg-[#090a10]/95 backdrop-blur-2xl border border-white/12 shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
+    : "bg-[#090a10]/40 backdrop-blur-md border border-white/[0.06]";
 
   const linkClass = (active: boolean) =>
     `relative px-4 py-2 rounded-md text-[11px] font-mono uppercase tracking-[0.2em] transition-colors cursor-pointer ${

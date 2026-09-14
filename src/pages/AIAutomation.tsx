@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem, WordsReveal } from "@/components/motion/Reveal";
+import liquidGlassAiPedestals from "@/assets/liquid-glass-ai-pedestals.jpg";
 
 const AIAutomation = () => {
   const services = [
@@ -53,10 +54,12 @@ const AIAutomation = () => {
 
       {/* ── Hero — Dark ── */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden z-10 border-b border-white/[0.06]">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[70%] md:w-[45%] h-[55%] rounded-t-[12rem] border-t border-x border-white/[0.06] bg-white/[0.01] backdrop-blur-[14px] z-0 pointer-events-none" />
         <div className="container relative mx-auto px-4 md:px-8 z-10 pb-20 pt-40 max-w-7xl">
           <RevealGroup className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
             <RevealItem className="lg:col-span-8">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-rose font-mono mb-4 block">
+                // ARTIFICIAL INTELLIGENCE & ENGINEERING
+              </span>
               <h1 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tight leading-[0.9]">
                 Engineer<br />Your<br />
                 Future <span className="text-rose font-extrabold italic font-serif lowercase tracking-wide">today</span>.
@@ -74,6 +77,21 @@ const AIAutomation = () => {
               </Link>
             </RevealItem>
           </RevealGroup>
+
+          {/* ── AI Intelligence Showcase ── */}
+          <Reveal className="mt-16 w-full">
+            <div className="glass-frame-4k glass-specular-bezel p-3 md:p-4 group">
+              <div className="relative rounded-2xl overflow-hidden aspect-[16/9] md:aspect-[16/8.5] bg-[#070913]">
+                <img
+                  src={liquidGlassAiPedestals}
+                  alt="Cohby AI Intelligence Architecture Display"
+                  className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#070709]/40 via-transparent to-transparent pointer-events-none" />
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

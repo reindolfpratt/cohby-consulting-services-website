@@ -122,3 +122,56 @@ export const WordsReveal = ({
     </motion.span>
   );
 };
+
+/** Reveals tech headings with glowing stagger, blur-clear, and smooth rising transition. */
+export const TechWordReveal = ({
+  text,
+  className = "",
+  highlightWord = "",
+  highlightClass = "text-rose font-serif italic lowercase",
+}: {
+  text: string;
+  className?: string;
+  highlightWord?: string;
+  highlightClass?: string;
+}) => {
+  const reduce = useReducedMotion();
+  const words = text.split(" ");
+  return (
+    <motion.span
+      className={`inline-block ${className}`}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "0px 0px -40px 0px" }}
+      variants={{
+        hidden: {},
+        visible: { transition: { staggerChildren: 0.05, delayChildren: 0.05 } },
+      }}
+      aria-label={text}
+    >
+      {words.map((word, i) => {
+        const isHighlight = highlightWord && word.toLowerCase().includes(highlightWord.toLowerCase());
+        return (
+          <span key={i} className="inline-block mr-[0.28em] last:mr-0">
+            <span className="inline-block overflow-hidden align-bottom">
+              <motion.span
+                className={`inline-block ${isHighlight ? highlightClass : ""}`}
+                variants={{
+                  hidden: { y: reduce ? 0 : 36, opacity: 0, filter: "blur(6px)" },
+                  visible: {
+                    y: 0,
+                    opacity: 1,
+                    filter: "blur(0px)",
+                    transition: { duration: 0.7, ease: EASE_OUT },
+                  },
+                }}
+              >
+                {word}
+              </motion.span>
+            </span>
+          </span>
+        );
+      })}
+    </motion.span>
+  );
+};

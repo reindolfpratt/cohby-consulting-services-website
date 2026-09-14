@@ -5,44 +5,50 @@ interface LiquidGlassBackgroundProps {
   variant?: 'hero' | 'cta' | 'footer';
 }
 
+/**
+ * Precision 4K Liquid Glass Atmospheric Background
+ * Provides optical-grade depth, subtle crystal refraction caustics, and specular highlights
+ * without blurry muddy gradient blooms.
+ */
 const LiquidGlassBackground: React.FC<LiquidGlassBackgroundProps> = ({
   className = '',
   variant = 'hero',
 }) => {
   return (
     <div className={`absolute inset-0 overflow-hidden pointer-events-none select-none z-0 ${className}`}>
-      {/* 1. Deep satin base */}
+      {/* 1. Deep crystalline obsidian base */}
       <div className="absolute inset-0 satin-glass-bg" />
 
-      {/* 2. Primary cyan orb - top-left */}
-      <div className="absolute -top-[20%] -left-[10%] w-[65%] h-[65%] liquid-orb-1" />
+      {/* 2. Micro-precision optical grid lines for 4K architectural depth */}
+      <div
+        className="absolute inset-0 opacity-[0.035]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px)`,
+          backgroundSize: '48px 48px',
+        }}
+      />
 
-      {/* 3. Hot pink orb - bottom-right */}
-      <div className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] liquid-orb-2" />
+      {/* 3. Primary crystal cyan optical caustic (top-left) */}
+      <div className="absolute -top-[15%] -left-[5%] w-[55%] h-[55%] liquid-orb-1" />
 
-      {/* 4. Rose accent orb - right mid */}
-      <div className="absolute top-[20%] right-[5%] w-[55%] h-[55%] liquid-orb-rose" />
+      {/* 4. Secondary luminous rose/magenta caustic (bottom-right) */}
+      <div className="absolute -bottom-[15%] -right-[5%] w-[55%] h-[55%] liquid-orb-2" />
 
-      {/* 5. Purple orb - hero only, center-left */}
+      {/* 5. Center-right precision optical highlight */}
+      <div className="absolute top-[25%] right-[10%] w-[45%] h-[45%] liquid-orb-rose" />
+
+      {/* 6. Subtle violet optical refraction (hero variant) */}
       {variant === 'hero' && (
-        <div className="absolute top-[15%] left-[10%] w-[50%] h-[50%] liquid-orb-3" />
+        <div className="absolute top-[10%] left-[20%] w-[40%] h-[40%] liquid-orb-3" />
       )}
 
-      {/* 6. CTA/footer teal accent */}
-      {variant !== 'hero' && (
-        <div className="absolute top-[30%] left-[20%] w-[40%] h-[40%] liquid-orb-4" />
-      )}
+      {/* 7. Deep ambient bottom vignette */}
+      <div className="absolute inset-0 satin-glass-wave opacity-90" />
 
-      {/* 7. Curved ambient vignette at bottom */}
-      <div className="absolute inset-0 satin-glass-wave opacity-85" />
-
-      {/* 8. Diagonal specular sheen */}
+      {/* 8. Razor-sharp diagonal specular glass sheen */}
       <div className="absolute inset-0 satin-glass-sheen" />
 
-      {/* 9. Luxury micro-grain texture */}
-      <div className="absolute inset-0 satin-noise-overlay" />
-
-      {/* 10. Top edge chromatic refraction line */}
+      {/* 9. Top-edge optical refraction line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] satin-glass-edge" />
     </div>
   );

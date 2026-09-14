@@ -9,9 +9,13 @@ import {
   useReducedMotion,
   Variants,
 } from "motion/react";
-import { Reveal, RevealGroup, RevealItem, WordsReveal } from "@/components/motion/Reveal";
+import { Reveal, RevealGroup, RevealItem, WordsReveal, TechWordReveal } from "@/components/motion/Reveal";
 import Magnetic from "@/components/motion/Magnetic";
 import { EASE_OUT } from "@/lib/motionTokens";
+import liquidGlassAiPedestals from "@/assets/liquid-glass-ai-pedestals.jpg";
+import liquidGlassBespokeSoftware from "@/assets/liquid-glass-bespoke-software.jpg";
+import consultingTeamCollaboration from "@/assets/consulting-team-collaboration.jpg";
+import PlatformsMarquee from "@/components/PlatformsMarquee";
 
 /* ── Hero entrance choreography ── */
 const heroStagger: Variants = {
@@ -33,6 +37,13 @@ const Home = () => {
   const reduce = useReducedMotion();
 
   const services = [
+    {
+      title: "Bespoke Software Engineering",
+      category: "Software",
+      href: "/solutions",
+      description:
+        "Custom enterprise web platforms, high-throughput microservices, and internal operations tools built from ground zero.",
+    },
     {
       title: "Salesforce Consulting",
       category: "Salesforce",
@@ -147,24 +158,12 @@ const Home = () => {
           <div className="h-full"></div>
         </div>
 
-        {/* Giant Vertical Frosted Glass Arch Frame — parallax layer */}
         <motion.div
-          className="absolute top-[15%] w-[85%] md:w-[50%] h-[85%] rounded-t-[16rem] border-t border-x border-white/[0.05] bg-white/[0.015] backdrop-blur-[24px] shadow-[inset_0_1.5px_0_rgba(255,255,255,0.08),0_24px_80px_rgba(0,0,0,0.65)] z-0 pointer-events-none flex flex-col justify-end p-12"
-          style={reduce ? undefined : { y: archY }}
-          initial={{ opacity: 0, scale: 0.97 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.4, ease: EASE_OUT }}
-        >
-          {/* Subtle reflection overlay inside arch */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent rounded-t-[16rem] pointer-events-none" />
-        </motion.div>
-
-        <motion.div
-          className="container relative mx-auto px-4 md:px-8 z-10 pt-40 pb-24 max-w-7xl text-center flex flex-col items-center justify-center"
+          className="container relative mx-auto px-4 md:px-8 z-10 pt-36 pb-28 max-w-7xl text-center flex flex-col items-center justify-center"
           style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
         >
           <motion.div
-            className="max-w-4xl mx-auto flex flex-col items-center"
+            className="max-w-5xl mx-auto flex flex-col items-center"
             variants={heroStagger}
             initial="hidden"
             animate="visible"
@@ -176,18 +175,13 @@ const Home = () => {
               // Elite Digital Architecture
             </motion.span>
 
-            <motion.h1
-              variants={heroItem}
-              className="text-5xl md:text-8xl lg:text-9xl font-black tracking-[-0.04em] leading-[0.85] text-white uppercase mb-10 max-w-4xl select-none"
-            >
-              Bespoke <br />
-              Systems. <br />
-              Real{" "}
-              <span className="text-rose font-extrabold italic font-serif lowercase tracking-normal">
-                results
-              </span>
-              .
-            </motion.h1>
+            <motion.div variants={heroItem} className="mb-10 max-w-4xl">
+              <TechWordReveal
+                text="Bespoke Systems. Real results."
+                highlightWord="results"
+                className="text-5xl md:text-8xl lg:text-9xl font-black tracking-[-0.04em] leading-[0.88] text-white uppercase select-none"
+              />
+            </motion.div>
 
             <motion.p
               variants={heroItem}
@@ -198,7 +192,7 @@ const Home = () => {
 
             <motion.div
               variants={heroItem}
-              className="flex flex-col sm:flex-row gap-4 items-center justify-center"
+              className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-2"
             >
               <Magnetic>
                 <Link to="/book-consultation">
@@ -233,6 +227,9 @@ const Home = () => {
           </motion.span>
         </div>
       </section>
+
+      {/* ── Dynamic 3D Moving Platforms Marquee ── */}
+      <PlatformsMarquee />
 
       {/* ── Services Showcase — Dark ── */}
       <section className="py-32 relative z-10 border-b border-white/10 bg-background/50">
@@ -284,6 +281,86 @@ const Home = () => {
             </RevealGroup>
           </div>
 
+          {/* ── AI Intelligence Showcase ── */}
+          <Reveal className="mt-20">
+            <div className="glass-frame-4k p-6 md:p-10 relative overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <div className="lg:col-span-7">
+                  <div className="relative rounded-2xl overflow-hidden aspect-[16/9] bg-[#070913] group shadow-2xl">
+                    <img
+                      src={liquidGlassAiPedestals}
+                      alt="Cohby AI Intelligence Architecture"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                  </div>
+                </div>
+
+                <div className="lg:col-span-5 space-y-5 text-left">
+                  <span className="text-xs uppercase tracking-[0.2em] text-rose font-mono block">
+                    // ARTIFICIAL INTELLIGENCE
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-black text-white uppercase leading-tight tracking-tight">
+                    Deterministic Automations & Cognitive AI Brains
+                  </h3>
+                  <p className="text-sm text-white/70 leading-relaxed font-sans">
+                    We encase advanced AI into structured, enterprise-grade pipelines: neural workflow loops, multi-agent data meshes, and contextual LLM brains that integrate directly into Salesforce and cloud datastores.
+                  </p>
+                  <div className="pt-2">
+                    <Link
+                      to="/ai-automation"
+                      className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan-300 hover:text-white transition-colors group"
+                    >
+                      <span>Explore AI Engineering</span>
+                      <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* ── Bespoke Software Engineering Feature ── */}
+          <Reveal className="mt-12">
+            <div className="glass-frame-4k p-6 md:p-10 relative overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <div className="lg:col-span-7 lg:order-2">
+                  <div className="relative rounded-2xl overflow-hidden aspect-[16/9] bg-[#070913] group shadow-2xl">
+                    <img
+                      src={liquidGlassBespokeSoftware}
+                      alt="Cohby Bespoke Software Architecture"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                  </div>
+                </div>
+
+                <div className="lg:col-span-5 lg:order-1 space-y-5 text-left">
+                  <span className="text-xs uppercase tracking-[0.2em] text-rose font-mono block">
+                    // BESPOKE SOFTWARE ENGINEERING
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-black text-white uppercase leading-tight tracking-tight">
+                    Engineered from Ground Zero for Enterprise Power
+                  </h3>
+                  <p className="text-sm text-white/70 leading-relaxed font-sans">
+                    When off-the-shelf software can't support your workflows, we engineer bespoke full-stack platforms, high-throughput microservices, and dedicated executive command centers that perform at enterprise scale.
+                  </p>
+                  <div className="pt-2">
+                    <Link
+                      to="/solutions"
+                      className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan-300 hover:text-white transition-colors group"
+                    >
+                      <span>Explore Bespoke Solutions</span>
+                      <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
         </div>
       </section>
 
@@ -314,6 +391,47 @@ const Home = () => {
               <WordsReveal text="We reject templated systems. We build bespoke digital architecture that integrates with your workflow." />
             </h2>
           </div>
+
+          {/* ── Consulting Team Collaboration Showcase ── */}
+          <Reveal className="my-16">
+            <div className="rounded-3xl overflow-hidden border border-black/10 shadow-2xl bg-[#faf8f5] relative group">
+              <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
+                <div className="lg:col-span-7 aspect-[16/10] overflow-hidden relative">
+                  <img
+                    src={consultingTeamCollaboration}
+                    alt="Cohby Consulting certified engineering team collaborating on live client dashboards"
+                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
+                    <span className="text-[10px] font-mono text-white tracking-widest uppercase">
+                      // UK & Canada Enterprise Delivery
+                    </span>
+                  </div>
+                </div>
+                <div className="lg:col-span-5 p-8 md:p-12 space-y-5">
+                  <span className="studio-label block">// Real Engineering Leadership</span>
+                  <h3 className="text-2xl md:text-3xl font-black text-[#121214] uppercase leading-tight tracking-tight">
+                    Direct Collaboration With Certified Architects
+                  </h3>
+                  <p className="text-sm text-black/65 leading-relaxed font-sans">
+                    No disconnected agency layers. You collaborate directly with certified architects and data engineers who build, configure, and optimize your cloud systems to solve genuine business challenges.
+                  </p>
+                  <div className="flex flex-wrap gap-4 pt-2">
+                    <div className="border-l-2 border-black/80 pl-3">
+                      <span className="text-xs font-mono font-bold text-black block">UK & Canada</span>
+                      <span className="text-[11px] text-black/50">Cross-border presence</span>
+                    </div>
+                    <div className="border-l-2 border-rose pl-3">
+                      <span className="text-xs font-mono font-bold text-black block">100% Bespoke</span>
+                      <span className="text-[11px] text-black/50">Zero generic templates</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
 
           {/* Differentiators Grid */}
           <RevealGroup className="grid grid-cols-1 md:grid-cols-3 gap-0 pt-2">

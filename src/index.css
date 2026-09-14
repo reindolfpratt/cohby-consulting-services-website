@@ -247,7 +247,23 @@
   100% { background-position: 200% 50%; }
 }
 
+@keyframes marquee-slide-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-33.333333%, 0, 0); }
+}
+
+@keyframes platform-3d-sway {
+  0%, 100% { transform: perspective(1000px) rotateY(-6deg) rotateX(1.5deg); }
+  50% { transform: perspective(1000px) rotateY(6deg) rotateX(-1.5deg); }
+}
+
 @layer utilities {
+  .animate-marquee-left {
+    display: flex;
+    width: max-content;
+    animation: marquee-slide-left 34s linear infinite;
+  }
+
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -502,61 +518,131 @@
     box-shadow: 0 0 24px rgba(27, 156, 217, 0.15);
   }
 
-  /* ──── Liquid Orbs ──── */
+  /* ──── Precision 4K Liquid Glass Caustics & Optical Refraction ──── */
 
   .liquid-orb-1 {
     background: radial-gradient(
-      circle at 35% 35%,
-      rgba(30, 200, 255, 0.18) 0%,
-      rgba(15, 110, 230, 0.08) 45%,
-      transparent 70%
+      ellipse at 40% 40%,
+      rgba(30, 210, 255, 0.16) 0%,
+      rgba(15, 110, 230, 0.05) 50%,
+      transparent 75%
     );
-    filter: blur(140px);
-    animation: liquid-float-a 25s ease-in-out infinite;
+    filter: blur(48px);
+    animation: liquid-float-a 24s ease-in-out infinite;
   }
 
   .liquid-orb-2 {
     background: radial-gradient(
-      circle at 65% 65%,
-      rgba(237, 193, 203, 0.16) 0%,
-      rgba(180, 30, 100, 0.06) 45%,
-      transparent 70%
+      ellipse at 60% 60%,
+      rgba(237, 193, 203, 0.14) 0%,
+      rgba(180, 30, 100, 0.04) 45%,
+      transparent 75%
     );
-    filter: blur(150px);
-    animation: liquid-float-b 30s ease-in-out infinite;
+    filter: blur(52px);
+    animation: liquid-float-b 28s ease-in-out infinite;
   }
 
   .liquid-orb-3 {
     background: radial-gradient(
       circle at 50% 50%,
-      rgba(130, 70, 255, 0.12) 0%,
-      rgba(80, 20, 200, 0.04) 50%,
+      rgba(130, 70, 255, 0.1) 0%,
+      rgba(80, 20, 200, 0.03) 50%,
       transparent 70%
     );
-    filter: blur(160px);
+    filter: blur(45px);
     animation: liquid-float-a 20s ease-in-out infinite reverse;
   }
 
   .liquid-orb-4 {
     background: radial-gradient(
       circle at 50% 50%,
-      rgba(30, 210, 240, 0.14) 0%,
-      rgba(10, 140, 200, 0.05) 45%,
+      rgba(30, 210, 240, 0.12) 0%,
+      rgba(10, 140, 200, 0.04) 45%,
       transparent 70%
     );
-    filter: blur(140px);
-    animation: liquid-float-b 28s ease-in-out infinite reverse;
+    filter: blur(48px);
+    animation: liquid-float-b 26s ease-in-out infinite reverse;
   }
 
   .liquid-orb-rose {
     background: radial-gradient(
-      circle at 45% 45%,
-      rgba(237, 193, 203, 0.18) 0%,
-      rgba(220, 50, 120, 0.05) 50%,
+      ellipse at 45% 45%,
+      rgba(237, 193, 203, 0.15) 0%,
+      rgba(220, 50, 120, 0.04) 50%,
       transparent 70%
     );
-    filter: blur(140px);
+    filter: blur(46px);
     animation: liquid-float-a 22s ease-in-out infinite;
+  }
+
+  /* ──── 4K High-Resolution Glass Frame ──── */
+  .glass-frame-4k {
+    position: relative;
+    border-radius: 1.75rem;
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 40%,
+      rgba(27, 156, 217, 0.04) 100%
+    );
+    backdrop-filter: blur(28px) saturate(2.1) brightness(1.08);
+    -webkit-backdrop-filter: blur(28px) saturate(2.1) brightness(1.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow:
+      0 24px 70px -12px rgba(0, 0, 0, 0.65),
+      0 0 35px -8px rgba(30, 210, 255, 0.15),
+      inset 0 1.5px 0 rgba(255, 255, 255, 0.35),
+      inset 0 -1.5px 0 rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-frame-4k:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow:
+      0 32px 90px -16px rgba(0, 0, 0, 0.75),
+      0 0 50px -10px rgba(30, 210, 255, 0.25),
+      inset 0 2px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -1.5px 0 rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+  }
+
+  /* ──── 4K Liquid Glass Floating Badge ──── */
+  .liquid-glass-badge-4k {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.03) 100%
+    );
+    backdrop-filter: blur(24px) saturate(2);
+    -webkit-backdrop-filter: blur(24px) saturate(2);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow:
+      0 8px 32px -4px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.45),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* ──── Precision Specular Highlight Bezel ──── */
+  .glass-specular-bezel {
+    position: relative;
+  }
+
+  .glass-specular-bezel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 20;
   }
 
   /* ──── Chrome Glass Reflective Text ──── */
