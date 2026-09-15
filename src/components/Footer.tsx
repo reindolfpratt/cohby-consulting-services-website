@@ -19,7 +19,7 @@ const Footer = () => {
                 alt="Cohby Consulting Services"
                 className="h-12 w-12 object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]"
               />
-              <span className="text-lg font-bold text-white">Cohby Consulting</span>
+              <span className="text-lg font-bold text-white">Cohby Consulting Services</span>
             </div>
             <p className="text-white/60 leading-relaxed pr-4 text-sm">
               Your trusted partner for Salesforce, Cloud Solutions, AI Engineering, and Data Analysis. Empowering digital transformation worldwide.
@@ -29,7 +29,7 @@ const Footer = () => {
                 href="https://www.facebook.com/CohbyConsultingServices"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Cohby Consulting on Facebook"
+                aria-label="Cohby Consulting Services on Facebook"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-white/[0.04] border border-white/[0.08] hover:bg-primary/20 hover:border-primary/40 transition-all duration-200 cursor-pointer text-white/70 hover:text-white"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -40,7 +40,7 @@ const Footer = () => {
                 href="https://www.instagram.com/cohby_consulting_service/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Cohby Consulting on Instagram"
+                aria-label="Cohby Consulting Services on Instagram"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-white/[0.04] border border-white/[0.08] hover:bg-primary/20 hover:border-primary/40 transition-all duration-200 cursor-pointer text-white/70 hover:text-white"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -51,7 +51,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/107525374/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Cohby Consulting on LinkedIn"
+                aria-label="Cohby Consulting Services on LinkedIn"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-white/[0.04] border border-white/[0.08] hover:bg-primary/20 hover:border-primary/40 transition-all duration-200 cursor-pointer text-white/70 hover:text-white"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

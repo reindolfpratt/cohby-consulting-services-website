@@ -80,8 +80,8 @@ const PrivacyPolicy = () => {
               <h2 className="text-xl font-black text-[#121214] uppercase tracking-tight">4. Legal Basis for Processing (UK/EU)</h2>
               <p>
                 Where applicable under UK GDPR and GDPR, we process your personal data on the following legal bases:
-                (a) Contractual necessity — to perform services you have requested; (b) Legitimate interests — to
-                improve our services and communicate with prospective clients; (c) Consent — for marketing
+                (a) Contractual necessity - to perform services you have requested; (b) Legitimate interests - to
+                improve our services and communicate with prospective clients; (c) Consent - for marketing
                 communications. You may withdraw consent at any time.
               </p>
             </div>

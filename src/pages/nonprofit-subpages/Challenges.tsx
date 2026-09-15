@@ -7,12 +7,12 @@ const Challenges = () => {
       num: "01",
       title: "Fragmented Donor & Constituent Data",
       problem: "Spreadsheets here, email lists there, sticky notes everywhere. When your donor and volunteer info is scattered across different places, it's easy to miss opportunities and hard to keep communications personal.",
-      solution: "Salesforce brings all your data together in one place. You get a 360-degree view of every supporter — donors, volunteers, beneficiaries, all in a single, searchable database. Suddenly, you can see who's engaged, personalise your outreach, and build stronger relationships.",
+      solution: "Salesforce brings all your data together in one place. You get a 360-degree view of every supporter - donors, volunteers, beneficiaries, all in a single, searchable database. Suddenly, you can see who's engaged, personalise your outreach, and build stronger relationships.",
     },
     {
       num: "02",
       title: "Tracking Campaigns & Donations",
-      problem: "You're running multiple campaigns — online appeals, events, grant applications — and trying to track who gave what, when, and why. Without a clear system, it's nearly impossible to know what's working.",
+      problem: "You're running multiple campaigns - online appeals, events, grant applications - and trying to track who gave what, when, and why. Without a clear system, it's nearly impossible to know what's working.",
       solution: "Salesforce's campaign and donation tracking tools let you see exactly where every pound or dollar came from, which campaigns are hitting targets, and which donors need a thank-you call. Automated workflows can even send receipts and follow-ups instantly.",
     },
     {
@@ -49,7 +49,7 @@ const Challenges = () => {
           <div className="pb-12 border-b studio-rule">
             <h2 className="studio-heading text-3xl mb-4">Research & Insights</h2>
             <p className="text-sm text-black/55 leading-relaxed max-w-2xl">
-              Running a non-profit is a labour of love, but it's not always smooth sailing. You're juggling big missions, tight budgets, and a million moving parts. Here are the top three non-profit challenges we see all the time — and how Salesforce can help you turn chaos into clarity.
+              Running a non-profit is a labour of love, but it's not always smooth sailing. You're juggling big missions, tight budgets, and a million moving parts. Here are the top three non-profit challenges we see all the time - and how Salesforce can help you turn chaos into clarity.
             </p>
           </div>
 

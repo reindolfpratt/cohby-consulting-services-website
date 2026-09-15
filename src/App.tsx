@@ -14,7 +14,7 @@ import Home from "./pages/Home";
 
 /*
  * Only Home ships in the initial bundle. Every other page is its own
- * chunk, loaded on demand — and prefetched in the background once the
+ * chunk, loaded on demand - and prefetched in the background once the
  * browser is idle, so in-site navigation stays instant.
  */
 const pageLoaders = {
@@ -71,7 +71,7 @@ const PrefetchPages = () => {
         // Stagger so prefetching never competes with the visible page
         window.setTimeout(() => {
           load().catch(() => {
-            /* offline or navigation away — the route will retry on demand */
+            /* offline or navigation away - the route will retry on demand */
           });
         }, i * 300);
       });
@@ -99,7 +99,7 @@ const App = () => (
           <Navigation />
           <main className="flex-grow relative z-10">
             <RouteTransition>
-              {/* Fallback is a full-height void — the space scene shows through while a chunk loads */}
+              {/* Fallback is a full-height void - the space scene shows through while a chunk loads */}
               <Suspense fallback={<div className="min-h-screen" />}>
                 <Routes>
                   <Route path="/" element={<Home />} />

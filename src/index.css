@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Cohby Consulting Services — Dark Cloud-Powered Design System
+/* Cohby Consulting Services - Dark Cloud-Powered Design System
    All colors are HSL. Default theme is dark.
 */
 
 @layer base {
   :root {
-    /* Cohby Consulting — True Midnight Black & Rose Premium Design System */
+    /* Cohby Consulting - True Midnight Black & Rose Premium Design System */
     --background: 240 10% 3.5%; /* Midnight Black #070709 */
     --foreground: 0 0% 98%; /* High Contrast White #fafafa */
 
@@ -994,7 +994,7 @@
   }
 }
 
-/* ──── Studio Gallery — Light Clay Theme (Unseen Studio inspired) ──── */
+/* ──── Studio Gallery - Light Clay Theme (Unseen Studio inspired) ──── */
 
 /* Light section background */
 .bg-studio-light {

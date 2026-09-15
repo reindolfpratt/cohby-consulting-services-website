@@ -52,7 +52,7 @@ const AIAutomation = () => {
   return (
     <div className="min-h-screen overflow-x-hidden selection:bg-rose/30">
 
-      {/* ── Hero — Dark ── */}
+      {/* ── Hero - Dark ── */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden z-10 border-b border-white/[0.06]">
         <div className="container relative mx-auto px-4 md:px-8 z-10 pb-20 pt-40 max-w-7xl">
           <RevealGroup className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">

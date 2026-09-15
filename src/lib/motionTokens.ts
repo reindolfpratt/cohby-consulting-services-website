@@ -1,4 +1,4 @@
-/* Shared motion vocabulary — one easing language across the whole site. */
+/* Shared motion vocabulary - one easing language across the whole site. */
 
 /* Strong ease-out: snappy start, elegant settle. Built-in CSS easings are too weak. */
 export const EASE_OUT: [number, number, number, number] = [0.23, 1, 0.32, 1];

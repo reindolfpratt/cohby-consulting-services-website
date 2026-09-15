@@ -145,7 +145,7 @@ const Home = () => {
   return (
     <div className="min-h-screen overflow-x-hidden selection:bg-rose/30">
 
-      {/* ── Hero Section — Dark ── */}
+      {/* ── Hero Section - Dark ── */}
       <section
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 border-b border-white/[0.06] grid-blueprint"
@@ -172,12 +172,12 @@ const Home = () => {
               variants={heroItem}
               className="text-[10px] uppercase tracking-[0.3em] text-rose font-mono mb-8 block px-3 py-1 rounded-full border border-rose/20 bg-rose/[0.02] backdrop-blur-md"
             >
-              // Elite Digital Architecture
+              // Cloud & Digital Systems
             </motion.span>
 
             <motion.div variants={heroItem} className="mb-10 max-w-4xl">
               <TechWordReveal
-                text="Bespoke Systems. Real results."
+                text="Custom Systems. Real results."
                 highlightWord="results"
                 className="text-5xl md:text-8xl lg:text-9xl font-black tracking-[-0.04em] leading-[0.88] text-white uppercase select-none"
               />
@@ -187,7 +187,7 @@ const Home = () => {
               variants={heroItem}
               className="text-base md:text-xl text-white/70 leading-relaxed max-w-lg mb-12 font-sans"
             >
-              Salesforce, Cloud, and AI platforms engineered for enterprise scale, built to integrate seamlessly with your workflow.
+              Salesforce and other CRMs, Cloud, and custom systems built to integrate seamlessly with your workflow.
             </motion.p>
 
             <motion.div
@@ -211,12 +211,7 @@ const Home = () => {
           </motion.div>
         </motion.div>
 
-        {/* Left and Right Vertical Info Bars */}
-        <div className="absolute left-6 bottom-12 hidden xl:block z-20">
-          <span className="text-[9px] font-mono text-white/30 uppercase tracking-[0.3em] block origin-left -rotate-90 -translate-y-12">
-            // UK . CANADA . EST. 2026
-          </span>
-        </div>
+        {/* Right Vertical Info Bar */}
         <div className="absolute right-6 bottom-12 hidden xl:block z-20">
           <motion.span
             className="text-[9px] font-mono text-white/30 uppercase tracking-[0.3em] block origin-right rotate-90 translate-y-12"
@@ -231,7 +226,7 @@ const Home = () => {
       {/* ── Dynamic 3D Moving Platforms Marquee ── */}
       <PlatformsMarquee />
 
-      {/* ── Services Showcase — Dark ── */}
+      {/* ── Services Showcase - Dark ── */}
       <section className="py-32 relative z-10 border-b border-white/10 bg-background/50">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
 
@@ -289,7 +284,7 @@ const Home = () => {
                   <div className="relative rounded-2xl overflow-hidden aspect-[16/9] bg-[#070913] group shadow-2xl">
                     <img
                       src={liquidGlassAiPedestals}
-                      alt="Cohby AI Intelligence Architecture"
+                      alt="Cohby Consulting Services AI Workflow Architecture"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
                     />
@@ -299,13 +294,13 @@ const Home = () => {
 
                 <div className="lg:col-span-5 space-y-5 text-left">
                   <span className="text-xs uppercase tracking-[0.2em] text-rose font-mono block">
-                    // ARTIFICIAL INTELLIGENCE
+                    // ARTIFICIAL INTELLIGENCE & AUTOMATION
                   </span>
                   <h3 className="text-2xl md:text-3xl font-black text-white uppercase leading-tight tracking-tight">
-                    Deterministic Automations & Cognitive AI Brains
+                    Practical AI & Intelligent Workflow Automation
                   </h3>
                   <p className="text-sm text-white/70 leading-relaxed font-sans">
-                    We encase advanced AI into structured, enterprise-grade pipelines: neural workflow loops, multi-agent data meshes, and contextual LLM brains that integrate directly into Salesforce and cloud datastores.
+                    We build automated systems that do real work: intelligent document processing, customer support agents, and automated data pipelines that connect directly to your CRM and cloud databases.
                   </p>
                   <div className="pt-2">
                     <Link
@@ -329,7 +324,7 @@ const Home = () => {
                   <div className="relative rounded-2xl overflow-hidden aspect-[16/9] bg-[#070913] group shadow-2xl">
                     <img
                       src={liquidGlassBespokeSoftware}
-                      alt="Cohby Bespoke Software Architecture"
+                      alt="Cohby Consulting Services Custom Systems Architecture"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
                     />
@@ -342,10 +337,10 @@ const Home = () => {
                     // BESPOKE SOFTWARE ENGINEERING
                   </span>
                   <h3 className="text-2xl md:text-3xl font-black text-white uppercase leading-tight tracking-tight">
-                    Engineered from Ground Zero for Enterprise Power
+                    Tailored Software & Custom Systems
                   </h3>
                   <p className="text-sm text-white/70 leading-relaxed font-sans">
-                    When off-the-shelf software can't support your workflows, we engineer bespoke full-stack platforms, high-throughput microservices, and dedicated executive command centers that perform at enterprise scale.
+                    When off-the-shelf software limits how your team operates, we design and build custom web platforms, client portals, and internal tools tailored to your exact business processes.
                   </p>
                   <div className="pt-2">
                     <Link
@@ -368,7 +363,7 @@ const Home = () => {
       {/* Gradient fade from dark to light clay */}
       <div className="h-48 w-full pointer-events-none" style={{background: "linear-gradient(180deg, hsl(240,10%,4%) 0%, #f0ede9 100%)"}} />
 
-      {/* ── Why Us Section — Light Clay ── */}
+      {/* ── Why Us Section - Light Clay ── */}
       <section className="bg-studio-light relative pt-4 pb-28 overflow-hidden">
 
         {/* Side Arch Pillars */}
@@ -380,7 +375,7 @@ const Home = () => {
           {/* Section Header */}
           <Reveal y={16} className="pt-4 pb-16 border-b studio-rule">
             <div className="flex items-baseline justify-between">
-              <span className="studio-label">// Why Cohby</span>
+              <span className="studio-label">// Why Cohby Consulting Services</span>
               <span className="studio-label">03 pillars</span>
             </div>
           </Reveal>
@@ -388,7 +383,7 @@ const Home = () => {
           {/* Big Statement */}
           <div className="py-20 border-b studio-rule">
             <h2 className="studio-heading text-4xl md:text-6xl lg:text-7xl max-w-4xl leading-[0.95]">
-              <WordsReveal text="We reject templated systems. We build bespoke digital architecture that integrates with your workflow." />
+              <WordsReveal text="We build systems that fit how your team actually works - without bloated agency layers, hidden handoffs, or unnecessary complexity." />
             </h2>
           </div>
 
@@ -399,33 +394,33 @@ const Home = () => {
                 <div className="lg:col-span-7 aspect-[16/10] overflow-hidden relative">
                   <img
                     src={consultingTeamCollaboration}
-                    alt="Cohby Consulting certified engineering team collaborating on live client dashboards"
+                    alt="Cohby Consulting Services certified engineering team collaborating on client architecture"
                     className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
                     <span className="text-[10px] font-mono text-white tracking-widest uppercase">
-                      // UK & Canada Enterprise Delivery
+                      // UK & Canada Delivery
                     </span>
                   </div>
                 </div>
                 <div className="lg:col-span-5 p-8 md:p-12 space-y-5">
-                  <span className="studio-label block">// Real Engineering Leadership</span>
+                  <span className="studio-label block">// Direct Collaboration</span>
                   <h3 className="text-2xl md:text-3xl font-black text-[#121214] uppercase leading-tight tracking-tight">
-                    Direct Collaboration With Certified Architects
+                    Work Directly with Senior Engineers
                   </h3>
                   <p className="text-sm text-black/65 leading-relaxed font-sans">
-                    No disconnected agency layers. You collaborate directly with certified architects and data engineers who build, configure, and optimize your cloud systems to solve genuine business challenges.
+                    You won't get bounced between account managers. You collaborate directly with senior cloud architects and Salesforce specialists who write the code, configure your environments, and deliver on time.
                   </p>
                   <div className="flex flex-wrap gap-4 pt-2">
                     <div className="border-l-2 border-black/80 pl-3">
                       <span className="text-xs font-mono font-bold text-black block">UK & Canada</span>
-                      <span className="text-[11px] text-black/50">Cross-border presence</span>
+                      <span className="text-[11px] text-black/50">Cross-border teams</span>
                     </div>
                     <div className="border-l-2 border-rose pl-3">
-                      <span className="text-xs font-mono font-bold text-black block">100% Bespoke</span>
-                      <span className="text-[11px] text-black/50">Zero generic templates</span>
+                      <span className="text-xs font-mono font-bold text-black block">Tailored Architecture</span>
+                      <span className="text-[11px] text-black/50">Built around your workflow</span>
                     </div>
                   </div>
                 </div>
@@ -453,7 +448,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── Methodology Section — Light Clay ── */}
+      {/* ── Methodology Section - Light Clay ── */}
       <section className="bg-studio-light relative pb-28 overflow-hidden">
 
         {/* Side Arch Pillars */}

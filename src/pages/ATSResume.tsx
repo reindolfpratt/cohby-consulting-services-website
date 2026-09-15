@@ -31,7 +31,7 @@ const ATSResume = () => {
 
   const builderItems = [
     { label: "6 Premium Templates", sub: "Classic, Modern, Minimal, Professional, Elegant, Creative", icon: <LayoutGrid size={18} className="text-rose" /> },
-    { label: "Smart Import",         sub: "Upload existing PDF or DOCX — auto-parses into structured JSON instantly.", icon: <UploadCloud size={18} className="text-rose" /> },
+    { label: "Smart Import",         sub: "Upload existing PDF or DOCX - auto-parses into structured JSON instantly.", icon: <UploadCloud size={18} className="text-rose" /> },
     { label: "Flexible Export",      sub: "Export to PDF or DOCX for every document type with just a toggle.", icon: <Download size={18} className="text-rose" /> },
   ];
 
@@ -46,7 +46,7 @@ const ATSResume = () => {
   return (
     <div className="min-h-screen overflow-x-hidden selection:bg-rose/30">
 
-      {/* ── Hero — Dark ── */}
+      {/* ── Hero - Dark ── */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden z-10 border-b border-white/[0.06]">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[70%] md:w-[45%] h-[55%] rounded-t-[12rem] border-t border-x border-white/[0.06] bg-white/[0.01] backdrop-blur-[14px] z-0 pointer-events-none" />
         <div className="container relative mx-auto px-4 md:px-8 z-10 pb-20 pt-40 max-w-7xl">
@@ -73,7 +73,7 @@ const ATSResume = () => {
             </RevealItem>
           </RevealGroup>
 
-          {/* Mockup preview — real product screenshot */}
+          {/* Mockup preview - real product screenshot */}
           <Reveal className="mt-16 w-full relative z-10">
             <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.02] backdrop-blur-md overflow-hidden p-3 shadow-[0_32px_80px_rgba(0,0,0,0.5)]">
               {/* Browser chrome bar */}
@@ -88,7 +88,7 @@ const ATSResume = () => {
               <a href="https://www.atsresumetailor.com/" target="_blank" rel="noopener noreferrer" className="block group">
                 <img
                   src="/ats-preview.png"
-                  alt="ATS Resume Tailor — app preview"
+                  alt="ATS Resume Tailor - app preview"
                   className="w-full rounded-xl object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]"
                   loading="lazy"
                 />

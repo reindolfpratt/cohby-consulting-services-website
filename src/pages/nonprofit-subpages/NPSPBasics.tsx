@@ -13,7 +13,7 @@ const NPSPBasics = () => {
 
   const whyStart = [
     { label: "It's Free", body: "NPSP is included with your Salesforce nonprofit account at no extra cost." },
-    { label: "Built for Nonprofits", body: "Speaks your language — donors, not customers; campaigns, not sales targets." },
+    { label: "Built for Nonprofits", body: "Speaks your language - donors, not customers; campaigns, not sales targets." },
     { label: "Room to Grow", body: "Start simple and add more features as your organisation's needs evolve." },
     { label: "Community Support", body: "Join a massive global community of nonprofits sharing resources." },
   ];

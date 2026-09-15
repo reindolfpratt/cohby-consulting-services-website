@@ -63,7 +63,7 @@ const CohbyLearn = () => {
   return (
     <div className="min-h-screen overflow-x-hidden selection:bg-rose/30">
 
-      {/* ── Hero — Dark ── */}
+      {/* ── Hero - Dark ── */}
       <section className="relative min-h-[85vh] flex items-end overflow-hidden z-10 border-b border-white/[0.06]">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[70%] md:w-[45%] h-[55%] rounded-t-[12rem] border-t border-x border-white/[0.06] bg-white/[0.01] backdrop-blur-[14px] z-0 pointer-events-none" />
         <div className="container relative mx-auto px-4 md:px-8 z-10 pb-20 pt-40 max-w-7xl">
@@ -90,7 +90,7 @@ const CohbyLearn = () => {
             </RevealItem>
           </RevealGroup>
 
-          {/* Platform mockup — real product screenshot */}
+          {/* Platform mockup - real product screenshot */}
           <Reveal className="mt-16 w-full relative z-10">
             <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.02] backdrop-blur-md overflow-hidden p-3 shadow-[0_32px_80px_rgba(0,0,0,0.5)]">
               {/* Browser chrome bar */}
@@ -105,7 +105,7 @@ const CohbyLearn = () => {
               <a href="http://www.cohbylearn.com/" target="_blank" rel="noopener noreferrer" className="block group">
                 <img
                   src="/learn-preview.png"
-                  alt="Cohby Learn — platform preview"
+                  alt="Cohby Learn - platform preview"
                   className="w-full rounded-xl object-cover object-top transition-transform duration-500 group-hover:scale-[1.01]"
                   loading="lazy"
                 />

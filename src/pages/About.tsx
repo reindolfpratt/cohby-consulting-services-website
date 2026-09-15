@@ -35,7 +35,7 @@ const About = () => {
   return (
     <div className="min-h-screen overflow-x-hidden selection:bg-rose/30">
 
-      {/* ── Hero — Dark ── */}
+      {/* ── Hero - Dark ── */}
       <section className="relative min-h-[50vh] flex items-end overflow-hidden z-10 border-b border-white/[0.06]">
         <RevealGroup className="container relative mx-auto px-4 md:px-8 z-10 pb-20 pt-40 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
@@ -45,10 +45,10 @@ const About = () => {
               </span>
               <h1 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tight leading-[0.9]">
                 About<br />
-                <span className="text-rose font-extrabold italic font-serif lowercase tracking-wide">cohby</span>
+                <span className="text-rose font-extrabold italic font-serif tracking-normal normal-case">Cohby Consulting Services</span>
               </h1>
               <p className="text-base text-white/50 mt-6 max-w-md leading-relaxed">
-                Your elite engineering partner in cloud, data, and digital business transformation across the UK & Canada.
+                Your engineering partner in cloud, Salesforce & other CRMs, and custom systems across the UK & Canada.
               </p>
             </RevealItem>
           </div>
@@ -59,7 +59,7 @@ const About = () => {
               <div className="relative rounded-2xl overflow-hidden aspect-[16/9] md:aspect-[16/8.5] bg-[#070913]">
                 <img
                   src={consultingTeamCollaboration}
-                  alt="Cohby Consulting certified engineering team in London office"
+                  alt="Cohby Consulting Services certified engineering team"
                   className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                   loading="eager"
                 />
@@ -87,17 +87,17 @@ const About = () => {
 
           <Reveal className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-16 pb-24 border-b studio-rule">
             <div className="lg:col-span-4">
-              <h3 className="text-2xl font-black text-[#121214] uppercase leading-tight">Quantifiable Impact</h3>
+              <h3 className="text-2xl font-black text-[#121214] uppercase leading-tight">Practical Engineering, Real Outcomes</h3>
             </div>
             <div className="lg:col-span-8 space-y-5 text-sm text-black/55 leading-relaxed">
               <p>
-                Cohby Consulting Services operates on a core thesis: premium engineering should translate directly to elite business outcomes. We've witnessed too many organisations crippled by bloated implementations, rigid architecture, and disconnected data silos.
+                Most technology initiatives stall because of bloated agency overhead, layers of non-technical account managers, and rigid software that doesn't fit how the business actually operates.
               </p>
               <p>
-                We do things differently. We are deeply technical, hands-on engineers and consultants who solve highly complex data and cloud challenges. Whether you require advanced AI pipelines, robust cloud infrastructure, or a high-performance Salesforce environment, we build to scale.
+                Cohby Consulting Services was founded to do things differently. We are hands-on engineers, certified specialists across Salesforce and other leading platforms, and cloud architects. We partner directly with leadership teams to modernize legacy workflows, implement scalable custom systems, and build technology your company owns completely.
               </p>
               <p>
-                Based in the UK and Canada, we architect customised, future-proof solutions for global enterprises driving the modern digital frontier.
+                Operating across the United Kingdom and Canada, we deliver responsive, high-touch engineering that solves genuine operational bottlenecks and scales with your business.
               </p>
             </div>
           </Reveal>

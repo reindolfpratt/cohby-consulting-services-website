@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen overflow-x-hidden selection:bg-rose/30">
 
-      {/* ── Hero — Dark ── */}
+      {/* ── Hero - Dark ── */}
       <section className="relative min-h-[45vh] flex items-end overflow-hidden z-10 border-b border-white/[0.06]">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[70%] md:w-[45%] h-[55%] rounded-t-[12rem] border-t border-x border-white/[0.06] bg-white/[0.01] backdrop-blur-[14px] z-0 pointer-events-none" />
         <RevealGroup className="container relative mx-auto px-4 md:px-8 z-10 pb-20 pt-40 max-w-7xl">
@@ -24,7 +24,7 @@ const Contact = () => {
         </RevealGroup>
       </section>
 
-      {/* ── Body — Light Clay ── */}
+      {/* ── Body - Light Clay ── */}
       <div className="h-24 w-full pointer-events-none" style={{background:"linear-gradient(180deg, hsl(240,10%,4%) 0%, #f0ede9 100%)"}} />
 
       <section className="bg-studio-light relative pb-32">
@@ -41,7 +41,7 @@ const Contact = () => {
 
           <RevealGroup className="grid grid-cols-1 lg:grid-cols-12 gap-16 pt-16">
 
-            {/* Left — Contact Details */}
+            {/* Left - Contact Details */}
             <RevealItem className="lg:col-span-4 space-y-10">
 
               <div className="flex gap-5 items-start group">
@@ -101,7 +101,7 @@ const Contact = () => {
               </div>
             </RevealItem>
 
-            {/* Right — Form */}
+            {/* Right - Form */}
             <RevealItem className="lg:col-span-8">
               <div className="bg-white border border-black/[0.08] rounded-2xl p-8 md:p-12 shadow-[0_4px_40px_rgba(0,0,0,0.06)]">
                 <h3 className="text-2xl font-black text-[#121214] mb-10 uppercase tracking-tight">Send a Message</h3>
@@ -175,7 +175,7 @@ const Contact = () => {
                       id="00NSj000002VLgX" name="00NSj000002VLgX" title="Country of Operation"
                       className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent transition-colors"
                     >
-                      <option value="">— Select —</option>
+                      <option value="">- Select -</option>
                       <option value="UK">UK</option>
                       <option value="Canada">Canada</option>
                       <option value="Other">Other</option>
@@ -206,7 +206,7 @@ const Contact = () => {
                         id="00NgD000000x7tV" name="00NgD000000x7tV" title="Current Salesforce Usage"
                         className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent transition-colors"
                       >
-                        <option value="">— Select —</option>
+                        <option value="">- Select -</option>
                         <option value="Not using Salesforce yet">Not using Salesforce yet</option>
                         <option value="Using Salesforce but need improvements">Using Salesforce but need improvements</option>
                         <option value="Other CRM system">Other CRM system</option>
@@ -219,9 +219,9 @@ const Contact = () => {
                         id="00NgD000000x7qH" name="00NgD000000x7qH" title="Estimated Project Timeline"
                         className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent transition-colors"
                       >
-                        <option value="">— Select —</option>
+                        <option value="">- Select -</option>
                         <option value="immediate (within 1 month">Immediate (within 1 month)</option>
-                        <option value="1-3 months">1–3 months</option>
+                        <option value="1-3 months">1-3 months</option>
                         <option value="3+ months">3+ months</option>
                       </select>
                     </div>
@@ -241,7 +241,7 @@ const Contact = () => {
                         id="00NSj000002VLjl" name="00NSj000002VLjl" title="How Did You Hear About Us"
                         className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent transition-colors"
                       >
-                        <option value="">— Select —</option>
+                        <option value="">- Select -</option>
                         <option value="Referral">Referral</option>
                         <option value="Google_Search">Google Search</option>
                         <option value="Social_Media">Social Media</option>

@@ -3,22 +3,22 @@
 Welcome to the official repository for **Cohby Consulting Services** ([cohbyconsultingservices.com](https://cohbyconsultingservices.com)), an elite digital engineering and cloud consultancy operating across the **UK** and **Canada**.
 
 > [!IMPORTANT]
-> **AI AGENT DIRECTIVE — UI OVERHAUL IN PROGRESS**
+> **AI AGENT DIRECTIVE - UI OVERHAUL IN PROGRESS**
 > This repository is undergoing a comprehensive **front-end UI / UX redesign**. The core business domain, services, routes, and logic are established, but the **look and feel (visual presentation, theme, typography, color harmony, and visitor experience)** must be elevated to a world-class, premium tier.
 > 
 > When modifying or building on this codebase, refer to the **UI & Look-and-Feel Audit** below to understand the current presentation, its structural friction points, and the design requirements.
 
 > [!CAUTION]
-> **PERMANENT DESIGN SYSTEM RULE — THE "OVAL DOT THING" MUST NEVER APPEAR ON THIS WEBSITE AGAIN**
+> **PERMANENT DESIGN SYSTEM RULE - THE "OVAL DOT THING" MUST NEVER APPEAR ON THIS WEBSITE AGAIN**
 >
 > 1. **STRICT, UNCONDITIONAL PROHIBITION ON OVAL PILL BADGES WITH DOTS ("THE OVAL DOT THING")**:
->    - **NEVER** introduce, reintroduce, or generate floating oval / pill / capsule badges with dots (e.g., `● BESPOKE SOFTWARE`, `● ACTIVE`, `● LIVE`, `animate-pulse` dots, glowing green/cyan/pink dots, or status indicators) anywhere on this website—neither over images, over cards, in hero sections, nor in headers.
+>    - **NEVER** introduce, reintroduce, or generate floating oval / pill / capsule badges with dots (e.g., `● BESPOKE SOFTWARE`, `● ACTIVE`, `● LIVE`, `animate-pulse` dots, glowing green/cyan/pink dots, or status indicators) anywhere on this website - neither over images, over cards, in hero sections, nor in headers.
 >    - **This is the single biggest "AI signature" and template cliché in modern web design.** It immediately makes the website look like an automated AI-generated template rather than a high-caliber corporate consultancy.
 >    - **Zero tolerance**: If you or any AI agent are tempted to place a pill badge with a dot next to text, **DO NOT DO IT**.
 >    - **Alternative**: If category, technical indicator, or context must be stated, write it simply, cleanly, and directly using understated typography (e.g., `// SYSTEMS WE WORK ON`, `// BESPOKE SOFTWARE`, or standard editorial text without oval capsule enclosures or dot graphics).
 >
 > 2. **NO "4K" JARGON OR FAKE TELEMETRY LABELS**:
->    - Never stamp "4K", "4K Active", "99.99% Mesh", or fake telemetry stats onto images, cards, or user-facing copy. Visual quality is communicated through crisp, high-resolution rendering and clean layout—never through amateur marketing badges.
+>    - Never stamp "4K", "4K Active", "99.99% Mesh", or fake telemetry stats onto images, cards, or user-facing copy. Visual quality is communicated through crisp, high-resolution rendering and clean layout - never through amateur marketing badges.
 >
 > 3. **MINIMALIST PARTNER & PLATFORM TICKERS**:
 >    - Ecosystem and partner tickers must consist exclusively of authentic, transparent vector logos (Salesforce, AWS, Azure, Oracle Cloud, Tableau, HubSpot, Zoho) moving cleanly across the website's deep blue-black background (`#080914`). No card boxes, no borders, no badges.
@@ -68,14 +68,14 @@ Welcome to the official repository for **Cohby Consulting Services** ([cohbycons
 
 ### 3.1 Visual Theme Concept: The "Split-Theme"
 The current site implements a hybrid visual identity combining two distinct visual aesthetics:
-1. **Upper Fold / Hero Sections — Midnight Space Theme**:
+1. **Upper Fold / Hero Sections - Midnight Space Theme**:
    - **Background**: Deep midnight black (`hsl(240 10% 3.5%)` / `#070709`) overlaid with fixed blurred radial glass orbs (`LiquidGlassBackground`) in cyan (`rgba(30, 200, 255)`), hot pink, and rose (`#EDC1CB`).
    - **Interactive Canvas (`CometField.tsx`)**: Fullscreen starfield background with shooting stars and a canvas comet that tracks the user's cursor.
    - **Visual Motifs**: 4-column blueprint gridlines (`grid-blueprint`), tall frosted glass arch cutouts (`rounded-t-[16rem] backdrop-blur-[24px]`), and monospaced tech tags (`// Elite Digital Architecture`).
    - **Headings**: Massive uppercase sans-serif text paired with lowercase italic serif accent words (e.g. `Bespoke Systems. Real *results*.`).
 2. **Transition**:
    - Every page features an abrupt vertical gradient fade (`linear-gradient(180deg, hsl(240,10%,4%) 0%, #f0ede9 100%)`).
-3. **Lower Fold / Content Sections — "Studio Clay" Light Theme**:
+3. **Lower Fold / Content Sections - "Studio Clay" Light Theme**:
    - **Background**: Editorial light warm clay (`#f0ede9` / `.bg-studio-light`), inspired by editorial studio showcases (e.g., Unseen Studio).
    - **Visual Motifs**: Architectural side pillar lines (`studio-pillar-left`, `studio-pillar-right`), subtle hairline borders (`studio-rule`), dark charcoal headings (`#121214`), and pill-shaped filter tags.
 4. **Footer**:

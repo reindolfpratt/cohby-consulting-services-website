@@ -287,7 +287,7 @@ const Solutions = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden selection:bg-rose/30">
-      {/* ── Hero — Dark Section ── */}
+      {/* ── Hero - Dark Section ── */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden z-10 border-b border-white/[0.06]">
         {/* 4-col grid lines */}
         <div className="absolute inset-0 grid grid-cols-4 pointer-events-none z-0 px-4 md:px-8 max-w-7xl mx-auto">
@@ -314,7 +314,7 @@ const Solutions = () => {
         </div>
       </section>
 
-      {/* ── Gallery — Light Clay Section ── */}
+      {/* ── Gallery - Light Clay Section ── */}
       <section className="bg-studio-light relative">
         {/* 3D Side Arch Pillars */}
         <div className="studio-pillar-left" aria-hidden="true" />
@@ -324,7 +324,7 @@ const Solutions = () => {
         <div className="sticky top-0 z-40 bg-studio-light/95 border-b border-black/[0.08] backdrop-blur-md shadow-sm">
           <div className="container mx-auto px-4 md:px-8 max-w-6xl">
             <div className="flex flex-wrap items-center gap-2 py-5">
-              <span className="studio-label mr-4 hidden md:block">Filter —</span>
+              <span className="studio-label mr-4 hidden md:block">Filter -</span>
               {categories.map((cat) => {
                 const active = activeCategory === cat;
                 return (
@@ -358,7 +358,7 @@ const Solutions = () => {
           </div>
         </div>
 
-        {/* Project Cards Grid — Animated with AnimatePresence to ensure no empty sections */}
+        {/* Project Cards Grid - Animated with AnimatePresence to ensure no empty sections */}
         <div className="container mx-auto px-4 md:px-8 max-w-6xl py-8 pb-28 min-h-[500px]">
           <AnimatePresence mode="wait">
             <motion.div
