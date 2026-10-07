@@ -34,6 +34,7 @@ const pageLoaders = {
   PrivacyPolicy: () => import("./pages/PrivacyPolicy"),
   TermsOfService: () => import("./pages/TermsOfService"),
   ThankYou: () => import("./pages/ThankYou"),
+  Feedback: () => import("./pages/Feedback"),
   NotFound: () => import("./pages/NotFound"),
 };
 
@@ -53,6 +54,7 @@ const ATSResume = lazy(pageLoaders.ATSResume);
 const PrivacyPolicy = lazy(pageLoaders.PrivacyPolicy);
 const TermsOfService = lazy(pageLoaders.TermsOfService);
 const ThankYou = lazy(pageLoaders.ThankYou);
+const Feedback = lazy(pageLoaders.Feedback);
 const NotFound = lazy(pageLoaders.NotFound);
 
 /* Warm the remaining page chunks once the browser has settled. */
@@ -119,6 +121,7 @@ const App = () => (
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                   <Route path="/terms-of-service" element={<TermsOfService />} />
                   <Route path="/thank-you" element={<ThankYou />} />
+                  <Route path="/feedback" element={<Feedback />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
