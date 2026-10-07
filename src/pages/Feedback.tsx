@@ -1,14 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { 
-  Star, 
-  MessageSquare, 
   CheckCircle2, 
-  Clock, 
   HeartHandshake, 
-  FileText, 
-  ArrowRight,
-  ShieldCheck,
   Send
 } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
@@ -90,12 +84,6 @@ const Feedback = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] md:w-[50%] h-[60%] rounded-t-[14rem] border-t border-x border-white/[0.06] bg-white/[0.01] backdrop-blur-[14px] z-0 pointer-events-none" />
         <RevealGroup className="container relative mx-auto px-4 md:px-8 z-10 pb-20 pt-40 max-w-7xl">
           <RevealItem>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/[0.1] text-rose text-xs font-mono uppercase tracking-wider mb-6">
-              <Star className="w-3.5 h-3.5 fill-rose text-rose" />
-              Client Experience & Project Review
-            </div>
-          </RevealItem>
-          <RevealItem>
             <h1 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tight leading-[0.9]">
               Project<br />
               <span className="text-rose font-extrabold italic font-serif lowercase tracking-wide">feedback</span>
@@ -126,10 +114,6 @@ const Feedback = () => {
             <div>
               <h2 className="studio-heading text-3xl md:text-4xl">Client Review Form</h2>
               <p className="text-sm text-black/50 mt-1">Takes approx. 3 minutes to complete</p>
-            </div>
-            <div className="flex items-center gap-2 text-xs font-mono text-black/40">
-              <ShieldCheck className="w-4 h-4 text-rose" />
-              Direct integration to Cohby Consulting CRM
             </div>
           </Reveal>
 
@@ -169,8 +153,7 @@ const Feedback = () => {
                           type="text"
                           required
                           maxLength={40}
-                          placeholder="e.g. Sarah"
-                          className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent placeholder:text-black/25 transition-colors"
+                          className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent transition-colors"
                         />
                       </div>
 
@@ -184,8 +167,7 @@ const Feedback = () => {
                           type="text"
                           required
                           maxLength={80}
-                          placeholder="e.g. Jenkins"
-                          className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent placeholder:text-black/25 transition-colors"
+                          className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent transition-colors"
                         />
                       </div>
                     </div>
@@ -201,8 +183,7 @@ const Feedback = () => {
                           type="email"
                           required
                           maxLength={80}
-                          placeholder="sarah@organization.org"
-                          className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent placeholder:text-black/25 transition-colors"
+                          className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent transition-colors"
                         />
                       </div>
 
@@ -216,8 +197,7 @@ const Feedback = () => {
                           type="text"
                           required
                           maxLength={80}
-                          placeholder="e.g. Hope Horizon Trust"
-                          className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent placeholder:text-black/25 transition-colors"
+                          className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent transition-colors"
                         />
                       </div>
                     </div>
@@ -231,8 +211,7 @@ const Feedback = () => {
                         name="00NSj000004UjdJ"
                         type="text"
                         maxLength={100}
-                        placeholder="e.g. Salesforce NPSP Migration & Automation"
-                        className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent placeholder:text-black/25 transition-colors"
+                        className="border-b border-black/15 focus:border-[#121214] focus:outline-none py-2.5 text-sm text-[#121214] bg-transparent transition-colors"
                       />
                     </div>
                   </div>
@@ -285,7 +264,7 @@ const Feedback = () => {
                         ))}
                       </div>
 
-                      {/* Scope Comments (Conditional or always accessible) */}
+                      {/* Scope Comments */}
                       <div className={`pt-3 transition-all duration-300 ${scopeDelivery ? "opacity-100" : "opacity-70"}`}>
                         <label htmlFor="00NSj000004Ujjl" className="studio-label text-xs block mb-1">
                           {scopeDelivery === "Partially" || scopeDelivery === "No" 
@@ -296,7 +275,6 @@ const Feedback = () => {
                           id="00NSj000004Ujjl"
                           name="00NSj000004Ujjl"
                           rows={3}
-                          placeholder="Provide details here..."
                           className="w-full border border-black/15 rounded-xl p-3 text-sm text-[#121214] bg-black/[0.01] focus:border-[#121214] focus:outline-none transition-colors resize-none"
                         />
                       </div>
@@ -350,7 +328,6 @@ const Feedback = () => {
                           id="00NSj000004Ujmz"
                           name="00NSj000004Ujmz"
                           rows={2}
-                          placeholder="Add comments on timeline..."
                           className="w-full border border-black/15 rounded-xl p-3 text-sm text-[#121214] bg-black/[0.01] focus:border-[#121214] focus:outline-none transition-colors resize-none"
                         />
                       </div>
@@ -383,7 +360,6 @@ const Feedback = () => {
                         id="00NSj000004Uji9"
                         name="00NSj000004Uji9"
                         rows={3}
-                        placeholder="e.g. Quick turnaround on data flows, clear explanations during walkthroughs, etc."
                         className="w-full border border-black/15 rounded-xl p-3 text-sm text-[#121214] bg-white focus:border-[#121214] focus:outline-none transition-colors resize-none"
                       />
                     </div>
@@ -397,7 +373,6 @@ const Feedback = () => {
                         id="00NSj000004UjS2"
                         name="00NSj000004UjS2"
                         rows={3}
-                        placeholder="e.g. More frequent milestone check-ins, earlier sandbox access, etc."
                         className="w-full border border-black/15 rounded-xl p-3 text-sm text-[#121214] bg-white focus:border-[#121214] focus:outline-none transition-colors resize-none"
                       />
                     </div>
@@ -520,7 +495,6 @@ const Feedback = () => {
                         id="00NSj000004UjlN"
                         name="00NSj000004UjlN"
                         rows={3}
-                        placeholder="Any additional thoughts, suggestions, or ideas..."
                         className="w-full border border-black/15 rounded-xl p-3 text-sm text-[#121214] bg-white focus:border-[#121214] focus:outline-none transition-colors resize-none"
                       />
                     </div>

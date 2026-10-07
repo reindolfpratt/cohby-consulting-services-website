@@ -14,7 +14,7 @@ const ThankYou = () => {
           <h1 className="text-3xl font-black tracking-tight text-white uppercase font-mono">Thank You</h1>
 
           <p className="text-white/45 text-sm leading-relaxed">
-            Your message has been successfully received. A member of our team will review your enquiry and get back to you shortly.
+            Your submission has been successfully received.
           </p>
 
           <div className="pt-4 border-t border-white/[0.06]">
