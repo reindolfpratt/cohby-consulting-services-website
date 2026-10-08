@@ -16,6 +16,7 @@ import liquidGlassAiPedestals from "@/assets/liquid-glass-ai-pedestals.jpg";
 import liquidGlassBespokeSoftware from "@/assets/liquid-glass-bespoke-software.jpg";
 import consultingTeamCollaboration from "@/assets/consulting-team-collaboration.jpg";
 import PlatformsMarquee from "@/components/PlatformsMarquee";
+import ClientFeedback from "@/components/ClientFeedback";
 
 /* ── Hero entrance choreography ── */
 const heroStagger: Variants = {
@@ -358,6 +359,9 @@ const Home = () => {
 
         </div>
       </section>
+
+      {/* ── Client Results & Feedback - Dark ── */}
+      <ClientFeedback />
 
       {/* ── Studio Gallery Transition ── */}
       {/* Gradient fade from dark to light clay */}
