@@ -1,6 +1,6 @@
 import React from "react";
 import { Reveal } from "@/components/motion/Reveal";
-import { CheckCircle2, Star } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import triumphLogo from "@/assets/clients/triumph-logo-white.png";
 
 export const ClientFeedback: React.FC = () => {
@@ -59,42 +59,27 @@ export const ClientFeedback: React.FC = () => {
 
               {/* Quote / Feedback */}
               <div className="py-8">
-                <p className="text-xl md:text-2xl lg:text-3xl font-medium text-white/90 leading-snug tracking-tight font-sans">
-                  “CRM design, development, and implementation, delivered on schedule with training resources for our team.”
+                <p className="text-xl md:text-2xl lg:text-2xl font-medium text-white/90 leading-relaxed tracking-tight font-sans">
+                  “A really great experience with Cohby Consulting, our brief was fully understood and developed beyond our expectations. We had very weak infrastructure and materials to develop the project but this was accommodated for. We received a flexible and thorough approach!”
                 </p>
               </div>
             </div>
 
             {/* Metrics Row */}
             <div className="pt-6 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-xl bg-rose/10 border border-rose/20 flex items-center justify-center text-rose">
-                  <Star className="h-5 w-5 fill-rose text-rose" />
-                </div>
-                <div>
-                  <span className="text-lg font-bold text-white block">5 / 5</span>
-                  <span className="text-xs text-white/50 font-mono">Satisfaction</span>
-                </div>
+              <div>
+                <span className="text-2xl font-bold text-white block">5 / 5</span>
+                <span className="text-xs text-white/50 font-mono uppercase tracking-wider">Satisfaction</span>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center text-white">
-                  <span className="font-mono font-bold text-sm">10</span>
-                </div>
-                <div>
-                  <span className="text-lg font-bold text-white block">10 / 10</span>
-                  <span className="text-xs text-white/50 font-mono">NPS Score</span>
-                </div>
+              <div>
+                <span className="text-2xl font-bold text-white block">10 / 10</span>
+                <span className="text-xs text-white/50 font-mono uppercase tracking-wider">NPS Score</span>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                  <CheckCircle2 className="h-5 w-5" />
-                </div>
-                <div>
-                  <span className="text-lg font-bold text-white block">On Schedule</span>
-                  <span className="text-xs text-white/50 font-mono">Full Scope Delivered</span>
-                </div>
+              <div>
+                <span className="text-2xl font-bold text-white block">On Schedule</span>
+                <span className="text-xs text-white/50 font-mono uppercase tracking-wider">Full Scope Delivered</span>
               </div>
             </div>
           </div>
