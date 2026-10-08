@@ -227,9 +227,6 @@ const Home = () => {
       {/* ── Dynamic 3D Moving Platforms Marquee ── */}
       <PlatformsMarquee />
 
-      {/* ── Client Results & Feedback - Dark ── */}
-      <ClientFeedback />
-
       {/* ── Services Showcase - Dark ── */}
       <section className="py-32 relative z-10 border-b border-white/10 bg-background/50">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
@@ -362,6 +359,9 @@ const Home = () => {
 
         </div>
       </section>
+
+      {/* ── Client Results & Feedback - Dark ── */}
+      <ClientFeedback />
 
       {/* ── Studio Gallery Transition ── */}
       {/* Gradient fade from dark to light clay */}
