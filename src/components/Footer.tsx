@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, Clock } from "lucide-react";
 import cohbyLogo from "@/assets/cohby-logo.png";
 import LiquidGlassBackground from "@/components/LiquidGlassBackground";
 
@@ -136,13 +136,12 @@ const Footer = () => {
                   info@cohbyconsultingservices.com
                 </a>
               </li>
-              <li className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <MapPin size={13} className="text-primary" />
+              <li className="flex items-center gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Clock size={13} className="text-primary" />
                 </div>
-                <div className="text-sm text-white/50 space-y-1">
+                <div className="text-sm text-white/50">
                   <div>Mon-Thu: 10am - 3pm</div>
-                  <div>Global Remote Service</div>
                 </div>
               </li>
             </ul>
